@@ -65,24 +65,11 @@ header {
   letter-spacing: -0.5px;
 }
 
-.logo-icon {
+.logo-img {
   width: 32px;
   height: 32px;
-  background: var(--primary);
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-icon svg {
-  width: 18px;
-  height: 18px;
-  stroke: white;
-  fill: none;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: contain;
 }
 
 nav {
