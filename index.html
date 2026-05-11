@@ -1,26 +1,435 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taskra – チームのタスクをもっとシンプルに</title>
-  <meta name="description" content="Taskraは、個人からチームまで使えるシンプルなタスク管理アプリです。直感的な操作で、やるべきことを確実に前に進めます。">
-  <meta property="og:title" content="Taskra – チームのタスクをもっとシンプルに">
-  <meta property="og:description" content="シンプルで使いやすいタスク管理アプリ。無料で今すぐ始められます。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://taskra.jp">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taskra – ビジネスをスマートに、タスクらくらく</title>
+<meta name="description" content="Taskraは、個人からチームまで使えるシンプルなタスク管理アプリです。直感的な操作で、やるべきことを確実に前に進めます。">
+<meta property="og:title" content="Taskra – ビジネスをスマートに、タスクらくらく">
+<meta property="og:description" content="シンプルで使いやすいタスク管理アプリ。無料で今すぐ始められます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taskra.jp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #3b5bdb;
+  --primary-dark: #2f4ac0;
+  --primary-light: #e8edff;
+  --accent: #7048e8;
+  --text: #1a1f36;
+  --text-sub: #4a5270;
+  --text-muted: #8890a4;
+  --bg: #ffffff;
+  --bg-subtle: #f7f8fc;
+  --border: #e5e8f0;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(59,91,219,0.10);
+  --shadow-lg: 0 8px 48px rgba(59,91,219,0.15);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+/* ── Header ── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; gap: 32px;
+  padding: 0 24px; height: 64px;
+}
+.logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  font-size: 20px; color: var(--text); text-decoration: none;
+}
+.logo-img { width: 28px; height: 28px; border-radius: 6px; }
+header nav { display: flex; gap: 28px; margin-left: auto; }
+header nav a {
+  text-decoration: none; color: var(--text-sub);
+  font-size: 14px; font-weight: 500;
+  transition: color .2s;
+}
+header nav a:hover { color: var(--primary); }
+.header-cta { display: flex; gap: 10px; align-items: center; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 10px 20px;
+  border-radius: 8px; border: none; cursor: pointer;
+  font-size: 14px; font-weight: 600; font-family: inherit;
+  text-decoration: none; transition: all .2s;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(59,91,219,0.3); }
+.btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+.btn-outline:hover { background: var(--primary-light); }
+.btn-lg { padding: 14px 28px; font-size: 16px; border-radius: 10px; }
+.btn-xl { padding: 16px 36px; font-size: 17px; border-radius: 12px; }
+
+/* hamburger */
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all .3s; }
+
+/* mobile menu */
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: #fff; flex-direction: column; padding: 24px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.mobile-menu nav { display: flex; flex-direction: column; gap: 0; }
+.mobile-menu nav a {
+  display: block; padding: 16px 0; font-size: 18px; font-weight: 600;
+  color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);
+}
+.mobile-menu-cta { margin-top: 32px; }
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(160deg, #eef1ff 0%, #f4f6ff 40%, #fafbff 70%, #ffffff 100%);
+  padding: 80px 24px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(112,72,232,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(59,91,219,0.08); color: var(--primary);
+  padding: 6px 14px; border-radius: 100px;
+  font-size: 13px; font-weight: 600; margin-bottom: 28px;
+}
+.hero h1 {
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 900; line-height: 1.2;
+  color: var(--text); margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.hero h1 .brand {
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+}
+.hero-sub {
+  font-size: clamp(15px, 2vw, 17px); color: var(--text-sub);
+  margin-bottom: 36px; line-height: 1.7;
+}
+.hero-cta {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+/* ── App Mockup ── */
+.hero-mockup-wrap {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.hero-mockup-card {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 0 rgba(59,91,219,0.15), 0 -20px 60px rgba(59,91,219,0.12), 0 8px 48px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1.5px solid rgba(59,91,219,0.12);
+  border-bottom: none;
+}
+/* window chrome */
+.mockup-chrome {
+  background: #f2f3f7;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.chrome-dots { display: flex; gap: 6px; }
+.chrome-dot { width: 10px; height: 10px; border-radius: 50%; }
+.chrome-dot.red { background: #ff5f57; }
+.chrome-dot.yellow { background: #febc2e; }
+.chrome-dot.green { background: #28c840; }
+.chrome-url {
+  flex: 1; margin: 0 12px;
+  background: #fff; border: 1px solid #dde0ea;
+  border-radius: 6px; padding: 4px 10px;
+  font-size: 12px; color: #888; text-align: left;
+}
+
+/* app layout inside mockup */
+.mockup-app {
+  display: flex;
+  height: 420px;
+}
+.mockup-sidebar {
+  width: 180px;
+  background: #fafbff;
+  border-right: 1px solid #eef0f8;
+  padding: 16px 0;
+  flex-shrink: 0;
+}
+.sidebar-logo {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 16px 16px;
+  font-weight: 800; font-size: 16px; color: var(--text);
+  font-family: 'Inter', sans-serif;
+  border-bottom: 1px solid #eef0f8; margin-bottom: 8px;
+}
+.sidebar-logo-icon {
+  width: 24px; height: 24px;
+  background: linear-gradient(135deg, #3b5bdb, #7048e8);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sidebar-logo-icon svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.5; }
+
+.sidebar-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 16px; font-size: 13px; font-weight: 500;
+  color: var(--text-sub); cursor: pointer; border-radius: 0;
+  transition: background .15s;
+  margin: 1px 8px; border-radius: 8px;
+}
+.sidebar-item svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
+.sidebar-item.active { background: #e8edff; color: var(--primary); font-weight: 700; }
+
+/* main content */
+.mockup-main { flex: 1; padding: 20px 24px; overflow: hidden; background: #fff; }
+.mockup-main-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 14px;
+}
+.mockup-main-title { font-size: 18px; font-weight: 800; color: var(--text); }
+.mockup-add-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--primary); color: #fff;
+  padding: 7px 14px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.mockup-tabs {
+  display: flex; gap: 4px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--border); padding-bottom: 0;
+}
+.mockup-tab {
+  padding: 6px 14px; font-size: 13px; font-weight: 500;
+  color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.mockup-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 700; }
+
+/* task rows */
+.task-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; border-radius: 10px;
+  margin-bottom: 6px; transition: background .15s;
+}
+.task-row:hover { background: #f7f8fc; }
+.task-dot {
+  width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.task-dot.green { background: #12b886; }
+.task-dot.blue { background: var(--primary); }
+.task-dot.gray { background: #dee2e6; border: 2px solid #ced4da; background: transparent; }
+.task-dot.cyan { background: #22b8cf; }
+.task-dot svg { width: 10px; height: 10px; stroke: #fff; fill: none; stroke-width: 3; }
+
+.task-info { flex: 1; min-width: 0; }
+.task-name { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.task-name.done { color: var(--text-muted); text-decoration: line-through; }
+.task-meta-row { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.task-tag {
+  font-size: 10px; padding: 1px 7px; border-radius: 100px; font-weight: 600;
+}
+.tag-red { background: #fff0f0; color: #e03131; }
+.tag-yellow { background: #fff9db; color: #e67700; }
+.tag-blue { background: #e8edff; color: #3b5bdb; }
+.tag-green { background: #ebfbee; color: #2f9e44; }
+
+.task-avatar {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #fff;
+}
+.av1 { background: linear-gradient(135deg, #f76707, #fd7e14); }
+.av2 { background: linear-gradient(135deg, #7048e8, #a61e4d); }
+.av3 { background: linear-gradient(135deg, #0ca678, #12b886); }
+.av4 { background: linear-gradient(135deg, #1971c2, #228be6); }
+
+.task-date { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+.task-flag { font-size: 13px; }
+.task-more { color: var(--text-muted); cursor: pointer; font-size: 16px; letter-spacing: 2px; }
+
+/* ── 4-feature bar ── */
+.hero-feature-bar {
+  max-width: 820px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  padding: 20px 0 0;
+}
+.hero-feat {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px; padding: 20px 12px 24px;
+  text-align: center;
+}
+.hero-feat-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-feat-icon svg { width: 28px; height: 28px; stroke: var(--primary); fill: none; stroke-width: 1.8; }
+.hero-feat-title { font-size: 13px; font-weight: 700; color: var(--text); }
+.hero-feat-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+/* ── Section common ── */
+.section-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+section { padding: 96px 0; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--primary-light); color: var(--primary);
+  padding: 5px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 700; margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 40px); font-weight: 900;
+  line-height: 1.25; margin-bottom: 16px; letter-spacing: -0.02em;
+}
+.section-desc { font-size: 16px; color: var(--text-sub); max-width: 480px; }
+
+/* fade-in */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* ── Features ── */
+.features { background: var(--bg); }
+.features-header { margin-bottom: 56px; }
+.features-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.feature-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px;
+  transition: box-shadow .2s, transform .2s;
+}
+.feature-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.feature-icon {
+  width: 48px; height: 48px;
+  background: var(--primary-light); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.feature-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 2; }
+.feature-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-sub); line-height: 1.7; }
+
+/* ── Pricing ── */
+#pricing { background: var(--bg-subtle); }
+.pricing-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  max-width: 680px; margin: 48px auto 0;
+}
+.pricing-card {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 20px; padding: 36px 32px;
+  position: relative;
+}
+.pricing-card.popular { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(59,91,219,0.08); }
+.pricing-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--primary); color: #fff;
+  padding: 4px 16px; border-radius: 100px;
+  font-size: 12px; font-weight: 700;
+}
+.pricing-plan { font-size: 14px; font-weight: 700; color: var(--text-sub); margin-bottom: 12px; }
+.pricing-price { font-size: 42px; font-weight: 900; color: var(--text); line-height: 1; }
+.pricing-price span { font-size: 16px; font-weight: 500; color: var(--text-sub); }
+.pricing-period { font-size: 13px; color: var(--text-muted); margin: 6px 0 24px; }
+.pricing-features { list-style: none; margin-bottom: 28px; }
+.pricing-features li {
+  padding: 8px 0; font-size: 14px; color: var(--text-sub);
+  border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px;
+}
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-features li::before { content: "✓"; color: var(--primary); font-weight: 700; font-size: 14px; }
+.pricing-card .btn { width: 100%; justify-content: center; }
+
+/* ── CTA ── */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: #fff; text-align: center; padding: 80px 24px;
+}
+.cta-section .section-title { color: #fff; }
+.cta-section p { color: rgba(255,255,255,0.85); font-size: 17px; margin-bottom: 36px; }
+.btn-white { background: #fff; color: var(--primary); font-weight: 700; }
+.btn-white:hover { background: #f0f3ff; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+/* ── Company ── */
+#company { background: var(--bg-subtle); }
+.legal-table { width: 100%; max-width: 600px; border-collapse: collapse; }
+.legal-table th, .legal-table td {
+  padding: 14px 16px; text-align: left; font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.legal-table th { font-weight: 700; color: var(--text-sub); width: 130px; }
+.legal-table a { color: var(--primary); text-decoration: none; }
+.legal-table a:hover { text-decoration: underline; }
+
+/* ── Footer ── */
+footer { background: var(--text); color: rgba(255,255,255,0.7); }
+.footer-inner { max-width: 1100px; margin: 0 auto; padding: 56px 24px 32px; }
+.footer-top { display: flex; gap: 64px; margin-bottom: 48px; flex-wrap: wrap; }
+.footer-brand { max-width: 280px; }
+.footer-brand .logo { color: #fff; margin-bottom: 12px; font-size: 18px; }
+.footer-brand p { font-size: 13px; line-height: 1.7; }
+.footer-links { display: flex; gap: 48px; flex: 1; flex-wrap: wrap; }
+.footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.05em; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none; transition: color .2s; }
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 12px; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: rgba(255,255,255,0.5); font-size: 12px; text-decoration: none; }
+.footer-bottom-links a:hover { color: #fff; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  header nav, .header-cta { display: none; }
+  .hamburger { display: flex; margin-left: auto; }
+  .hero { padding: 56px 20px 0; }
+  .hero h1 { font-size: 34px; }
+  .mockup-sidebar { display: none; }
+  .mockup-app { height: 320px; }
+  .hero-feature-bar { grid-template-columns: repeat(2, 1fr); }
+  .features-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .footer-top { flex-direction: column; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .hero-feature-bar { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
 </head>
 <body>
 
@@ -38,8 +447,8 @@
     <a href="#pricing">料金</a>
     <a href="#company">会社情報</a>
   </nav>
-  <div class="mobile-menu-cta">
-    <button class="btn btn-primary btn-lg" data-action="login">ログイン / 無料で始める</button>
+  <div class="mobile-menu-cta" style="margin-top:32px;">
+    <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" data-action="login">ログイン / 無料で始める</button>
   </div>
 </div>
 
@@ -50,18 +459,15 @@
       <img src="icon.png" class="logo-img" alt="Taskra">
       Taskra
     </a>
-
     <nav>
       <a href="#features">機能</a>
       <a href="#pricing">料金</a>
       <a href="#company">会社情報</a>
     </nav>
-
-    <div class="header-nav-cta" style="display:flex;gap:12px;align-items:center;">
+    <div class="header-cta">
       <button class="btn btn-outline" data-action="login">ログイン</button>
       <button class="btn btn-primary" data-action="login">無料で始める</button>
     </div>
-
     <button id="hamburger" class="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
@@ -71,57 +477,181 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-badge">✦ シンプルなタスク管理</div>
-  <h1>タスクを整理して、<br><span class="highlight">チームを前へ進める</span></h1>
-  <p>Taskraは、個人からチームまで使えるシンプルなタスク管理ツールです。余計な機能を省いて、本当に必要なことだけに集中できます。</p>
+  <h1>ビジネスをスマートに、<br><span class="brand">タスクらくらく taskra</span></h1>
+  <p class="hero-sub">タスクを整理して、チームを前へ進める。<br>シンプルなタスク管理ツール「taskra」</p>
   <div class="hero-cta">
-    <button class="btn btn-primary btn-lg" data-action="login">無料で始める →</button>
-    <a href="#features" class="btn btn-outline btn-lg">機能を見る</a>
+    <button class="btn btn-primary btn-xl" data-action="login">無料で始める →</button>
+    <a href="#features" class="btn btn-outline btn-xl">機能を見る</a>
   </div>
 
-  <div class="hero-image">
-    <div class="app-mockup">
-      <div class="mockup-bar">
-        <div class="mockup-dot"></div>
-        <div class="mockup-dot"></div>
-        <div class="mockup-dot"></div>
+  <!-- App Mockup -->
+  <div class="hero-mockup-wrap fade-in">
+    <div class="hero-mockup-card">
+      <!-- Window chrome -->
+      <div class="mockup-chrome">
+        <div class="chrome-dots">
+          <div class="chrome-dot red"></div>
+          <div class="chrome-dot yellow"></div>
+          <div class="chrome-dot green"></div>
+        </div>
+        <div class="chrome-url">app.taskra.jp</div>
       </div>
-      <div class="mockup-body">
+      <!-- App body -->
+      <div class="mockup-app">
+        <!-- Sidebar -->
         <div class="mockup-sidebar">
-          <div class="mockup-sidebar-item"></div>
-          <div class="mockup-sidebar-item"></div>
-          <div class="mockup-sidebar-item"></div>
-          <div class="mockup-sidebar-item"></div>
+          <div class="sidebar-logo">
+            <div class="sidebar-logo-icon">
+              <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            Taskra
+          </div>
+          <div class="sidebar-item active">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            マイタスク
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            プロジェクト
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            チーム
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            カレンダー
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            レポート
+          </div>
+          <div class="sidebar-item" style="margin-top:auto;">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            設定
+          </div>
         </div>
+
+        <!-- Main content -->
         <div class="mockup-main">
-          <div class="mockup-card">
-            <div class="mockup-check done"></div>
-            <div class="mockup-text-block">
-              <div class="mockup-line"></div>
-              <div class="mockup-line"></div>
+          <div class="mockup-main-header">
+            <span class="mockup-main-title">マイタスク</span>
+            <div class="mockup-add-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              タスクを追加
             </div>
           </div>
-          <div class="mockup-card">
-            <div class="mockup-check active"></div>
-            <div class="mockup-text-block">
-              <div class="mockup-line"></div>
-              <div class="mockup-line"></div>
-            </div>
+          <div class="mockup-tabs">
+            <div class="mockup-tab active">すべて</div>
+            <div class="mockup-tab">進行中</div>
+            <div class="mockup-tab">完了</div>
           </div>
-          <div class="mockup-card">
-            <div class="mockup-check pending"></div>
-            <div class="mockup-text-block">
-              <div class="mockup-line"></div>
-              <div class="mockup-line"></div>
+
+          <!-- Tasks -->
+          <div class="task-row">
+            <div class="task-dot green">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
+            <div class="task-info">
+              <div class="task-name done">Q2マーケティング資料の作成</div>
+              <div class="task-meta-row">
+                <span class="task-tag tag-green">完了</span>
+              </div>
+            </div>
+            <div class="task-avatar av1">田</div>
+            <span class="task-date">今日</span>
+            <span class="task-flag">🚩</span>
+            <span class="task-more">···</span>
           </div>
-          <div class="mockup-card">
-            <div class="mockup-check pending"></div>
-            <div class="mockup-text-block">
-              <div class="mockup-line"></div>
-              <div class="mockup-line"></div>
+
+          <div class="task-row">
+            <div class="task-dot blue"></div>
+            <div class="task-info">
+              <div class="task-name">新機能のUI仕様レビュー</div>
+              <div class="task-meta-row">
+                <span class="task-tag tag-red">高優先度</span>
+              </div>
             </div>
+            <div class="task-avatar av2">中</div>
+            <span class="task-date">明日</span>
+            <span class="task-flag">🚩</span>
+            <span class="task-more">···</span>
+          </div>
+
+          <div class="task-row">
+            <div class="task-dot gray"></div>
+            <div class="task-info">
+              <div class="task-name">週次ミーティングのアジェンダ準備</div>
+              <div class="task-meta-row">
+                <span class="task-tag tag-yellow">中優先度</span>
+              </div>
+            </div>
+            <div class="task-avatar av3">鈴</div>
+            <span class="task-date">6月5日</span>
+            <span class="task-flag">🏳️</span>
+            <span class="task-more">···</span>
+          </div>
+
+          <div class="task-row">
+            <div class="task-dot cyan"></div>
+            <div class="task-info">
+              <div class="task-name">顧客フィードバックのまとめ</div>
+              <div class="task-meta-row">
+                <span class="task-tag tag-blue">進行中</span>
+              </div>
+            </div>
+            <div class="task-avatar av4">佐</div>
+            <span class="task-date">6月7日</span>
+            <span class="task-flag">🏳️</span>
+            <span class="task-more">···</span>
+          </div>
+
+          <div class="task-row">
+            <div class="task-dot gray"></div>
+            <div class="task-info">
+              <div class="task-name">サービス改善提案書の作成</div>
+              <div class="task-meta-row">
+                <span class="task-tag tag-yellow">中優先度</span>
+              </div>
+            </div>
+            <div class="task-avatar av1">遠</div>
+            <span class="task-date">6月10日</span>
+            <span class="task-flag">🏳️</span>
+            <span class="task-more">···</span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- 4-feature bar -->
+    <div class="hero-feature-bar">
+      <div class="hero-feat">
+        <div class="hero-feat-icon">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="hero-feat-title">シンプルで使いやすい</div>
+        <div class="hero-feat-desc">誰でもすぐに使いこなせる<br>シンプル設計</div>
+      </div>
+      <div class="hero-feat">
+        <div class="hero-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="hero-feat-title">チームで協力</div>
+        <div class="hero-feat-desc">タスクの共有や進捗管理で、<br>チームの力を最大化</div>
+      </div>
+      <div class="hero-feat">
+        <div class="hero-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <div class="hero-feat-title">進捗を可視化</div>
+        <div class="hero-feat-desc">状況をひと目で把握して、<br>次のアクションへ</div>
+      </div>
+      <div class="hero-feat">
+        <div class="hero-feat-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="hero-feat-title">安心・安全</div>
+        <div class="hero-feat-desc">大切なデータを<br>しっかり守ります</div>
       </div>
     </div>
   </div>
@@ -130,12 +660,11 @@
 <!-- Features -->
 <section class="features" id="features">
   <div class="section-inner">
-    <div class="fade-in">
+    <div class="features-header fade-in">
       <div class="section-label">機能</div>
       <h2 class="section-title">必要なことだけ、<br>過不足なく</h2>
       <p class="section-desc">複雑な設定は不要。アカウントを作ってすぐに使い始められます。</p>
     </div>
-
     <div class="features-grid">
       <div class="feature-card fade-in">
         <div class="feature-icon">
@@ -144,7 +673,6 @@
         <h3>直感的なタスク管理</h3>
         <p>タスクの作成・完了・削除がワンクリック。シンプルな操作で素早く整理できます。</p>
       </div>
-
       <div class="feature-card fade-in">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -152,7 +680,6 @@
         <h3>期限・優先度管理</h3>
         <p>締め切りと優先度を設定して、今日やるべきことを明確に。大事なタスクを見逃しません。</p>
       </div>
-
       <div class="feature-card fade-in">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -160,7 +687,6 @@
         <h3>Googleアカウントでログイン</h3>
         <p>面倒なパスワード登録は不要。Googleアカウントでワンタップでログインできます。</p>
       </div>
-
       <div class="feature-card fade-in">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -168,7 +694,6 @@
         <h3>どのデバイスからでも</h3>
         <p>PC・スマートフォン・タブレットに対応。外出先でも同じタスクにアクセスできます。</p>
       </div>
-
       <div class="feature-card fade-in">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -176,7 +701,6 @@
         <h3>進捗の可視化</h3>
         <p>今日の達成状況が一目でわかる。小さな進歩を積み重ねるモチベーションになります。</p>
       </div>
-
       <div class="feature-card fade-in">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -191,16 +715,15 @@
 <!-- Pricing -->
 <section id="pricing">
   <div class="section-inner">
-    <div class="fade-in">
+    <div class="fade-in" style="text-align:center;">
       <div class="section-label">料金</div>
       <h2 class="section-title">シンプルな料金体系</h2>
-      <p class="section-desc">まずは無料で試して、必要になったらアップグレード。</p>
+      <p class="section-desc" style="margin:0 auto;">まずは無料で試して、必要になったらアップグレード。</p>
     </div>
-
     <div class="pricing-grid fade-in">
       <div class="pricing-card">
         <div class="pricing-plan">フリープラン</div>
-        <div class="pricing-price">¥0<span></span></div>
+        <div class="pricing-price">¥0</div>
         <div class="pricing-period">ずっと無料</div>
         <ul class="pricing-features">
           <li>タスク管理（最大50件）</li>
@@ -210,7 +733,6 @@
         </ul>
         <button class="btn btn-primary" data-action="login">無料で始める</button>
       </div>
-
       <div class="pricing-card popular">
         <div class="pricing-badge">近日公開</div>
         <div class="pricing-plan">プロプラン</div>
@@ -224,7 +746,7 @@
           <li>繰り返しタスク</li>
           <li>優先サポート</li>
         </ul>
-        <button class="btn" data-action="login">無料で試す</button>
+        <button class="btn btn-outline" data-action="login">無料で試す</button>
       </div>
     </div>
   </div>
@@ -232,25 +754,23 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <div class="section-inner fade-in" style="text-align:center;">
+  <div class="fade-in">
     <h2 class="section-title">今日から始めよう</h2>
     <p>アカウント登録は無料・1分以内。Googleアカウントですぐに使えます。</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <button class="btn btn-lg" style="background:white;color:var(--primary);font-weight:700;" data-action="login">無料で始める →</button>
-    </div>
+    <button class="btn btn-white btn-xl" data-action="login">無料で始める →</button>
   </div>
 </section>
 
 <!-- Company -->
-<section id="company" style="background:var(--bg-subtle);">
+<section id="company">
   <div class="section-inner fade-in">
     <div class="section-label">運営者情報</div>
     <h2 class="section-title">運営者情報</h2>
-    <table class="legal-table" style="margin-top:32px;max-width:600px;">
+    <table class="legal-table" style="margin-top:32px;">
       <tr><th>屋号</th><td>Taskra</td></tr>
       <tr><th>代表者</th><td>遠藤 政宗</td></tr>
       <tr><th>所在地</th><td>埼玉県</td></tr>
-      <tr><th>お問い合わせ</th><td><a href="contact.html" style="color:var(--primary);">お問い合わせフォーム</a></td></tr>
+      <tr><th>お問い合わせ</th><td><a href="contact.html">お問い合わせフォーム</a></td></tr>
     </table>
   </div>
 </section>
@@ -260,13 +780,12 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo">
+        <div class="logo" style="color:#fff;margin-bottom:12px;">
           <img src="icon.png" class="logo-img" alt="Taskra">
           Taskra
         </div>
         <p>シンプルで使いやすいタスク管理ツール。<br>個人からチームまで、やるべきことを前に進める。</p>
       </div>
-
       <div class="footer-links">
         <div class="footer-col">
           <h4>サービス</h4>
@@ -286,7 +805,6 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>© 2025 Taskra. All rights reserved.</p>
       <div class="footer-bottom-links">
@@ -298,6 +816,25 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+// Login redirect
+document.querySelectorAll('[data-action="login"]').forEach(btn => {
+  btn.addEventListener('click', () => { window.location.href = 'https://app.taskra.jp'; });
+});
+
+// Fade-in on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
