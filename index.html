@@ -437,34 +437,38 @@ section { padding: 96px 0; }
 
 /* ── Pricing ── */
 #pricing { background: var(--bg-subtle); }
-.pricing-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-  max-width: 680px; margin: 48px auto 0;
+.pricing-table-wrap { max-width: 640px; margin: 48px auto 0; }
+.pricing-table {
+  width: 100%; border-collapse: collapse;
+  background: #fff; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
-.pricing-card {
-  background: #fff; border: 1.5px solid var(--border);
-  border-radius: 20px; padding: 36px 32px;
-  position: relative;
+.pricing-table thead th {
+  padding: 24px 28px 20px;
+  font-size: 15px; font-weight: 700; color: var(--text-sub);
+  background: #fff; text-align: center;
 }
-.pricing-card.popular { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(59,91,219,0.08); }
-.pricing-badge {
-  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-  background: var(--primary); color: #fff;
-  padding: 4px 16px; border-radius: 100px;
-  font-size: 12px; font-weight: 700;
+.pricing-table thead th:first-child { text-align: left; }
+.pricing-table thead th.popular-col {
+  background: rgba(59,91,219,0.05);
+  color: var(--primary);
+  border-top: 3px solid var(--primary);
 }
-.pricing-plan { font-size: 14px; font-weight: 700; color: var(--text-sub); margin-bottom: 12px; }
-.pricing-price { font-size: 42px; font-weight: 900; color: var(--text); line-height: 1; }
-.pricing-price span { font-size: 16px; font-weight: 500; color: var(--text-sub); }
-.pricing-period { font-size: 13px; color: var(--text-muted); margin: 6px 0 24px; }
-.pricing-features { list-style: none; margin-bottom: 28px; }
-.pricing-features li {
-  padding: 8px 0; font-size: 14px; color: var(--text-sub);
-  border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px;
+.pricing-table tbody tr { border-top: 1px solid var(--border); }
+.pricing-table tbody td {
+  padding: 14px 28px; font-size: 14px; color: var(--text-sub); text-align: center;
 }
-.pricing-features li:last-child { border-bottom: none; }
-.pricing-features li::before { content: "✓"; color: var(--primary); font-weight: 700; font-size: 14px; }
-.pricing-card .btn { width: 100%; justify-content: center; }
+.pricing-table tbody td:first-child { text-align: left; font-weight: 600; color: var(--text); }
+.pricing-table tbody td.popular-col,
+.pricing-table thead th.popular-col { background: rgba(59,91,219,0.04); }
+.pricing-table tbody tr:nth-child(odd) td:not(:first-child):not(.popular-col) { background: var(--bg-subtle); }
+.pricing-table .price-row td { padding-top: 20px; padding-bottom: 20px; }
+.price-val { font-size: 32px; font-weight: 900; color: var(--text); }
+.price-unit { font-size: 14px; font-weight: 500; color: var(--text-sub); }
+.feat-yes { color: var(--primary); font-weight: 700; font-size: 16px; }
+.feat-no { color: #ccc; font-size: 16px; }
+.cta-row td { padding: 24px 28px; }
+.cta-row .btn { width: 100%; justify-content: center; }
 
 /* ── CTA ── */
 .cta-section {
@@ -519,7 +523,8 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
   .mockup-app { height: 320px; }
   .hero-feature-bar { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .pricing-table thead th, .pricing-table tbody td { padding: 12px 16px; }
+  .price-val { font-size: 24px; }
   .footer-top { flex-direction: column; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
@@ -876,34 +881,53 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
       <h2 class="section-title">シンプルな料金体系</h2>
       <p class="section-desc" style="margin:0 auto;">まずは無料で試して、必要になったらアップグレード。</p>
     </div>
-    <div class="pricing-grid fade-in">
-      <div class="pricing-card">
-        <div class="pricing-plan">フリープラン</div>
-        <div class="pricing-price">¥0</div>
-        <div class="pricing-period">ずっと無料</div>
-        <ul class="pricing-features">
-          <li>タスク管理（最大50件）</li>
-          <li>期限・優先度設定</li>
-          <li>Googleログイン</li>
-          <li>全デバイス対応</li>
-        </ul>
-        <button class="btn btn-primary" data-action="login">無料で始める</button>
-      </div>
-      <div class="pricing-card popular">
-        <div class="pricing-badge">近日公開</div>
-        <div class="pricing-plan">ベーシックプラン</div>
-        <div class="pricing-price">¥300<span>/月</span></div>
-        <div class="pricing-period">月額・いつでもキャンセル可</div>
-        <ul class="pricing-features">
-          <li>タスク管理（無制限）</li>
-          <li>期限・優先度設定</li>
-          <li>Googleログイン</li>
-          <li>全デバイス対応</li>
-          <li>繰り返しタスク</li>
-          <li>優先サポート</li>
-        </ul>
-        <button class="btn btn-outline" data-action="login">無料で試す</button>
-      </div>
+    <div class="pricing-table-wrap fade-in">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>フリープラン</th>
+            <th class="popular-col">スタンダードプラン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-row">
+            <td>価格</td>
+            <td><span class="price-val">¥0</span></td>
+            <td><span class="price-val">¥480<span class="price-unit">/月</span></span></td>
+          </tr>
+          <tr>
+            <td>タスク</td>
+            <td>30件まで</td>
+            <td>無制限</td>
+          </tr>
+          <tr>
+            <td>プロジェクト</td>
+            <td>3件まで</td>
+            <td>無制限</td>
+          </tr>
+          <tr>
+            <td>繰り返しタスク</td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>AIアシスタント</td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>優先サポート</td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr class="cta-row">
+            <td></td>
+            <td><button class="btn btn-primary" data-action="login">無料で始める</button></td>
+            <td><button class="btn btn-outline" data-action="login">今すぐ試す</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
