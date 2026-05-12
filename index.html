@@ -320,6 +320,14 @@ section { padding: 96px 0; }
 .features-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
+.feature-card-calc {
+  grid-column: 2 / 3;
+  background: linear-gradient(135deg, #f4f6ff 0%, #eef1ff 100%);
+  border-color: rgba(59,91,219,0.2);
+}
+@media (max-width: 768px) {
+  .feature-card-calc { grid-column: auto; }
+}
 .feature-card {
   background: var(--bg-subtle);
   border: 1px solid var(--border);
@@ -336,6 +344,48 @@ section { padding: 96px 0; }
 .feature-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 2; }
 .feature-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .feature-card p { font-size: 14px; color: var(--text-sub); line-height: 1.7; }
+
+/* ── Screenshots ── */
+.screenshots { background: #0f1117; padding: 96px 0; }
+.screenshots .section-label { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
+.screenshots .section-title { color: #fff; }
+.screenshots .section-desc { color: rgba(255,255,255,0.6); }
+.screenshots-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; margin-top: 56px;
+}
+.screenshot-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; overflow: hidden;
+  transition: transform .25s, box-shadow .25s;
+}
+.screenshot-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(59,91,219,0.3);
+}
+.screenshot-img-wrap {
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.screenshot-img-wrap img {
+  width: 100%; display: block;
+  object-fit: cover; object-position: top left;
+  max-height: 260px;
+}
+.screenshot-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(59,91,219,0.9);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 4px 10px; border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+.screenshot-body { padding: 20px 24px 24px; }
+.screenshot-body h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.screenshot-body p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+@media (max-width: 768px) {
+  .screenshots-grid { grid-template-columns: 1fr; }
+}
 
 /* ── Pricing ── */
 #pricing { background: var(--bg-subtle); }
@@ -477,8 +527,8 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
 <!-- Hero -->
 <section class="hero">
   <div class="hero-badge">✦ シンプルなタスク管理</div>
-  <h1>ビジネスをスマートに、<br><span class="brand">タスクらくらく taskra</span></h1>
-  <p class="hero-sub">タスクを整理して、チームを前へ進める。<br>シンプルなタスク管理ツール「taskra」</p>
+  <h1>ビジネスをスマートに、<br><span class="brand">タスクらくらく Taskra</span></h1>
+  <p class="hero-sub">タスクを整理して、チームを前へ進める。<br>シンプルなタスク管理ツール「Taskra」</p>
   <div class="hero-cta">
     <button class="btn btn-primary btn-xl" data-action="login">無料で始める →</button>
     <a href="#features" class="btn btn-outline btn-xl">機能を見る</a>
@@ -707,6 +757,61 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
         </div>
         <h3>安心のセキュリティ</h3>
         <p>Google OAuth認証を採用。データは安全に管理されます。</p>
+      </div>
+      <div class="feature-card fade-in feature-card-calc">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#1a1f36,#2d3561);">
+          <svg viewBox="0 0 24 24" style="stroke:#a5b4fc;"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="12" y1="10" x2="12" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="10" x2="16" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="8" y1="14" x2="8" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="12" y1="14" x2="12" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="14" x2="16" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="8" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="18" x2="16" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+        </div>
+        <h3>内蔵電卓で即計算</h3>
+        <p>税込/税抜・円/ドル換算をその場で計算。アプリを離れずに数字の確認ができます。ビジネスシーンで役立つ専用機能です。</p>
+        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">税込/税抜</span>
+          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">円/ドル換算</span>
+          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">式の保存</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="screenshots fade-in">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:0;">
+      <div class="section-label">実際の画面</div>
+      <h2 class="section-title">使いやすさを、画面で確認</h2>
+      <p class="section-desc" style="margin:0 auto;">シンプルなUIで、すぐに使いこなせます。</p>
+    </div>
+    <div class="screenshots-grid">
+      <div class="screenshot-item fade-in">
+        <div class="screenshot-img-wrap">
+          <img src="screenshots/taskra-forecast.png" alt="Forecastビュー — 週間カレンダーでタスクを管理">
+          <span class="screenshot-badge">Forecast ビュー</span>
+        </div>
+        <div class="screenshot-body">
+          <h3>週間カレンダーで先を見通す</h3>
+          <p>日付ごとにタスクを俯瞰できる Forecast ビュー。今週・来週の予定を一目で把握して、抜け漏れをなくします。</p>
+        </div>
+      </div>
+      <div class="screenshot-item fade-in">
+        <div class="screenshot-img-wrap">
+          <img src="screenshots/taskra-task-detail.png" alt="タスク詳細パネル — プロジェクト管理">
+          <span class="screenshot-badge">タスク詳細</span>
+        </div>
+        <div class="screenshot-body">
+          <h3>プロジェクト×タスクを一元管理</h3>
+          <p>プロジェクトごとにタスクを整理し、優先度・期限・タグ・メモをひとつのパネルで素早く編集できます。</p>
+        </div>
+      </div>
+      <div class="screenshot-item fade-in">
+        <div class="screenshot-img-wrap">
+          <img src="screenshots/taskra-calculator.png" alt="内蔵電卓 — 税込・税抜・円ドル換算">
+          <span class="screenshot-badge" style="background:rgba(112,72,232,0.9);">内蔵 電卓</span>
+        </div>
+        <div class="screenshot-body">
+          <h3>タスク画面のまま即計算</h3>
+          <p>税込/税抜・円/ドル換算に対応した電卓を内蔵。アプリを切り替えず、作業の流れを止めません。</p>
+        </div>
       </div>
     </div>
   </div>
