@@ -140,139 +140,177 @@ header nav a:hover { color: var(--primary); }
 /* ── App Mockup ── */
 .hero-mockup-wrap {
   position: relative;
-  max-width: 820px;
+  max-width: 860px;
   margin: 0 auto;
 }
 .hero-mockup-card {
   background: #fff;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 -4px 0 rgba(59,91,219,0.15), 0 -20px 60px rgba(59,91,219,0.12), 0 8px 48px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06), 0 24px 80px rgba(59,91,219,0.18), 0 8px 32px rgba(0,0,0,0.1);
   overflow: hidden;
-  border: 1.5px solid rgba(59,91,219,0.12);
-  border-bottom: none;
+  border: 1px solid rgba(0,0,0,0.08);
 }
 /* window chrome */
 .mockup-chrome {
-  background: #f2f3f7;
-  padding: 10px 16px;
+  background: #ececec;
+  padding: 11px 16px;
   display: flex; align-items: center; gap: 8px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #d8d8d8;
 }
 .chrome-dots { display: flex; gap: 6px; }
-.chrome-dot { width: 10px; height: 10px; border-radius: 50%; }
+.chrome-dot { width: 12px; height: 12px; border-radius: 50%; }
 .chrome-dot.red { background: #ff5f57; }
 .chrome-dot.yellow { background: #febc2e; }
 .chrome-dot.green { background: #28c840; }
 .chrome-url {
-  flex: 1; margin: 0 12px;
-  background: #fff; border: 1px solid #dde0ea;
-  border-radius: 6px; padding: 4px 10px;
-  font-size: 12px; color: #888; text-align: left;
+  flex: 1; margin: 0 16px;
+  background: #fff; border: 1px solid #d0d0d0;
+  border-radius: 6px; padding: 4px 12px;
+  font-size: 12px; color: #666; text-align: center;
 }
 
 /* app layout inside mockup */
 .mockup-app {
   display: flex;
-  height: 420px;
+  height: 400px;
 }
 .mockup-sidebar {
-  width: 180px;
-  background: #fafbff;
-  border-right: 1px solid #eef0f8;
-  padding: 16px 0;
+  width: 200px;
+  background: #f7f8fc;
+  border-right: 1px solid #e8eaf0;
+  padding: 14px 0;
   flex-shrink: 0;
 }
 .sidebar-logo {
-  display: flex; align-items: center; gap: 8px;
-  padding: 4px 16px 16px;
-  font-weight: 800; font-size: 16px; color: var(--text);
+  display: flex; align-items: center; gap: 9px;
+  padding: 4px 18px 14px;
+  font-weight: 800; font-size: 17px; color: var(--text);
   font-family: 'Inter', sans-serif;
-  border-bottom: 1px solid #eef0f8; margin-bottom: 8px;
+  border-bottom: 1px solid #e8eaf0; margin-bottom: 10px;
 }
 .sidebar-logo-icon {
-  width: 24px; height: 24px;
+  width: 28px; height: 28px;
   background: linear-gradient(135deg, #3b5bdb, #7048e8);
-  border-radius: 6px;
+  border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
 }
-.sidebar-logo-icon svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.5; }
+.sidebar-logo-icon svg { width: 15px; height: 15px; fill: none; stroke: #fff; stroke-width: 2.5; }
 
 .sidebar-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 9px 16px; font-size: 13px; font-weight: 500;
-  color: var(--text-sub); cursor: pointer; border-radius: 0;
+  padding: 9px 14px; font-size: 13px; font-weight: 500;
+  color: #5a637a; cursor: pointer;
   transition: background .15s;
-  margin: 1px 8px; border-radius: 8px;
+  margin: 2px 10px; border-radius: 8px;
+  position: relative;
 }
-.sidebar-item svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
-.sidebar-item.active { background: #e8edff; color: var(--primary); font-weight: 700; }
+.sidebar-item svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
+.sidebar-item.active {
+  background: #e8edff; color: var(--primary); font-weight: 700;
+}
+.sidebar-item.active::before {
+  content: ''; position: absolute; left: -10px; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 20px; background: var(--primary); border-radius: 0 3px 3px 0;
+}
 
 /* main content */
-.mockup-main { flex: 1; padding: 20px 24px; overflow: hidden; background: #fff; }
+.mockup-main { flex: 1; padding: 20px 22px; overflow: hidden; background: #fff; }
 .mockup-main-header {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 14px;
 }
-.mockup-main-title { font-size: 18px; font-weight: 800; color: var(--text); }
+.mockup-main-title { font-size: 20px; font-weight: 800; color: var(--text); }
 .mockup-add-btn {
   display: flex; align-items: center; gap: 6px;
   background: var(--primary); color: #fff;
-  padding: 7px 14px; border-radius: 8px;
-  font-size: 13px; font-weight: 600; cursor: pointer;
+  padding: 8px 16px; border-radius: 9px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59,91,219,0.3);
 }
 .mockup-tabs {
-  display: flex; gap: 4px; margin-bottom: 14px;
-  border-bottom: 1px solid var(--border); padding-bottom: 0;
+  display: flex; gap: 0; margin-bottom: 14px;
+  border-bottom: 1.5px solid #eef0f8;
 }
 .mockup-tab {
-  padding: 6px 14px; font-size: 13px; font-weight: 500;
-  color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
+  padding: 7px 16px; font-size: 13px; font-weight: 500;
+  color: #8890a4; cursor: pointer; border-bottom: 2.5px solid transparent;
+  margin-bottom: -1.5px;
 }
 .mockup-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 700; }
 
 /* task rows */
 .task-row {
   display: flex; align-items: center; gap: 12px;
-  padding: 10px 12px; border-radius: 10px;
-  margin-bottom: 6px; transition: background .15s;
+  padding: 9px 10px; border-radius: 10px;
+  margin-bottom: 4px; transition: background .15s;
 }
 .task-row:hover { background: #f7f8fc; }
 .task-dot {
-  width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+  width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 .task-dot.green { background: #12b886; }
 .task-dot.blue { background: var(--primary); }
-.task-dot.gray { background: #dee2e6; border: 2px solid #ced4da; background: transparent; }
+.task-dot.gray { border: 2px solid #ced4da; background: transparent; box-shadow: none; }
 .task-dot.cyan { background: #22b8cf; }
-.task-dot svg { width: 10px; height: 10px; stroke: #fff; fill: none; stroke-width: 3; }
+.task-dot svg { width: 11px; height: 11px; stroke: #fff; fill: none; stroke-width: 3; }
 
 .task-info { flex: 1; min-width: 0; }
 .task-name { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.task-name.done { color: var(--text-muted); text-decoration: line-through; }
-.task-meta-row { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.task-name.done { color: #adb5bd; text-decoration: line-through; font-weight: 400; }
+.task-meta-row { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
 .task-tag {
-  font-size: 10px; padding: 1px 7px; border-radius: 100px; font-weight: 600;
+  font-size: 10px; padding: 2px 8px; border-radius: 100px; font-weight: 700;
 }
 .tag-red { background: #fff0f0; color: #e03131; }
-.tag-yellow { background: #fff9db; color: #e67700; }
+.tag-yellow { background: #fff9db; color: #d07700; }
 .tag-blue { background: #e8edff; color: #3b5bdb; }
 .tag-green { background: #ebfbee; color: #2f9e44; }
 
 .task-avatar {
-  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: #fff;
+  font-size: 11px; font-weight: 800; color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
 }
 .av1 { background: linear-gradient(135deg, #f76707, #fd7e14); }
 .av2 { background: linear-gradient(135deg, #7048e8, #a61e4d); }
 .av3 { background: linear-gradient(135deg, #0ca678, #12b886); }
 .av4 { background: linear-gradient(135deg, #1971c2, #228be6); }
+.av5 { background: linear-gradient(135deg, #e67700, #f59f00); }
 
-.task-date { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
-.task-flag { font-size: 13px; }
-.task-more { color: var(--text-muted); cursor: pointer; font-size: 16px; letter-spacing: 2px; }
+.task-right { display: flex; align-items: center; gap: 6px; }
+.task-date { font-size: 11px; color: #8890a4; white-space: nowrap; }
+.task-flag { font-size: 12px; color: #ced4da; }
+.task-more { color: #ced4da; cursor: pointer; font-size: 14px; letter-spacing: 2px; }
+
+/* ── Modal ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(10,12,24,0.75); backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.modal-overlay.open { display: flex; animation: fadeIn .2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-content {
+  position: relative; max-width: 1100px; width: 100%;
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+  animation: scaleIn .2s ease;
+}
+@keyframes scaleIn { from { transform: scale(.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.modal-content img { display: block; width: 100%; height: auto; }
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(0,0,0,0.5); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 18px; line-height: 1;
+  transition: background .15s;
+}
+.modal-close:hover { background: rgba(0,0,0,0.75); }
 
 /* ── 4-feature bar ── */
 .hero-feature-bar {
@@ -383,6 +421,16 @@ section { padding: 96px 0; }
 .screenshot-body { padding: 20px 24px 24px; }
 .screenshot-body h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
 .screenshot-body p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.screenshot-item[data-modal-img] { cursor: pointer; }
+.screenshot-zoom-hint {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(0,0,0,0.55); color: #fff;
+  font-size: 11px; font-weight: 600; padding: 4px 10px;
+  border-radius: 100px; opacity: 0;
+  transition: opacity .2s;
+  backdrop-filter: blur(4px);
+}
+.screenshot-item:hover .screenshot-zoom-hint { opacity: 1; }
 @media (max-width: 768px) {
   .screenshots-grid { grid-template-columns: 1fr; }
 }
@@ -604,70 +652,70 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             </div>
             <div class="task-info">
               <div class="task-name done">Q2マーケティング資料の作成</div>
-              <div class="task-meta-row">
-                <span class="task-tag tag-green">完了</span>
-              </div>
+              <div class="task-meta-row"><span class="task-tag tag-green">完了</span></div>
             </div>
-            <div class="task-avatar av1">田</div>
-            <span class="task-date">今日</span>
-            <span class="task-flag">🚩</span>
-            <span class="task-more">···</span>
+            <div class="task-right">
+              <div class="task-avatar av1">田</div>
+              <span class="task-date">今日</span>
+              <span class="task-flag">🚩</span>
+              <span class="task-more">···</span>
+            </div>
           </div>
 
           <div class="task-row">
             <div class="task-dot blue"></div>
             <div class="task-info">
               <div class="task-name">新機能のUI仕様レビュー</div>
-              <div class="task-meta-row">
-                <span class="task-tag tag-red">高優先度</span>
-              </div>
+              <div class="task-meta-row"><span class="task-tag tag-red">高優先度</span></div>
             </div>
-            <div class="task-avatar av2">中</div>
-            <span class="task-date">明日</span>
-            <span class="task-flag">🚩</span>
-            <span class="task-more">···</span>
+            <div class="task-right">
+              <div class="task-avatar av2">中</div>
+              <span class="task-date">明日</span>
+              <span class="task-flag">🚩</span>
+              <span class="task-more">···</span>
+            </div>
           </div>
 
           <div class="task-row">
             <div class="task-dot gray"></div>
             <div class="task-info">
               <div class="task-name">週次ミーティングのアジェンダ準備</div>
-              <div class="task-meta-row">
-                <span class="task-tag tag-yellow">中優先度</span>
-              </div>
+              <div class="task-meta-row"><span class="task-tag tag-yellow">中優先度</span></div>
             </div>
-            <div class="task-avatar av3">鈴</div>
-            <span class="task-date">6月5日</span>
-            <span class="task-flag">🏳️</span>
-            <span class="task-more">···</span>
+            <div class="task-right">
+              <div class="task-avatar av3">鈴</div>
+              <span class="task-date">6月5日</span>
+              <span class="task-flag" style="color:#ced4da;">⚑</span>
+              <span class="task-more">···</span>
+            </div>
           </div>
 
           <div class="task-row">
             <div class="task-dot cyan"></div>
             <div class="task-info">
               <div class="task-name">顧客フィードバックのまとめ</div>
-              <div class="task-meta-row">
-                <span class="task-tag tag-blue">進行中</span>
-              </div>
+              <div class="task-meta-row"><span class="task-tag tag-blue">進行中</span></div>
             </div>
-            <div class="task-avatar av4">佐</div>
-            <span class="task-date">6月7日</span>
-            <span class="task-flag">🏳️</span>
-            <span class="task-more">···</span>
+            <div class="task-right">
+              <div class="task-avatar av4">佐</div>
+              <span class="task-date">6月7日</span>
+              <span class="task-flag" style="color:#ced4da;">⚑</span>
+              <span class="task-more">···</span>
+            </div>
           </div>
 
           <div class="task-row">
             <div class="task-dot gray"></div>
             <div class="task-info">
               <div class="task-name">サービス改善提案書の作成</div>
-              <div class="task-meta-row">
-                <span class="task-tag tag-yellow">中優先度</span>
-              </div>
+              <div class="task-meta-row"><span class="task-tag tag-yellow">中優先度</span></div>
             </div>
-            <div class="task-avatar av1">遠</div>
-            <span class="task-date">6月10日</span>
-            <span class="task-flag">🏳️</span>
-            <span class="task-more">···</span>
+            <div class="task-right">
+              <div class="task-avatar av5">遠</div>
+              <span class="task-date">6月10日</span>
+              <span class="task-flag" style="color:#ced4da;">⚑</span>
+              <span class="task-more">···</span>
+            </div>
           </div>
         </div>
       </div>
@@ -783,30 +831,33 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
       <p class="section-desc" style="margin:0 auto;">シンプルなUIで、すぐに使いこなせます。</p>
     </div>
     <div class="screenshots-grid">
-      <div class="screenshot-item fade-in">
+      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-forecast.png" data-modal-title="Forecast ビュー — 週間カレンダー">
         <div class="screenshot-img-wrap">
           <img src="screenshots/taskra-forecast.png" alt="Forecastビュー — 週間カレンダーでタスクを管理">
           <span class="screenshot-badge">Forecast ビュー</span>
+          <div class="screenshot-zoom-hint">クリックで拡大</div>
         </div>
         <div class="screenshot-body">
           <h3>週間カレンダーで先を見通す</h3>
           <p>日付ごとにタスクを俯瞰できる Forecast ビュー。今週・来週の予定を一目で把握して、抜け漏れをなくします。</p>
         </div>
       </div>
-      <div class="screenshot-item fade-in">
+      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-task-detail.png" data-modal-title="タスク詳細パネル — プロジェクト管理">
         <div class="screenshot-img-wrap">
           <img src="screenshots/taskra-task-detail.png" alt="タスク詳細パネル — プロジェクト管理">
           <span class="screenshot-badge">タスク詳細</span>
+          <div class="screenshot-zoom-hint">クリックで拡大</div>
         </div>
         <div class="screenshot-body">
           <h3>プロジェクト×タスクを一元管理</h3>
           <p>プロジェクトごとにタスクを整理し、優先度・期限・タグ・メモをひとつのパネルで素早く編集できます。</p>
         </div>
       </div>
-      <div class="screenshot-item fade-in">
+      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-calculator.png" data-modal-title="内蔵電卓 — 税込・税抜・円ドル換算">
         <div class="screenshot-img-wrap">
           <img src="screenshots/taskra-calculator.png" alt="内蔵電卓 — 税込・税抜・円ドル換算">
           <span class="screenshot-badge" style="background:rgba(112,72,232,0.9);">内蔵 電卓</span>
+          <div class="screenshot-zoom-hint">クリックで拡大</div>
         </div>
         <div class="screenshot-body">
           <h3>タスク画面のまま即計算</h3>
@@ -921,6 +972,14 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
   </div>
 </footer>
 
+<!-- Modal -->
+<div id="screenshotModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">✕</button>
+    <img id="modalImg" src="" alt="">
+  </div>
+</div>
+
 <script>
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
@@ -940,6 +999,25 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// Screenshot modal
+const modal = document.getElementById('screenshotModal');
+const modalImg = document.getElementById('modalImg');
+const modalClose = document.getElementById('modalClose');
+document.querySelectorAll('[data-modal-img]').forEach(card => {
+  card.addEventListener('click', () => {
+    modalImg.src = card.dataset.modalImg;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
