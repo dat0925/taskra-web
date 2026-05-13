@@ -437,7 +437,7 @@ section { padding: 96px 0; }
 
 /* ── Pricing ── */
 #pricing { background: var(--bg-subtle); }
-.pricing-table-wrap { max-width: 640px; margin: 48px auto 0; }
+.pricing-table-wrap { max-width: 900px; margin: 48px auto 0; }
 .pricing-table {
   width: 100%; border-collapse: collapse;
   background: #fff; border-radius: 20px; overflow: hidden;
@@ -888,6 +888,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             <th></th>
             <th>フリープラン</th>
             <th class="popular-col">スタンダードプラン</th>
+            <th>プレミアムプラン</th>
           </tr>
         </thead>
         <tbody>
@@ -895,35 +896,48 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             <td>価格</td>
             <td><span class="price-val">¥0</span></td>
             <td><span class="price-val">¥480<span class="price-unit">/月</span></span></td>
+            <td><span class="price-val">¥780<span class="price-unit">/月</span></span></td>
           </tr>
           <tr>
             <td>タスク</td>
-            <td>30件まで</td>
+            <td>100件まで</td>
+            <td>無制限</td>
             <td>無制限</td>
           </tr>
           <tr>
             <td>プロジェクト</td>
             <td>3件まで</td>
             <td>無制限</td>
+            <td>無制限</td>
+          </tr>
+          <tr>
+            <td>ノート</td>
+            <td>50件まで</td>
+            <td>300件まで</td>
+            <td>無制限</td>
           </tr>
           <tr>
             <td>繰り返しタスク</td>
             <td><span class="feat-no">✗</span></td>
             <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
           </tr>
           <tr>
             <td>AIアシスタント</td>
-            <td><span class="feat-no">✗</span></td>
-            <td><span class="feat-yes">✓</span></td>
+            <td>20回/月</td>
+            <td>100回/月</td>
+            <td>500回/月</td>
           </tr>
           <tr>
             <td>優先サポート</td>
             <td><span class="feat-no">✗</span></td>
             <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
           </tr>
           <tr class="cta-row">
             <td></td>
             <td><button class="btn btn-primary" data-action="login">無料で始める</button></td>
+            <td><button class="btn btn-outline" data-action="login">今すぐ試す</button></td>
             <td><button class="btn btn-outline" data-action="login">今すぐ試す</button></td>
           </tr>
         </tbody>
