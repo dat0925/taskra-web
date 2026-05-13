@@ -991,8 +991,8 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <tr class="cta-row">
             <td></td>
             <td><button class="btn btn-primary" data-action="login">無料で始める</button></td>
-            <td><button class="btn btn-outline" data-action="login">今すぐ試す</button></td>
-            <td><button class="btn btn-outline" data-action="login">今すぐ試す</button></td>
+            <td><button class="btn btn-outline" data-action="stripe-standard">スタンダードを始める</button></td>
+            <td><button class="btn btn-outline" data-action="stripe-premium">プレミアムを始める</button></td>
           </tr>
         </tbody>
       </table>
@@ -1084,6 +1084,14 @@ mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
 // Login redirect
 document.querySelectorAll('[data-action="login"]').forEach(btn => {
   btn.addEventListener('click', () => { window.location.href = 'https://app.taskra.jp'; });
+});
+
+// Stripe links
+document.querySelectorAll('[data-action="stripe-standard"]').forEach(btn => {
+  btn.addEventListener('click', () => { window.open('https://buy.stripe.com/test_8x27sK4UQbwb4aBdqPds400', '_blank'); });
+});
+document.querySelectorAll('[data-action="stripe-premium"]').forEach(btn => {
+  btn.addEventListener('click', () => { window.open('https://buy.stripe.com/test_cNifZg0EA6bRcH70E3ds401', '_blank'); });
 });
 
 // Fade-in on scroll
