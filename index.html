@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taskra – ビジネスをスマートに、タスクらくらく</title>
-<meta name="description" content="Taskraは、個人からチームまで使えるシンプルなタスク管理アプリです。直感的な操作で、やるべきことを確実に前に進めます。">
+<meta name="description" content="Taskraは、ダッシュボード・ガントチャート・コメント機能を備えたタスク管理アプリです。個人からチームまで、仕事を確実に前に進めます。">
 <meta property="og:title" content="Taskra – ビジネスをスマートに、タスクらくらく">
-<meta property="og:description" content="シンプルで使いやすいタスク管理アプリ。無料で今すぐ始められます。">
+<meta property="og:description" content="ガントチャート・コメント・AIを搭載したシンプルなタスク管理アプリ。無料で今すぐ始められます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taskra.jp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -402,10 +402,6 @@ section { padding: 96px 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.feature-card-calc {
-  background: linear-gradient(135deg, #f4f6ff 0%, #eef1ff 100%);
-  border-color: rgba(59,91,219,0.2);
-}
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -631,9 +627,9 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
   <!-- Split: Left text / Right photo -->
   <div class="hero-split">
     <div class="hero-left">
-      <div class="hero-badge">✦ シンプルなタスク管理</div>
+      <div class="hero-badge">✦ ガントチャート・コメント・AI搭載</div>
       <h1>ビジネスをスマートに、<br><span class="brand">タスクらくらく Taskra</span></h1>
-      <p class="hero-sub">やることを整理して、今日の仕事を前へ進める。<br>シンプルなタスク管理ツール「Taskra」</p>
+      <p class="hero-sub">ダッシュボードで今日の仕事を把握し、ガントチャートで進捗を管理。<br>タスク内のコメント機能でチームのやり取りも一元化できます。</p>
       <div class="hero-cta">
         <button class="btn btn-primary btn-xl" data-action="login">無料で始める →</button>
         <a href="#features" class="btn btn-outline btn-xl">機能を見る</a>
@@ -668,28 +664,28 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             Taskra
           </div>
           <div class="sidebar-item active">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            マイタスク
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            Dashboard
           </div>
           <div class="sidebar-item">
-            <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            プロジェクト
+            <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Inbox
           </div>
           <div class="sidebar-item">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            チーム
+            <svg viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+            Next
           </div>
           <div class="sidebar-item">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            カレンダー
+            <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Forecast
           </div>
           <div class="sidebar-item">
-            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            レポート
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="12" height="4" rx="1"/><rect x="3" y="16" width="15" height="4" rx="1"/></svg>
+            Gantt
           </div>
-          <div class="sidebar-item" style="margin-top:auto;">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            設定
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Note
           </div>
         </div>
 
@@ -788,32 +784,31 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
     <div class="hero-feature-bar">
       <div class="hero-feat">
         <div class="hero-feat-icon">
-          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         </div>
-        <div class="hero-feat-title">シンプルで使いやすい</div>
-        <div class="hero-feat-desc">誰でもすぐに使いこなせる<br>シンプル設計</div>
-      </div>
-
-      <div class="hero-feat">
-        <div class="hero-feat-icon">
-          <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><polyline points="3 6 4 7 6 5"/><polyline points="3 12 4 13 6 11"/><polyline points="3 18 4 19 6 17"/></svg>
-        </div>
-        <div class="hero-feat-title">親・サブタスク管理</div>
-        <div class="hero-feat-desc">階層構造でタスクを整理、<br>大きな仕事も分解して管理</div>
+        <div class="hero-feat-title">ダッシュボード</div>
+        <div class="hero-feat-desc">今日のタスクと通知を<br>ひと目で確認</div>
       </div>
       <div class="hero-feat">
         <div class="hero-feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="12" height="4" rx="1"/><rect x="3" y="16" width="15" height="4" rx="1"/></svg>
         </div>
-        <div class="hero-feat-title">一括編集機能</div>
-        <div class="hero-feat-desc">複数タスクをまとめて操作、<br>作業効率を大幅にアップ</div>
+        <div class="hero-feat-title">ガントチャート</div>
+        <div class="hero-feat-desc">プロジェクトの進捗を<br>視覚的に管理</div>
+      </div>
+      <div class="hero-feat">
+        <div class="hero-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="hero-feat-title">タスク内コメント</div>
+        <div class="hero-feat-desc">タスクでそのままチャット、<br>コメント通知も完備</div>
       </div>
       <div class="hero-feat">
         <div class="hero-feat-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
-        <div class="hero-feat-title">AIによるタスク操作</div>
-        <div class="hero-feat-desc">AIが自動でタスクを提案・<br>整理してくれる次世代機能</div>
+        <div class="hero-feat-title">AIアシスタント</div>
+        <div class="hero-feat-desc">タスクを自動提案・整理<br>する次世代AI機能</div>
       </div>
     </div>
   </div>
@@ -825,8 +820,8 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
   <div class="section-inner">
     <div class="features-header fade-in">
       <div class="section-label">機能</div>
-      <h2 class="section-title">必要なことだけ、<br>過不足なく</h2>
-      <p class="section-desc">複雑な設定は不要。アカウントを作ってすぐに使い始められます。</p>
+      <h2 class="section-title">必要な機能が、<br>すべて揃っている</h2>
+      <p class="section-desc">タスク管理・ガントチャート・コメント・AIまで。これ一つで仕事が前に進みます。</p>
     </div>
     <div class="features-grid">
       <div class="feature-card fade-in">
@@ -865,16 +860,37 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
         <h3>安心のセキュリティ</h3>
         <p>Google OAuth認証を採用。データは安全に管理されます。</p>
       </div>
-      <div class="feature-card fade-in feature-card-calc">
-        <div class="feature-icon" style="background:linear-gradient(135deg,#1a1f36,#2d3561);">
-          <svg viewBox="0 0 24 24" style="stroke:#a5b4fc;"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="12" y1="10" x2="12" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="10" x2="16" y2="10" stroke-linecap="round" stroke-width="3"/><line x1="8" y1="14" x2="8" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="12" y1="14" x2="12" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="14" x2="16" y2="14" stroke-linecap="round" stroke-width="3"/><line x1="8" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/><line x1="16" y1="18" x2="16" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#e8f4fd,#dbeafe);">
+          <svg viewBox="0 0 24 24" style="stroke:#1d6fa4;"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="12" height="4" rx="1"/><rect x="3" y="16" width="15" height="4" rx="1"/></svg>
         </div>
-        <h3>内蔵電卓で即計算</h3>
-        <p>税込/税抜・円/ドル換算をその場で計算。アプリを離れずに数字の確認ができます。ビジネスシーンで役立つ専用機能です。</p>
+        <h3>ガントチャートで進捗管理</h3>
+        <p>プロジェクトのスケジュールをガントチャートで一目瞭然に。タスクの開始・終了・依存関係を視覚的に把握して、納期遅れを防ぎます。</p>
         <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
-          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">税込/税抜</span>
-          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">円/ドル換算</span>
-          <span style="background:#e8edff;color:#3b5bdb;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">式の保存</span>
+          <span style="background:#dbeafe;color:#1d6fa4;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">スケジュール可視化</span>
+          <span style="background:#dbeafe;color:#1d6fa4;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">進捗バー</span>
+        </div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);">
+          <svg viewBox="0 0 24 24" style="stroke:#16a34a;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="13" y2="14"/></svg>
+        </div>
+        <h3>タスク内コメント・チャット</h3>
+        <p>タスクの中でそのままチャットができます。「あのファイルどこ？」「仕様変わりました」をタスクに紐づけてやり取りできるので、コミュニケーションが迷子になりません。</p>
+        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="background:#dcfce7;color:#16a34a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">コメント通知</span>
+          <span style="background:#dcfce7;color:#16a34a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">スレッド管理</span>
+        </div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#fef9ec,#fef3c7);">
+          <svg viewBox="0 0 24 24" style="stroke:#d97706;"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 16h7M17.5 13v7"/></svg>
+        </div>
+        <h3>ダッシュボードで今日を把握</h3>
+        <p>ログインしたら今日やることと通知がすぐ見える専用のダッシュボード画面。担当タスク・期限・チームの動きを一画面でまとめて確認できます。</p>
+        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="background:#fef3c7;color:#d97706;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">今日のタスク</span>
+          <span style="background:#fef3c7;color:#d97706;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">通知センター</span>
         </div>
       </div>
     </div>
@@ -901,26 +917,28 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <p>日付ごとにタスクを俯瞰できる Forecast ビュー。今週・来週の予定を一目で把握して、抜け漏れをなくします。</p>
         </div>
       </div>
-      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-task-detail.png" data-modal-title="タスク詳細パネル — プロジェクト管理">
+      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-task-detail.png" data-modal-title="タスク詳細パネル — コメント・チャット">
         <div class="screenshot-img-wrap">
-          <img src="screenshots/taskra-task-detail.png" alt="タスク詳細パネル — プロジェクト管理">
-          <span class="screenshot-badge">タスク詳細</span>
+          <img src="screenshots/taskra-task-detail.png" alt="タスク詳細パネル — コメント機能">
+          <span class="screenshot-badge">コメント</span>
           <div class="screenshot-zoom-hint">クリックで拡大</div>
         </div>
         <div class="screenshot-body">
-          <h3>プロジェクト×タスクを一元管理</h3>
-          <p>プロジェクトごとにタスクを整理し、優先度・期限・タグ・メモをひとつのパネルで素早く編集できます。</p>
+          <h3>タスク内でそのままチャット</h3>
+          <p>タスク詳細パネルにコメント機能を搭載。メンション・通知にも対応し、やり取りをタスクに紐づけて管理できます。</p>
         </div>
       </div>
-      <div class="screenshot-item fade-in" data-modal-img="screenshots/taskra-calculator.png" data-modal-title="内蔵電卓 — 税込・税抜・円ドル換算">
-        <div class="screenshot-img-wrap">
-          <img src="screenshots/taskra-calculator.png" alt="内蔵電卓 — 税込・税抜・円ドル換算">
-          <span class="screenshot-badge" style="background:rgba(112,72,232,0.9);">内蔵 電卓</span>
-          <div class="screenshot-zoom-hint">クリックで拡大</div>
+      <div class="screenshot-item fade-in" style="background:rgba(59,91,219,0.06);border:1px solid rgba(59,91,219,0.18);">
+        <div class="screenshot-img-wrap" style="background:linear-gradient(135deg,#1a1f36,#2d3561);min-height:160px;display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:32px 20px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(165,180,252,0.9)" stroke-width="1.5" style="margin-bottom:12px;"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="12" height="4" rx="1"/><rect x="3" y="16" width="15" height="4" rx="1"/></svg>
+            <div style="color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;">Gantt Chart</div>
+          </div>
+          <span class="screenshot-badge" style="background:rgba(59,91,219,0.9);">ガントチャート</span>
         </div>
         <div class="screenshot-body">
-          <h3>タスク画面のまま即計算</h3>
-          <p>税込/税抜・円/ドル換算に対応した電卓を内蔵。アプリを切り替えず、作業の流れを止めません。</p>
+          <h3>プロジェクトのスケジュールを可視化</h3>
+          <p>ガントチャートビューでタスクの開始・終了・依存関係を一覧表示。チーム全体の進捗を把握して、納期遅れを事前に防げます。</p>
         </div>
       </div>
     </div>
@@ -973,6 +991,18 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <tr>
             <td>繰り返しタスク</td>
             <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>ガントチャート</td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>コメント・通知</td>
+            <td><span class="feat-yes">✓</span></td>
             <td><span class="feat-yes">✓</span></td>
             <td><span class="feat-yes">✓</span></td>
           </tr>
@@ -1032,7 +1062,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <img src="icon.png" class="logo-img" alt="Taskra">
           Taskra
         </div>
-        <p>シンプルで使いやすいタスク管理ツール。<br>個人からチームまで、やるべきことを前に進める。</p>
+        <p>ダッシュボード・ガントチャート・コメント機能を備えた<br>シンプルで使いやすいタスク管理ツール。</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
