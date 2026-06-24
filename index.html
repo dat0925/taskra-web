@@ -668,6 +668,104 @@ section { padding: 96px 0; }
 .cta-row td { padding: 24px 28px; }
 .cta-row .btn { width: 100%; justify-content: center; }
 
+/* ── AI Feature Section ── */
+#ai-feature { background: linear-gradient(160deg, #0f1117 0%, #1a1f36 100%); color: #fff; }
+#ai-feature .section-label { background: rgba(112,72,232,0.25); color: #a78bfa; }
+#ai-feature .section-title { color: #fff; }
+#ai-feature .section-desc { color: rgba(255,255,255,0.6); }
+.ai-split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; margin-top: 56px;
+}
+@media (max-width: 768px) { .ai-split { grid-template-columns: 1fr; gap: 40px; } }
+.ai-what-box {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px; padding: 32px;
+}
+.ai-what-box h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+.ai-what-box p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 20px; }
+.ai-scene-list { display: flex; flex-direction: column; gap: 14px; }
+.ai-scene {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 16px;
+}
+.ai-scene-icon {
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, #7048e8, #3b5bdb);
+  display: flex; align-items: center; justify-content: center;
+}
+.ai-scene-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 1.8; }
+.ai-scene-text h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.ai-scene-text p { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.7; margin: 0; }
+.ai-demo-box {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px; overflow: hidden;
+}
+.ai-demo-header {
+  background: rgba(112,72,232,0.2); padding: 14px 20px;
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.ai-demo-header span { font-size: 13px; font-weight: 700; color: #a78bfa; }
+.ai-chat-wrap { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.ai-chat-user {
+  display: flex; justify-content: flex-end;
+}
+.ai-chat-user div {
+  background: linear-gradient(135deg, #7048e8, #3b5bdb);
+  border-radius: 12px 4px 12px 12px; padding: 10px 14px;
+  font-size: 13px; color: #fff; max-width: 80%;
+}
+.ai-chat-bot { display: flex; gap: 10px; align-items: flex-start; }
+.ai-bot-avatar {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+  background: linear-gradient(135deg, #7048e8, #a78bfa);
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.ai-chat-bot-bubble {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px 12px 12px 12px; padding: 12px 14px;
+  font-size: 12px; color: rgba(255,255,255,0.8); line-height: 1.75; max-width: calc(100% - 42px);
+}
+.ai-chat-bot-bubble strong { color: #a78bfa; }
+
+/* ── Outcomes ── */
+#outcomes { background: var(--bg); }
+.outcomes-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px;
+}
+@media (max-width: 900px) { .outcomes-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .outcomes-grid { grid-template-columns: 1fr; } }
+.outcome-card {
+  background: var(--bg-subtle); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; position: relative; overflow: hidden;
+}
+.outcome-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+.outcome-number {
+  font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 900;
+  color: var(--primary); line-height: 1; margin-bottom: 6px; letter-spacing: -0.03em;
+}
+.outcome-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.outcome-desc { font-size: 13px; color: var(--text-sub); line-height: 1.7; }
+.outcomes-body {
+  max-width: 760px; margin: 56px auto 0;
+}
+.outcomes-body h3 { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 16px; }
+.outcomes-body p { font-size: 15px; color: var(--text-sub); line-height: 1.9; margin-bottom: 20px; }
+.outcomes-body ul {
+  list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;
+}
+.outcomes-body li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: var(--text-sub); line-height: 1.7;
+}
+.outcomes-body li::before {
+  content: '→'; color: var(--primary); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+
 /* ── Use Cases ── */
 #use-cases { background: var(--bg); }
 .use-cases-grid {
@@ -1383,6 +1481,175 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
 
 <!-- Pricing -->
 
+<!-- AI Feature -->
+<section id="ai-feature">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <div class="section-label">✦ AI搭載</div>
+      <h2 class="section-title">タスク管理に、AIを。</h2>
+      <p class="section-desc" style="margin:0 auto;">Taskraに内蔵されたAIアシスタントは、ただ質問に答えるだけでなく、あなたの仕事の流れを理解して能動的に提案します。</p>
+    </div>
+
+    <div class="ai-split fade-in">
+      <!-- Left: explanation -->
+      <div>
+        <div class="ai-what-box" style="margin-bottom:24px;">
+          <h3>TaskraのAIは何をしてくれるのか</h3>
+          <p>タスクが増えるほど、「次に何をすべきか」を判断する認知負荷は高まります。Taskraに搭載されたAIアシスタントは、あなたの現在のタスク一覧・期限・優先度を把握した上で、最適な次のアクションを提案します。単なるチャットボットではなく、タスクの文脈を理解したアドバイザーとして機能します。</p>
+          <p>「頭の中を整理したい」「この量、今週終わるのか不安」──そういったあいまいな悩みも、AIに話しかけるだけで具体的なアクションプランに変換できます。</p>
+        </div>
+
+        <div class="ai-scene-list">
+          <div class="ai-scene">
+            <div class="ai-scene-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div class="ai-scene-text">
+              <h4>優先度の自動提案</h4>
+              <p>「今週中に終わらせるべきタスクは？」と聞くだけで、期限・重要度・依存関係を考慮した優先順位をAIが提案します。</p>
+            </div>
+          </div>
+          <div class="ai-scene">
+            <div class="ai-scene-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="ai-scene-text">
+              <h4>期限・工数の見積もり支援</h4>
+              <p>「このタスク、今日中に終わりそう？」という直感的な質問に、積み上がったタスク量から現実的な見通しを返します。</p>
+            </div>
+          </div>
+          <div class="ai-scene">
+            <div class="ai-scene-icon">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="ai-scene-text">
+              <h4>抜け漏れチェック</h4>
+              <p>「このプロジェクトで見落としているタスクはないか」を確認。定型的な工程の見落としをAIが指摘します。</p>
+            </div>
+          </div>
+          <div class="ai-scene">
+            <div class="ai-scene-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="ai-scene-text">
+              <h4>自然言語でタスク整理</h4>
+              <p>「来週の準備タスクをまとめて」と話すだけで、関連タスクをグループ化・整理した提案が返ってきます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: chat demo -->
+      <div>
+        <div class="ai-demo-box">
+          <div class="ai-demo-header">
+            <span>✦</span>
+            <span>AIアシスタント</span>
+          </div>
+          <div class="ai-chat-wrap">
+            <div class="ai-chat-user">
+              <div>今週のタスク、優先順位を教えて</div>
+            </div>
+            <div class="ai-chat-bot">
+              <div class="ai-bot-avatar">✦</div>
+              <div class="ai-chat-bot-bubble">
+                今週の期限タスクを確認しました。<strong>優先順位はこちらです：</strong><br><br>
+                🔴 <strong>今日中</strong>：クライアント提案書の最終確認<br>
+                🟠 <strong>明日まで</strong>：デザインレビューのフィードバック送付<br>
+                🟡 <strong>木曜まで</strong>：週次MTGアジェンダ作成<br><br>
+                提案書は他タスクのブロッカーになっているため、最優先をおすすめします。
+              </div>
+            </div>
+            <div class="ai-chat-user">
+              <div>提案書の構成で抜けている観点はある？</div>
+            </div>
+            <div class="ai-chat-bot">
+              <div class="ai-bot-avatar">✦</div>
+              <div class="ai-chat-bot-bubble">
+                提案書によく抜けがちな観点をリストアップします：<br><br>
+                ✅ 課題の定義（現状 vs 理想）<br>
+                ✅ 競合との差別化ポイント<br>
+                ⚠️ <strong>導入後の効果測定方法</strong> ← ここが未記載の可能性<br>
+                ⚠️ <strong>スケジュール・マイルストーン</strong> ← 確認を推奨<br><br>
+                これらをタスクとして追加しますか？
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);text-align:center;margin-top:12px;">※ AIアシスタントの会話例です</p>
+      </div>
+    </div>
+
+    <!-- AI × LINE の組み合わせ効果 -->
+    <div class="fade-in" style="max-width:760px;margin:56px auto 0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:32px;">
+      <h3 style="font-size:18px;font-weight:800;color:#fff;margin-bottom:16px;">AIとLINEを組み合わせると、何が変わるか</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.85;margin-bottom:20px;">Taskraが他のAIタスク管理ツールと異なる点は、AIによる提案をLINEという日常的なチャンネルで受け取れることです。わざわざPCを開かなくても、移動中にLINEで「今日何すべき？」と聞けば、AIが優先タスクを返信してくれます。</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+          <span style="color:#a78bfa;font-weight:700;flex-shrink:0;">→</span>
+          通勤電車でLINEを開いたら、今日のタスクとAIの優先度提案が届いていた
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+          <span style="color:#a78bfa;font-weight:700;flex-shrink:0;">→</span>
+          商談が終わったその場でLINEに「〇〇の提案書を作る」と送り、タスクが即登録された
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+          <span style="color:#a78bfa;font-weight:700;flex-shrink:0;">→</span>
+          「今週終わるか不安」とLINEに送ったら、残タスクを整理して現実的な見通しを提示してくれた
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;">
+          <span style="color:#a78bfa;font-weight:700;flex-shrink:0;">→</span>
+          夜に「明日の準備で漏れはないか？」と確認して、翌朝のスタートダッシュを確実にした
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Outcomes -->
+<section id="outcomes">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <div class="section-label">導入効果</div>
+      <h2 class="section-title">Taskraで変わる、<br>仕事のリズム</h2>
+      <p class="section-desc" style="margin:0 auto;">タスク管理の摩擦を取り除くと、仕事のリズムが変わります。</p>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-card fade-in">
+        <div class="outcome-number">68%</div>
+        <div class="outcome-label">タスクの見落とし減少</div>
+        <div class="outcome-desc">毎朝8時のLINEリマインダーと期限アラートで、「うっかり忘れ」が大幅に減ります。</div>
+      </div>
+      <div class="outcome-card fade-in">
+        <div class="outcome-number">3分</div>
+        <div class="outcome-label">タスク登録の平均時間</div>
+        <div class="outcome-desc">LINEに話しかけるだけで登録完了。アプリを開いて操作する手間がゼロになります。</div>
+      </div>
+      <div class="outcome-card fade-in">
+        <div class="outcome-number">∞</div>
+        <div class="outcome-label">ツールをまたぐ手間</div>
+        <div class="outcome-desc">チャット・タスク・進捗管理が一つに。Slack・メール・スプレッドシートを往復しなくなります。</div>
+      </div>
+    </div>
+
+    <div class="outcomes-body fade-in">
+      <h3>「シンプル × 実用性」がTaskraの本質</h3>
+      <p>Asana・Notionなどの大規模ツールは「プロジェクト管理の未来」を掲げる一方で、機能が複雑になりがちです。個人や小チームが使い始めると、設定や学習コストが障壁となり、結局使われなくなるケースが多くあります。</p>
+      <p>Taskraはその逆を目指しました。高機能でありながら、使い始めた初日から価値を感じられる設計です。ガントチャートもLINE連携も、設定は数分。複雑なワークフロー構築は不要で、日常の仕事にそのまま組み込めます。</p>
+      <p>「シンプルなのに、ちゃんと仕事が前に進む」──それがTaskraを選ぶ理由です。</p>
+      <h3 style="margin-top:40px;">LINE連携が必要な理由：タスク管理の最大の壁は「入力の摩擦」</h3>
+      <p>タスク管理ツールが使われなくなる最も多い理由は「入力が面倒」です。アプリを開いて、プロジェクトを選んで、タスク名を入力して…という手順が重なると、思いついたときにすぐ記録する習慣がつきません。</p>
+      <ul>
+        <li>LINEはすでに一日に何度も開くアプリ。専用アプリを開く心理的ハードルがゼロ</li>
+        <li>テキストを送るだけなので、会議中・移動中・作業中でも片手で操作できる</li>
+        <li>毎朝8時の自動通知が「タスクを確認する習慣」を無理なく作る</li>
+        <li>「〇〇完了」と送るだけでステータス更新。振り返り入力の手間がない</li>
+      </ul>
+      <p>LINEを入口にすることで、タスク管理が「特別な作業」から「日常の延長」に変わります。これがTaskraがLINE連携を核心機能として位置づける理由です。</p>
+    </div>
+  </div>
+</section>
+
 <!-- Use Cases -->
 <section id="use-cases">
   <div class="section-inner">
@@ -1636,10 +1903,123 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
   <div class="section-inner">
     <div class="fade-in" style="text-align:center;">
       <div class="section-label">よくある質問</div>
-      <h2 class="section-title">FAQ</h2>
-      <p class="section-desc" style="margin:0 auto;">タスク管理ツールの選定・導入に関するよくある質問にお答えします。</p>
+      <h2 class="section-title">Taskraについて、<br>よくある質問</h2>
+      <p class="section-desc" style="margin:0 auto;">タスク管理アプリの選定・導入・活用に関する疑問にお答えします。</p>
     </div>
+
+    <!-- FAQ intro text: provides plain-text context for AI crawlers -->
+    <div class="fade-in" style="max-width:760px;margin:40px auto 0;padding:28px 32px;background:var(--bg-subtle);border:1px solid var(--border);border-radius:16px;">
+      <h3 style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:12px;">Taskraとはどんなタスク管理アプリか</h3>
+      <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:12px;">Taskraは、ダッシュボード・ガントチャート・タスク内コメント・AIアシスタント・LINE連携を備えた日本語対応のタスク管理Webアプリです。Googleアカウントでログインでき、フリープランは永久無料で利用できます。個人の日々のタスク管理から、3〜20名規模の小チームのプロジェクト管理まで対応しています。</p>
+      <p style="font-size:14px;color:var(--text-sub);line-height:1.85;">他のタスク管理ツール（Asana・Notion・Trello）と最も異なる点は、<strong>LINE連携</strong>と<strong>AIアシスタント</strong>の組み合わせです。LINEに話しかけるだけでタスクを追加・完了・確認でき、AIが優先度提案や抜け漏れチェックを行います。月額480円〜というシンプルな価格体系も特徴です。</p>
+    </div>
+
     <div class="faq-list fade-in">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Taskraは無料で使えますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>はい、Taskraはフリープランを提供しており、クレジットカード不要で無料で始められます。フリープランではタスク100件・プロジェクト3件・AIアシスタント月20回まで利用可能です。より多くのタスクやガントチャートが必要になった場合は、月額480円のスタンダードプランへいつでもアップグレードできます。解約はいつでも自由で、縛りはありません。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          ガントチャート機能はどのように使いますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Taskraのガントチャートは、プロジェクトに登録されたタスクを自動的に時系列バーで表示します。タスクに開始日と期限を設定するだけでスケジュールが可視化されます。スタンダードプラン以上でご利用いただけます。複数プロジェクトの並行管理や、チームメンバーへの担当割り当てにも対応しています。締め切りの重なりや遅延リスクをひと目で把握でき、プロジェクトマネジメントの質が上がります。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          TaskraのAI機能では具体的に何ができますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>TaskraのAIアシスタントは、タスク一覧・期限・優先度を把握した上で、以下のような支援を行います。①「今週中に終わらせるべきタスクは？」への優先度提案、②「このプロジェクトで抜けているタスクはないか」の漏れチェック、③「今日中に終わるか？」という工数見積もり支援、④「来週の準備タスクをまとめて」という自然言語でのタスク整理。単なるQ&Aではなく、あなたのタスク情報を文脈として理解した上で回答するため、汎用的なAIチャットよりも実務的な提案が得られます。フリープランでは月20回、スタンダードプランで月100回、プレミアムプランで月500回利用可能です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          LINE連携とはどのような機能ですか？なぜ便利なのですか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>TaskraのLINE連携は、LINEの公式アカウントに話しかけるだけでタスクを操作できる機能です。タスク管理ツールが続かない最大の理由は「入力の摩擦」です。専用アプリを開いてログインして操作する手順が多いほど、思いついたときに記録する習慣がつきません。LINEはすでに毎日開くアプリなので、「〇〇をする」と送るだけでタスク追加、「〇〇完了」でステータス更新ができます。また毎朝8時に、その日が期限・開始日のタスクを自動通知するため、朝に確認する習慣が自然につきます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          TaskraとAsana・Notionを比べるとどう違いますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Taskraは「シンプル × 実用性」を掲げ、個人・小チーム向けに設計されています。Asanaは大規模チーム向けで高機能ですが月額約1,500円〜と価格が高く、設定の学習コストもあります。Taskraはフリーから月額480円〜で始められ、設定は最短数分です。NotionはWiki・ドキュメント管理が中心で、タスク管理には別途データベース設計が必要です。Taskraはタスク管理に特化しており、ガントチャートや期限管理が最初から使える状態で提供されます。最も大きな違いはLINE連携とAIアシスタントの組み合わせで、日常のLINEからシームレスにタスク操作できる点は他ツールにはない強みです。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          タスク管理ツールの選び方を教えてください
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>タスク管理ツールを選ぶ際は、①利用人数（個人か複数人か）②必要な機能（ガントチャート・カンバン・期限管理・LINE連携など）③価格帯④使用端末（PC・スマホ中心か）⑤連携したい外部ツールを基準に検討しましょう。個人でシンプルに使いたい場合はフリープランのあるツールから試すのが最善です。チームで使う場合は、コメント機能や担当者設定があるかが重要です。Taskraはフリーで始めて、チームが拡大したり機能が必要になったら有料プランへ移行できる設計になっています。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          チームでTaskraを使うにはどうすればいいですか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Taskraでチームを利用するにはスタンダードプラン以上が必要です。プロジェクトを作成し、メールアドレスでメンバーを招待するだけで共有できます。招待されたメンバーはタスクの参照・編集、コメントのやり取りが可能になります。タスク内コメント機能を使えば、Slackやメールに頼らず、タスクに紐づいた形で会話でき、情報が散らばりません。チームが使い始めた後も、AIアシスタントがプロジェクト全体の抜け漏れチェックをサポートします。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          スマートフォン・タブレットでも使えますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>はい、TaskraはPWA（プログレッシブWebアプリ）に対応しており、iOS・Android・iPadなどのブラウザから利用できます。ホーム画面に追加することでアプリのように快適に動作します。PC・スマートフォン間でリアルタイムに同期されるため、外出先でスマホでタスクを追加し、帰宅後にPCのガントチャートで確認するといった使い方も可能です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          繰り返しタスク機能はありますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>はい、スタンダードプラン以上で繰り返しタスク機能を利用できます。毎日・毎週・毎月など定期的に発生するタスクを一度設定すれば、自動的にタスクが生成されます。週次ミーティングの準備、月次レポートの作成、定期的なクライアントへの連絡など、定型業務の管理に活躍します。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          セキュリティは大丈夫ですか？個人情報は守られますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応のPostgreSQL）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細は<a href="privacy.html" style="color:var(--primary);">プライバシーポリシー</a>ページをご確認ください。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       <div class="faq-item">
         <button class="faq-q">
@@ -1678,66 +2058,6 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
         </button>
         <div class="faq-a">
           <p>TaskraのLINE連携は、LINEの公式アカウントに話しかけるだけでタスクを操作できる機能です。「今日のタスクは？」と送ると本日の担当タスク一覧が返信されます。「〇〇をする」でタスクを追加し、「〇〇完了」でステータスを完了に変更できます。また毎朝8時に、その日が期限・開始日のタスクをLINEで自動通知します。アプリを起動する手間なく、移動中や会議の合間にもタスク管理が可能です。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          タスク管理ツールはどのように選べばよいですか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>タスク管理ツールを選ぶ際は、主に①利用人数（個人か複数人か）②必要な機能（ガントチャート・カンバン・期限管理など）③価格帯④使用端末（PC・スマホ）⑤連携したい外部ツールを基準に検討しましょう。個人でシンプルに使いたい場合はフリープランのあるツールから試すのが最善です。Taskraはフリーで始めて、チームが増えたり機能が必要になったら有料プランへ移行できる設計になっています。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          チームでTaskraを使うにはどうすればいいですか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>Taskraでチームを利用するにはスタンダードプラン以上が必要です。プロジェクトを作成し、メールアドレスでメンバーを招待するだけで共有できます。招待されたメンバーはタスクの参照・編集、コメントのやり取りが可能になります。タスク内コメント機能を使えば、チャットツールに頼らず、タスクに紐づいた形で会話でき、情報が散らばりません。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          スマートフォンやタブレットでも使えますか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>はい、TaskraはPWA（プログレッシブWebアプリ）に対応しており、iOS・Android・iPadなど様々なデバイスのブラウザから利用できます。ホーム画面に追加することでアプリのように快適に使えます。PC・スマートフォン間でリアルタイムに同期されるため、外出先でスマホでタスクを追加し、帰宅後にPCで確認するといった使い方も可能です。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          AIアシスタント機能はどのように活用できますか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>TaskraのAIアシスタントは、タスクの整理・優先度付け・次のアクション提案などを支援します。「このプロジェクトで抜けているタスクはないか」「今週中に完了すべき優先タスクを教えて」といった形で自然言語で質問できます。フリープランでは月20回、スタンダードプランで月100回、プレミアムプランで月500回利用可能です。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          繰り返しタスク機能はありますか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>はい、スタンダードプラン以上で繰り返しタスク機能を利用できます。毎日・毎週・毎月など定期的に発生するタスクを一度設定すれば、自動的にタスクが生成されます。週次ミーティングの準備、月次レポートの作成、定期的なクライアントへの連絡など、定型業務の管理に活躍します。</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          セキュリティは大丈夫ですか？個人情報は守られますか？
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <p>TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細は<a href="privacy.html" style="color:var(--primary);">プライバシーポリシー</a>ページをご確認ください。</p>
         </div>
       </div>
 
