@@ -1,0 +1,30 @@
+# === 秘匿情報：絶対にコミットしない ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+serviceAccount*.json
+secrets.json
+
+# === 依存関係 ===
+node_modules/
+
+# === バックアップ・一時ファイル ===
+*.bak
+*.tmp
+*.log
+*~
+
+# === OS・エディタ ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# === Claude Code のローカル設定 ===
+.claude/
