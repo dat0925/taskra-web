@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taskra – ビジネスをスマートに、タスクらくらく</title>
-<meta name="description" content="Taskraは、ダッシュボード・ガントチャート・コメント機能を備えたタスク管理アプリです。個人からチームまで、仕事を確実に前に進めます。">
+<meta name="description" content="Taskraは、ダッシュボード・ガントチャート・コメント・ファイル添付を備えたタスク管理アプリです。資料もタスクに集約でき、個人からチームまで仕事を確実に前に進めます。">
 <meta property="og:title" content="Taskra – ビジネスをスマートに、タスクらくらく">
-<meta property="og:description" content="ガントチャート・コメント・AIを搭載したシンプルなタスク管理アプリ。無料で今すぐ始められます。">
+<meta property="og:description" content="ガントチャート・コメント・ファイル添付・AIを搭載したシンプルなタスク管理アプリ。無料で今すぐ始められます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taskra.jp">
 <meta property="og:image" content="https://taskra.jp/hero.png">
@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://taskra.jp/hero.png">
 <meta name="twitter:title" content="Taskra – ビジネスをスマートに、タスクらくらく">
-<meta name="twitter:description" content="ガントチャート・コメント・AIを搭載したシンプルなタスク管理アプリ。無料で今すぐ始められます。">
+<meta name="twitter:description" content="ガントチャート・コメント・ファイル添付・AIを搭載したシンプルなタスク管理アプリ。無料で今すぐ始められます。">
 
 <!-- 構造化データ（JSON-LD） -->
 <script type="application/ld+json">
@@ -26,14 +26,17 @@
   "url": "https://taskra.jp",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web, iOS, Android",
-  "description": "Taskraは、ダッシュボード・ガントチャート・タスク内コメント・AIアシスタント・LINE連携を備えた日本語対応のタスク管理アプリです。個人から小チームまで、シンプルな操作で仕事を前に進められます。",
+  "description": "Taskraは、ダッシュボード・ガントチャート・タスク内コメント・ファイル添付・AIアシスタント・LINE連携を備えた日本語対応のタスク管理アプリです。機密情報は本人以外が復号できないエンドツーエンド暗号化のシークレットメモに保存できます。個人から小チームまで、シンプルな操作で仕事を前に進められます。",
   "screenshot": "https://taskra.jp/hero.png",
   "featureList": [
     "ダッシュボードで今日のタスクを一覧確認",
     "ガントチャートによるプロジェクトスケジュール管理",
     "タスク内コメント・チャット機能",
+    "タスク・ノートへの画像/ファイル添付（画像・PDF・Word・Excel・PowerPoint・ZIP、1件25MBまで、チーム共有対応）",
+    "エンドツーエンド暗号化のシークレットメモ（本人以外は運営者も復号不可・全プラン利用可）",
     "LINE連携による自然言語タスク操作",
     "AIアシスタントによるタスク提案",
+    "資料からのAI起票（メール本文・Word・Excel・PowerPoint・PDF・写真を解析してタスク化）",
     "繰り返しタスクの設定",
     "Google OAuth認証",
     "チーム共有・メンバー招待"
@@ -52,7 +55,7 @@
       "price": "480",
       "priceCurrency": "JPY",
       "billingIncrement": "P1M",
-      "description": "タスク・プロジェクト無制限。ガントチャート・チーム共有・繰り返しタスク対応"
+      "description": "タスク・プロジェクト無制限。ガントチャート・チーム共有・ファイル添付（1件25MBまで）・繰り返しタスク対応"
     },
     {
       "@type": "Offer",
@@ -60,7 +63,7 @@
       "price": "780",
       "priceCurrency": "JPY",
       "billingIncrement": "P1M",
-      "description": "ノート無制限・AIアシスタント月400回・優先サポート付き"
+      "description": "ノート無制限・AIアシスタント月400回・資料からのAI起票（Word/Excel/PDF/写真の解析）月30回・ファイル添付・優先サポート付き"
     }
   ],
   "publisher": {
@@ -131,6 +134,22 @@
     },
     {
       "@type": "Question",
+      "name": "タスクにファイルや画像を添付できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。タスクの詳細画面とノートに、画像・PDF・Word・Excel・PowerPoint・テキスト・CSV・ZIPを添付できます。スマートフォンで撮影した写真もその場で添付でき、1ファイルあたり25MBまで対応しています。共有プロジェクトのタスクに添付したファイルはチームメンバーも閲覧・ダウンロードできます（ノートへの添付は本人のみの閲覧です）。添付の追加はスタンダードプラン（月額480円）以上の機能ですが、閲覧・ダウンロードは全プランで可能なため、チームにフリープランのメンバーがいても共有された資料をそのまま開けます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "シークレットメモとは何ですか？運営者に中身を見られませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "シークレットメモは、タスクやノートの中に本人だけが読める情報を保存できる機能です。内容はユーザーが設定した合言葉をもとに端末内で暗号化されてから保存され、復号のための鍵がTaskraのサーバーへ送信されることはありません。そのため共有プロジェクトのメンバーはもちろん、Taskraの運営者やデータベース管理者であっても中身を読むことはできません。全プランで無料で利用できます。仕組み上、合言葉と復元コードの両方を失った場合は運営側でも復旧できないため、初回設定時に表示される復元コードは安全な場所に保管してください。シークレットメモの内容は検索・AIアシスタント・LINE通知の対象外です。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "スマートフォンやタブレットでも使えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -142,7 +161,7 @@
       "name": "AIアシスタント機能はどのように活用できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TaskraのAIアシスタントは、タスクの整理・優先度付け・次のアクション提案などを支援します。「このプロジェクトで抜けているタスクはないか」「今週中に完了すべき優先タスクを教えて」といった形で自然言語で質問できます。フリープランでは月10回、スタンダードプランで月200回、プレミアムプランで月400回利用可能です。"
+        "text": "TaskraのAIアシスタントは、タスクの整理・優先度付け・次のアクション提案などを支援します。「このプロジェクトで抜けているタスクはないか」「今週中に完了すべき優先タスクを教えて」といった形で自然言語で質問できます。フリープランでは月10回、スタンダードプランで月200回、プレミアムプランで月400回利用可能です。またプレミアムプランでは、メール本文・議事録・Word・Excel・PowerPoint・PDF・写真をAIが読み取り、対応が必要な項目だけをタスク候補として起票する機能を月30回まで利用できます。"
       }
     },
     {
@@ -158,7 +177,7 @@
       "name": "セキュリティは大丈夫ですか？個人情報は守られますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応のPostgreSQL）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細はプライバシーポリシーページをご確認ください。"
+        "text": "TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応のPostgreSQL）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。添付ファイルも非公開の保管領域に保存され、閲覧権限のあるユーザーにのみ一時的なURLを発行する方式です。さらに、特に秘匿したい情報は端末内で暗号化され運営者にも復号できないシークレットメモに保存でき、全プランで利用可能です。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細はプライバシーポリシーページをご確認ください。"
       }
     }
   ]
@@ -1190,7 +1209,11 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>安心のセキュリティ</h3>
-        <p>Google OAuth認証を採用。データは安全に管理されます。</p>
+        <p>Google OAuth認証を採用し、パスワードは保持しません。さらに、絶対に見られたくない情報は「シークレットメモ」に。あなたの合言葉で暗号化され、共有相手はもちろん運営者も中身を読めません。</p>
+        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="background:#ede9fe;color:#7048e8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">エンドツーエンド暗号化</span>
+          <span style="background:#ede9fe;color:#7048e8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">全プランで利用可</span>
+        </div>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-icon" style="background:linear-gradient(135deg,#e8f4fd,#dbeafe);">
@@ -1215,6 +1238,18 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
         </div>
       </div>
       <div class="feature-card fade-in">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#f3f0ff,#e5dbff);">
+          <svg viewBox="0 0 24 24" style="stroke:#7048e8;"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+        </div>
+        <h3>資料は、タスクの中に</h3>
+        <p>提案書・見積書・スクリーンショット・現場写真を、タスクやノートにそのまま添付。資料を探してメールやチャットを遡る時間がなくなります。共有プロジェクトなら、チームの誰が開いても同じ資料が同じ場所にあります。</p>
+        <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="background:#e5dbff;color:#7048e8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">画像・PDF・Office</span>
+          <span style="background:#e5dbff;color:#7048e8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">チームで共有</span>
+        </div>
+        <p style="margin-top:10px;font-size:12px;color:var(--text-muted);line-height:1.6;">添付の追加はスタンダードプラン（¥480/月）以上。閲覧・ダウンロードは全プランで可能です。</p>
+      </div>
+      <div class="feature-card fade-in">
         <div class="feature-icon" style="background:linear-gradient(135deg,#fef9ec,#fef3c7);">
           <svg viewBox="0 0 24 24" style="stroke:#d97706;"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 16h7M17.5 13v7"/></svg>
         </div>
@@ -1235,7 +1270,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
     <div class="fade-in" style="text-align:center;margin-bottom:64px;">
       <div class="section-label">チームで使う</div>
       <h2 class="section-title">仕事は、チームで<br>前に進む</h2>
-      <p class="section-desc" style="margin:0 auto;">チームを作ってタスクを共有。コメントでそのまま会話できるから、情報が散らばりません。</p>
+      <p class="section-desc" style="margin:0 auto;">チームを作ってタスクを共有。コメントでそのまま会話でき、資料もタスクに添付できるから、情報が散らばりません。</p>
     </div>
 
     <!-- 3-col feature strip -->
@@ -1278,6 +1313,18 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
         <span style="font-size:15px;font-weight:700;color:var(--text);flex:1;">新機能のUI仕様レビュー</span>
         <span style="font-size:11px;font-weight:700;background:#fff0f0;color:#e03131;padding:3px 10px;border-radius:100px;">高優先度</span>
         <span style="font-size:12px;color:var(--text-muted);">明日まで</span>
+      </div>
+      <!-- attachments -->
+      <div style="padding:14px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:800;color:var(--text-muted);letter-spacing:.5px;flex-shrink:0;">添付</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#f7f8fc;border:1px solid var(--border);border-radius:9px;padding:6px 11px;font-size:12px;font-weight:600;color:var(--text-sub);">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#e03131" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          UI仕様書_v3.pdf
+        </span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#f7f8fc;border:1px solid var(--border);border-radius:9px;padding:6px 11px;font-size:12px;font-weight:600;color:var(--text-sub);">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1971c2" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          モバイル画面.png
+        </span>
       </div>
       <!-- comments -->
       <div style="padding:20px 28px;display:flex;flex-direction:column;gap:16px;">
@@ -1536,6 +1583,15 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
               <p>「来週の準備タスクをまとめて」と話すだけで、関連タスクをグループ化・整理した提案が返ってきます。</p>
             </div>
           </div>
+          <div class="ai-scene">
+            <div class="ai-scene-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            </div>
+            <div class="ai-scene-text">
+              <h4>資料から、まとめて起票 <span style="font-size:11px;font-weight:700;color:#c4b5fd;border:1px solid rgba(196,181,253,0.4);border-radius:100px;padding:1px 8px;margin-left:6px;vertical-align:middle;">プレミアム</span></h4>
+              <p>議事録・メールの本文・Excelの依頼一覧・ホワイトボードの写真を渡すだけ。AIが読み取って、対応が必要な項目だけをタスクの候補にします（Word・Excel・PowerPoint・PDF・写真に対応／月30回まで）。</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1672,7 +1728,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
       <div class="use-case-card fade-in">
         <span class="use-case-emoji">📱</span>
         <h3>移動・外回りが多いビジネスパーソン</h3>
-        <p>営業・現場担当者がLINEから「商談完了」「○○に電話」をその場で操作。帰社後に改めてアプリを開かなくても、タスクが自動で更新されています。</p>
+        <p>営業・現場担当者がLINEから「商談完了」「○○に電話」をその場で操作。撮影した現場写真や受け取った資料もその場でタスクに添付できるので、帰社後に改めて整理し直す必要がありません。</p>
       </div>
       <div class="use-case-card fade-in">
         <span class="use-case-emoji">📋</span>
@@ -1761,6 +1817,13 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             <td class="hl-col"><span class="cmp-yes">✓</span></td>
             <td><span class="cmp-partial">有料オプション</span></td>
             <td><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>機密メモの暗号化<br><span style="font-size:11px;color:var(--text-muted);font-weight:400;">本人以外は運営者も復号不可</span></td>
+            <td class="hl-col"><span class="cmp-yes">✓（全プラン）</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-no">✗</span></td>
             <td><span class="cmp-no">✗</span></td>
           </tr>
           <tr>
@@ -1875,10 +1938,28 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
             <td><span class="feat-yes">✓</span></td>
           </tr>
           <tr>
+            <td>ファイル・画像添付<br><span style="font-size:11px;color:var(--text-muted);font-weight:400;">画像・PDF・Office・zip</span></td>
+            <td><span style="font-size:12px;color:var(--text-sub);">閲覧・DLのみ</span></td>
+            <td><span class="feat-yes">✓</span><br><span style="font-size:11px;color:var(--text-muted);">25MB/件</span></td>
+            <td><span class="feat-yes">✓</span><br><span style="font-size:11px;color:var(--text-muted);">25MB/件</span></td>
+          </tr>
+          <tr>
+            <td>シークレットメモ<br><span style="font-size:11px;color:var(--text-muted);font-weight:400;">本人だけが読める暗号化メモ</span></td>
+            <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
+            <td><span class="feat-yes">✓</span></td>
+          </tr>
+          <tr>
             <td>AIアシスタント</td>
             <td>10回/月</td>
             <td>200回/月</td>
             <td>400回/月</td>
+          </tr>
+          <tr>
+            <td>資料からAI起票<br><span style="font-size:11px;color:var(--text-muted);font-weight:400;">Word・Excel・PDF・写真を解析</span></td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-no">✗</span></td>
+            <td><span class="feat-yes">✓</span><br><span style="font-size:11px;color:var(--text-muted);">30回/月</span></td>
           </tr>
           <tr>
             <td>優先サポート</td>
@@ -1910,7 +1991,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
     <!-- FAQ intro text: provides plain-text context for AI crawlers -->
     <div class="fade-in" style="max-width:760px;margin:40px auto 0;padding:28px 32px;background:var(--bg-subtle);border:1px solid var(--border);border-radius:16px;">
       <h3 style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:12px;">Taskraとはどんなタスク管理アプリか</h3>
-      <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:12px;">Taskraは、ダッシュボード・ガントチャート・タスク内コメント・AIアシスタント・LINE連携を備えた日本語対応のタスク管理Webアプリです。Googleアカウントでログインでき、フリープランは永久無料で利用できます。個人の日々のタスク管理から、3〜20名規模の小チームのプロジェクト管理まで対応しています。</p>
+      <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:12px;">Taskraは、ダッシュボード・ガントチャート・タスク内コメント・ファイル添付・AIアシスタント・LINE連携を備えた日本語対応のタスク管理Webアプリです。Googleアカウントでログインでき、フリープランは永久無料で利用できます。個人の日々のタスク管理から、3〜20名規模の小チームのプロジェクト管理まで対応しています。</p>
       <p style="font-size:14px;color:var(--text-sub);line-height:1.85;">他のタスク管理ツール（Asana・Notion・Trello）と最も異なる点は、<strong>LINE連携</strong>と<strong>AIアシスタント</strong>の組み合わせです。LINEに話しかけるだけでタスクを追加・完了・確認でき、AIが優先度提案や抜け漏れチェックを行います。月額480円〜というシンプルな価格体系も特徴です。</p>
     </div>
 
@@ -1942,7 +2023,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          <p>TaskraのAIアシスタントは、タスク一覧・期限・優先度を把握した上で、以下のような支援を行います。①「今週中に終わらせるべきタスクは？」への優先度提案、②「このプロジェクトで抜けているタスクはないか」の漏れチェック、③「今日中に終わるか？」という工数見積もり支援、④「来週の準備タスクをまとめて」という自然言語でのタスク整理。単なるQ&Aではなく、あなたのタスク情報を文脈として理解した上で回答するため、汎用的なAIチャットよりも実務的な提案が得られます。フリープランでは月10回、スタンダードプランで月200回、プレミアムプランで月400回利用可能です。</p>
+          <p>TaskraのAIアシスタントは、タスク一覧・期限・優先度を把握した上で、以下のような支援を行います。①「今週中に終わらせるべきタスクは？」への優先度提案、②「このプロジェクトで抜けているタスクはないか」の漏れチェック、③「今日中に終わるか？」という工数見積もり支援、④「来週の準備タスクをまとめて」という自然言語でのタスク整理、⑤メール本文・議事録・Word・Excel・PowerPoint・PDF・写真を読み取って対応が必要な項目だけをタスク候補にする「資料からの起票」（プレミアムプラン限定・月30回）。単なるQ&Aではなく、あなたのタスク情報を文脈として理解した上で回答するため、汎用的なAIチャットよりも実務的な提案が得られます。フリープランでは月10回、スタンダードプランで月200回、プレミアムプランで月400回利用可能です。</p>
         </div>
       </div>
 
@@ -1988,6 +2069,26 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
 
       <div class="faq-item">
         <button class="faq-q">
+          タスクにファイルや画像を添付できますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>はい。タスクの詳細画面とノートに、画像・PDF・Word・Excel・PowerPoint・テキスト・CSV・ZIPを添付できます。スマートフォンならその場で撮影した写真も添付でき、現場写真やホワイトボードの記録をタスクに紐づけて残せます。1ファイルあたり25MBまでです。共有プロジェクトのタスクに添付したファイルはチームメンバーも閲覧・ダウンロードできるため、「あの資料どこ？」とメールやチャットを遡る必要がなくなります（ノートへの添付はご本人のみの閲覧です）。<strong>添付の追加はスタンダードプラン以上</strong>の機能ですが、<strong>閲覧・ダウンロードは全プランで可能</strong>です。チームにフリープランのメンバーがいても、共有された資料はそのまま開けます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          シークレットメモとは何ですか？運営者に中身を見られませんか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>シークレットメモは、タスクやノートの中に「あなただけが読める」情報を保存できる機能です。取引先から預かったIDや共有アカウントの情報など、タスクの本文には書きたくない内容を想定しています。内容はご自身で設定した合言葉をもとに<strong>お使いの端末の中で暗号化</strong>されてから保存され、暗号を解く鍵がTaskraのサーバーに送られることはありません。そのため、共有プロジェクトのメンバーはもちろん、<strong>Taskraの運営者やデータベースの管理者であっても中身を読むことはできません</strong>。全プランで無料でご利用いただけます。<br><br>この仕組み上、<strong>合言葉と復元コードの両方を失うと、運営側でも復旧できません</strong>。初回設定時に表示される復元コードは、必ず安全な場所に保管してください。なお、シークレットメモの内容は検索・AIアシスタント・LINE通知の対象外です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
           スマートフォン・タブレットでも使えますか？
           <span class="faq-icon">+</span>
         </button>
@@ -2012,7 +2113,7 @@ footer { background: var(--text); color: rgba(255,255,255,0.7); }
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          <p>TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応のPostgreSQL）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細は<a href="privacy.html" style="color:var(--primary);">プライバシーポリシー</a>ページをご確認ください。</p>
+          <p>TaskraはGoogle OAuth認証を採用しており、パスワードを直接管理しません。バックエンドにはSupabase（行レベルセキュリティ対応のPostgreSQL）を使用し、ユーザーは自分のデータにのみアクセスできる仕組みです。添付ファイルも非公開の保管領域に保存され、閲覧権限のある方だけに一時的なURLを発行する方式をとっています。さらに、特に見られたくない情報については、端末内で暗号化され運営者にも復号できない「シークレットメモ」を全プランでご利用いただけます。プライバシーポリシーを公開しており、収集するデータと利用目的を明示しています。詳細は<a href="privacy.html" style="color:var(--primary);">プライバシーポリシー</a>ページをご確認ください。</p>
         </div>
       </div>
 
