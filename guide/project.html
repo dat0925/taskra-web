@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクトの使い方 – 並び順が「次にやること」を決める | Taskra 使い方ガイド</title>
+<meta name="description" content="Taskraのプロジェクト画面は、案件ごとのタスク一覧です。ここでの並び順がそのままNextビューに出るタスクを決めます。並び替えの基準、セクション、チーム共有について説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/project.html">
+<meta property="og:title" content="プロジェクトの使い方 – 並び順が「次にやること」を決める">
+<meta property="og:description" content="案件ごとのタスク一覧。ここでの並び順が Next に出るタスクを決めます。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/project.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/project.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/project.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "プロジェクト",
+      "item": "https://taskra.jp/guide/project.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "プロジェクトの並び順を変えたら、Nextの順番も変わりました。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仕様どおりです。Nextの行の順番は、サイドバーに並んでいるプロジェクトの順番と同じになります。先に進めたい案件をサイドバーの上に置いてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "並び替えを「期限順」にしたら、期限切れのタスクが最後に来ました。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "期限が未設定のタスクを最後に送る仕組みのため、基準によっては直感と違う並びになることがあります。着手する順番を自分で決めたい場合は「手動の並び順」をおすすめします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "プロジェクトを削除するとタスクはどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "配下のタスクも一緒に削除されます。一時的に見えなくしたいだけなら、削除ではなく非表示にしてください。タスクは残ったまま、NextやReviewから外れます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "セクションを作ると Next に出るタスクは変わりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "変わりません。セクションは見出しなので、リスト全体でいちばん上にあるタスクが Next に出ます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "フリープランでいくつまでプロジェクトを作れますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "フリープランは10件までです。それ以上を使う場合はスタンダードプラン以上をご検討ください。非表示にしたプロジェクトも件数には含まれるため、本当に不要なものは削除してください。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html" class="is-current"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>プロジェクト</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+      プロジェクト
+    </span>
+
+    <h1>プロジェクトの使い方<br>― 並び順が「次にやること」を決める</h1>
+
+    <p class="g-lead">
+      プロジェクトは、ひとつの案件に属するタスクをまとめた一覧です。ただの入れ物に見えますが、<strong>Taskraでいちばん設計を効かせられる画面</strong>でもあります。ここでの<strong>並び順の先頭</strong>が、そのまま<a href="/guide/next.html">Nextビュー</a>に出てくるタスクになるからです。「次に何をやるか」は、この画面で決まります。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>案件ごとにタスクをまとめて、そこだけに集中できる</li>
+        <li>ドラッグで並べ替えて、着手する順番を自分で決められる</li>
+        <li>並び替えの基準を、手動・優先度・期限から選べる</li>
+        <li>セクションで工程やフェーズごとに区切れる</li>
+        <li>チームで共有して、担当者を割り当てられる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/project.jpg" alt="Taskraのプロジェクト画面。Webサイトリニューアルのタスクが4件並び、サイドバーにはプロジェクトとタグの一覧が表示されている" width="1568" height="697">
+      <span class="pin" style="left:12.1%;top:20.8%">1</span>
+      <span class="pin" style="left:26%;top:18.2%">2</span>
+      <span class="pin" style="left:25.5%;top:24.8%">3</span>
+      <span class="pin" style="left:4%;top:48.5%">4</span>
+    </figure>
+    <p class="shot-cap">サイドバーの「ビュー」を折りたたむと、プロジェクトとタグの一覧が広く使えます。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>ドラッグハンドル。</b>ここをつまんでプロジェクト自体を並べ替えます。<b>この順番が Next ビューの行の順番になります。</b></span></li>
+      <li><span class="n">2</span><span><b>フィルタ行のボタン。</b>並び替えの基準を変えたり、このプロジェクトだけの<a href="/guide/gantt.html">ガントチャート</a>を開いたりできます。</span></li>
+      <li><span class="n">3</span><span><b>いちばん上のタスク。</b>これが Next に表示される1件です。順番を変えたいときは、このリストの中でタスクをドラッグします。</span></li>
+      <li><span class="n">4</span><span><b>チームで共有しているプロジェクトは、別のセクションに並びます。</b>メンバーのアイコンと招待リンクもここにあります。</span></li>
+    </ul>
+
+    <h2>仕組み：並び替えの基準が「先頭」を決める</h2>
+    <p>「先頭のタスク」と言っても、何を基準に並べるかで中身は変わります。Taskraでは<strong>手動の並び順・優先度順・期限順</strong>の3つから選べます。選んだ基準がそのまま Next の出力に効きます。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 312" role="img" aria-labelledby="svgt-11 svgd-11" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-11">並び替えの基準とNextに出るタスクの関係</title>
+        <desc id="svgd-11">同じ3件のタスクでも、手動の並び順・優先度順・期限順のどれを選ぶかで先頭のタスクが変わり、Nextビューに出るタスクも変わることを示した図。</desc>
+        <defs><marker id="ah-pj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">同じ3件でも、並び替えの基準を変えると先頭が変わる</text>
+        <text x="0" y="46" font-size="11.5" font-weight="700" fill="#4f46e5">手動の並び順</text>
+        <rect x="0" y="58" width="240" height="36" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="12" y="80" font-size="10.5" fill="#3730a3">現行サイトの課題を洗い出す</text>
+        <rect x="0" y="102" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="12" y="124" font-size="10.5" fill="#9ca3af">ワイヤーフレームを作成する</text>
+        <rect x="0" y="146" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="12" y="168" font-size="10.5" fill="#9ca3af">デザイン案をレビューする</text>
+        <line x1="120" y1="196" x2="120" y2="226" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-pj)"/>
+        <rect x="0" y="234" width="240" height="40" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="12" y="250" font-size="10" fill="#9ca3af">Next に出るのは</text>
+        <text x="12" y="266" font-size="10.5" font-weight="600" fill="#4f46e5">現行サイトの課題を洗い出す</text>
+        <text x="260" y="46" font-size="11.5" font-weight="700" fill="#8b5cf6">優先度順</text>
+        <rect x="260" y="58" width="240" height="36" rx="8" fill="#eef2ff" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="272" y="80" font-size="10.5" fill="#3730a3">現行サイトの課題を洗い出す</text>
+        <text x="488" y="80" font-size="9.5" fill="#9ca3af" text-anchor="end">高</text>
+        <rect x="260" y="102" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="272" y="124" font-size="10.5" fill="#9ca3af">ワイヤーフレームを作成する</text>
+        <text x="488" y="124" font-size="9.5" fill="#9ca3af" text-anchor="end">中</text>
+        <rect x="260" y="146" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="272" y="168" font-size="10.5" fill="#9ca3af">デザイン案をレビューする</text>
+        <text x="488" y="168" font-size="9.5" fill="#9ca3af" text-anchor="end">—</text>
+        <line x1="380" y1="196" x2="380" y2="226" stroke="#8b5cf6" stroke-width="2" marker-end="url(#ah-pj)"/>
+        <rect x="260" y="234" width="240" height="40" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="272" y="250" font-size="10" fill="#9ca3af">Next に出るのは</text>
+        <text x="272" y="266" font-size="10.5" font-weight="600" fill="#8b5cf6">現行サイトの課題を洗い出す</text>
+        <text x="520" y="46" font-size="11.5" font-weight="700" fill="#10b981">期限順</text>
+        <rect x="520" y="58" width="240" height="36" rx="8" fill="#eef2ff" stroke="#10b981" stroke-width="1.5"/>
+        <text x="532" y="80" font-size="10.5" fill="#3730a3">ワイヤーフレームを作成する</text>
+        <text x="748" y="80" font-size="9.5" fill="#9ca3af" text-anchor="end">9/6</text>
+        <rect x="520" y="102" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="532" y="124" font-size="10.5" fill="#9ca3af">デザイン案をレビューする</text>
+        <text x="748" y="124" font-size="9.5" fill="#9ca3af" text-anchor="end">9/10</text>
+        <rect x="520" y="146" width="240" height="36" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="532" y="168" font-size="10.5" fill="#9ca3af">現行サイトの課題を洗い出す</text>
+        <text x="748" y="168" font-size="9.5" fill="#9ca3af" text-anchor="end">9/4</text>
+        <line x1="640" y1="196" x2="640" y2="226" stroke="#10b981" stroke-width="2" marker-end="url(#ah-pj)"/>
+        <rect x="520" y="234" width="240" height="40" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
+        <text x="532" y="250" font-size="10" fill="#9ca3af">Next に出るのは</text>
+        <text x="532" y="266" font-size="10.5" font-weight="600" fill="#10b981">ワイヤーフレームを作成する</text>
+        <text x="0" y="300" font-size="11" fill="#6b7280">「期限順」では期限切れ（9/4）が最後に来ます。期限が未設定・過ぎたものの扱いが基準ごとに違うためです。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">基準はプロジェクトごとではなく、アプリ全体の設定として切り替わります。</p>
+    <p>おすすめは<strong>手動の並び順</strong>です。優先度順や期限順は自動で決まるぶん楽ですが、「重要度は低いが先に片付けたほうが後が楽になる」といった段取りを表現できません。手動なら、その判断をそのまま順番として残せます。</p>
+
+    <h2>セクションで工程に区切る</h2>
+    <p>タスクが増えてきたら、セクションで区切ると見通しが良くなります。「調査」「設計」「実装」「確認」のように工程で分ける使い方が分かりやすいです。</p><p>セクションはあくまで見出しなので、<strong>Next に出るタスクの判定には影響しません</strong>。どのセクションにあっても、リスト全体でいちばん上のタスクが Next に出ます。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>プロジェクトを作る。</b>サイドバー下部の「＋ プロジェクトを追加」から作ります。色を付けておくと、他のビューでチップの色として使われて見分けやすくなります。</li>
+      <li><b>タスクを並べる。</b>やる順番にドラッグして並べます。このとき考えるのは重要度ではなく<b>着手できる順番</b>です。</li>
+      <li><b>先頭を意識する。</b>いちばん上のタスクが Next に出ます。「これを次にやる」と言えるものを先頭に置いてください。</li>
+      <li><b>使わなくなったら非表示にする。</b>プロジェクトの「⋯」から「🙈 非表示にする」を選ぶと、Next からも Review からもガントチャートからも外れ、サイドバーの「非表示」欄にたたまれます。削除ではないので後から戻せます。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>選択したタスクをまとめて先頭へ移せます。</b>フィルタ行の「一括」で選択モードにしてタスクを選び、「⬆️ 最上部へ」を押すと、まとめてリストの先頭に移動します。「今週はこの3件をやる」と決めたときに便利です。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>プロジェクト画面に表示されるもの</h3>
+      <ul>
+        <li>選択したプロジェクトに属するタスク</li>
+        <li>セクションを作ると、その見出しごとに分かれて表示</li>
+        <li>並び替えの基準は 手動の並び順／優先度順／期限順 から選択</li>
+        <li>サブタスクは親タスクの下にたたまれ、展開して表示</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>プロジェクトの並び順を変えたら、Nextの順番も変わりました。</summary>
+        <p>仕様どおりです。Nextの行の順番は、サイドバーに並んでいるプロジェクトの順番と同じになります。先に進めたい案件をサイドバーの上に置いてください。</p>
+      </details>
+      <details>
+        <summary>並び替えを「期限順」にしたら、期限切れのタスクが最後に来ました。</summary>
+        <p>期限が未設定のタスクを最後に送る仕組みのため、基準によっては直感と違う並びになることがあります。着手する順番を自分で決めたい場合は「手動の並び順」をおすすめします。</p>
+      </details>
+      <details>
+        <summary>プロジェクトを削除するとタスクはどうなりますか？</summary>
+        <p>配下のタスクも一緒に削除されます。一時的に見えなくしたいだけなら、削除ではなく<b>非表示</b>にしてください。タスクは残ったまま、NextやReviewから外れます。</p>
+      </details>
+      <details>
+        <summary>セクションを作ると Next に出るタスクは変わりますか？</summary>
+        <p>変わりません。セクションは見出しなので、リスト全体でいちばん上にあるタスクが Next に出ます。</p>
+      </details>
+      <details>
+        <summary>フリープランでいくつまでプロジェクトを作れますか？</summary>
+        <p>フリープランは10件までです。それ以上を使う場合はスタンダードプラン以上をご検討ください。<b>非表示にしたプロジェクトも件数には含まれる</b>ため、本当に不要なものは削除してください。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/next.html">
+        <span class="t">Next</span>
+        <span class="d">各プロジェクトの「次の1件」だけを抜き出した一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/gantt.html">
+        <span class="t">Gantt</span>
+        <span class="d">プロジェクトの期間を横棒で可視化。</span>
+      </a>
+      <a class="g-card" href="/guide/assigned.html">
+        <span class="t">Assigned</span>
+        <span class="d">チームの中で自分が担当になっているタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/review.html">
+        <span class="t">Review</span>
+        <span class="d">期限切れ・停滞・レビュー時期をまとめて点検。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>プロジェクトを作ってみる</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

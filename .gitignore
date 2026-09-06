@@ -28,3 +28,7 @@ desktop.ini
 
 # === Claude Code のローカル設定 ===
 .claude/
+
+# === Python（ビルドスクリプトのキャッシュ） ===
+__pycache__/
+*.pyc

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todayの使い方 – 今日やることを1画面に集める | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのTodayビューには、期限が今日のタスクとフラグを付けたタスクが集まります。「期限が今日ではないのに出てくる」理由を、実際の画面と図解で説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/today.html">
+<meta property="og:title" content="Todayの使い方 – 今日やることを1画面に集める">
+<meta property="og:description" content="期限が今日のタスク＋フラグを付けたタスク。Taskra の Today ビューの中身を図解します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/today.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/today.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/today.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Todayビュー",
+      "item": "https://taskra.jp/guide/today.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "期限が今日ではないタスクが混ざっています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "フラグ（★）が付いているタスクです。Todayは「期限が今日」または「フラグ付き」のどちらかに当てはまるタスクを表示します。行の右側に赤い旗のアイコンが出ているかを確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "フラグを外したのに Today から消えません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "そのタスクの期限が今日になっている可能性があります。期限のチップが「今日」と出ていれば、フラグとは別の理由で表示されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Todayが毎日長くなっていきます。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "フラグを付けたまま外していないタスクがたまっている状態です。フラグは「今日やる」という一時的な印なので、終わらなかった日は外してNext の順番に戻すと、翌日のTodayが短くなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "サブタスクだけを非表示にできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "サブタスクごとに期限を設定しなければ、Todayには出てきません。期限は親タスクだけに入れて、サブタスクは手順の分解として使うと画面が短くなります。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html" class="is-current"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Todayビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Today
+    </span>
+
+    <h1>Todayの使い方<br>― 今日やることを1画面に集める</h1>
+
+    <p class="g-lead">
+      今日中に手を付けたいものが集まる画面です。入り口は<strong>2つ</strong>あります。<strong>期限日を今日にする</strong>か、<strong>フラグ（★）を付ける</strong>か。前者は「今日が締め切り」、後者は「締め切りは違うが今日やりたい」を表します。この2つが同じ画面に並ぶので、Todayは<strong>今日の作業リスト</strong>として使えます。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>今日が期限のタスクをまとめて確認できる</li>
+        <li>期限に関係なく「今日やる」と決めたタスクを、フラグで持ち込める</li>
+        <li>共有プロジェクトのタスクを表示するかどうかを切り替えられる</li>
+        <li>サブタスクも独立した行として表示されるので、細かい作業も漏らさない</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/today.jpg" alt="TaskraのTodayビュー。期限が今日のタスクとフラグを付けたタスクが合わせて5件表示されている" width="1568" height="697">
+      <span class="pin" style="left:43.6%;top:28.1%">1</span>
+      <span class="pin" style="left:36.2%;top:37.6%">2</span>
+      <span class="pin" style="left:25%;top:51.8%">3</span>
+    </figure>
+    <p class="shot-cap">1行目は期限が2日前ですが、フラグが付いているので Today に並んでいます。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>フラグ（★）。</b>これが付いていると、期限がいつであっても Today に出ます。この行は期限が2日前なので、同時に <a href="/guide/overdue.html">Overdue</a> にも並びます。</span></li>
+      <li><span class="n">2</span><span><b>期限のチップ。</b>「今日(日曜)」と出ているものが、今日が締め切りのタスクです。</span></li>
+      <li><span class="n">3</span><span><b>サブタスクも1行として並びます。</b>親タスク名が上に小さく表示されます。親と子の両方に期限が入っていると、2行とも Today に出ます。</span></li>
+    </ul>
+
+    <h2>仕組み：2つの入り口が1つの画面に合流する</h2>
+    <p>Todayは「今日」という日付だけで絞り込んでいるわけではありません。<strong>期限が今日のタスク</strong>と<strong>フラグを付けたタスク</strong>を足し合わせた結果を表示しています。両方の条件に当てはまるタスクは、1件にまとめられます。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 380" role="img" aria-labelledby="svgt-5 svgd-5" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-5">Todayビューに入るタスクの条件</title>
+        <desc id="svgd-5">期限が今日のタスクと、フラグを付けたタスクの両方がTodayビューに表示され、重複は1件にまとめられることを示した図。</desc>
+        <defs><marker id="ah-td" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">Today は「期限が今日」と「フラグ付き」の合計</text>
+        <rect x="0" y="40" width="300" height="122" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="14" y="62" font-size="11.5" font-weight="700" fill="#4f46e5">① 期限が今日のタスク</text>
+        <text x="14" y="84" font-size="11" fill="#4b5563">競合サービスを調査する</text>
+        <text x="14" y="106" font-size="11" fill="#4b5563">ワイヤーフレームを作成する</text>
+        <text x="14" y="128" font-size="11" fill="#4b5563">トップページ</text>
+        <text x="14" y="150" font-size="11" fill="#4b5563">来期の予算枠を確認する</text>
+        <rect x="0" y="178" width="300" height="100" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="14" y="200" font-size="11.5" font-weight="700" fill="#ef4444">② フラグ（★）を付けたタスク</text>
+        <text x="14" y="222" font-size="11" fill="#4b5563">現行サイトの課題を洗い出す</text>
+        <text x="14" y="244" font-size="11" fill="#4b5563">競合サービスを調査する</text>
+        <text x="14" y="266" font-size="11" fill="#4b5563">来期の予算枠を確認する</text>
+        <path d="M 308 96 C 350 96, 350 150, 388 150" fill="none" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-td)"/>
+        <path d="M 308 222 C 350 222, 350 172, 388 172" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#ah-td)"/>
+        <rect x="400" y="62" width="360" height="188" rx="10" fill="#f8fafc" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="414" y="84" font-size="11.5" font-weight="700" fill="#4f46e5">Today ビュー（5件）</text>
+        <text x="414" y="106" font-size="11" fill="#4b5563">現行サイトの課題を洗い出す</text>
+        <text x="414" y="128" font-size="11" fill="#4b5563">競合サービスを調査する</text>
+        <text x="414" y="150" font-size="11" fill="#4b5563">ワイヤーフレームを作成する</text>
+        <text x="414" y="172" font-size="11" fill="#4b5563">トップページ</text>
+        <text x="414" y="194" font-size="11" fill="#4b5563">来期の予算枠を確認する</text>
+        <rect x="0" y="292" width="760" height="76" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="314" font-size="11" fill="#4b5563">①と②の両方に当てはまるタスク（競合サービスを調査する／来期の予算枠を確認する）は、1件だけ表示されます。</text>
+        <text x="16" y="334" font-size="11" fill="#4b5563">②の「現行サイトの課題を洗い出す」は期限が2日前ですが、フラグが付いているので Today に出ます。</text>
+        <text x="16" y="354" font-size="11" fill="#4b5563">期限が今日でなくても Today に並ぶのは、このためです。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">フラグは期限を上書きしません。「期限は来週だが今日やる」を表現するための、もう一つの入り口です。</p>
+    <p>この設計のおかげで、<strong>期限を動かさずに「今日やる」と宣言できます</strong>。期限は相手との約束、フラグは自分の段取り、と分けて使うと混乱しません。</p>
+
+    <h2>Dashboardの「今日」とは中身が違う</h2>
+    <p><a href="/guide/dashboard.html">Dashboard</a> にも「今日」というセクションがありますが、こちらは<strong>期限が今日のタスクだけ</strong>です。フラグを付けただけのタスクは入りません。</p><p>Dashboardは「締め切りの確認」、Todayビューは「今日の作業リスト」と役割が分かれていると考えてください。Dashboardでフラグ付きを見たいときは、同じ画面の「フラグ付き」セクションを見ます。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>朝、Todayを開いて件数を見る。</b>今日さばける量を超えていたら、この時点で減らします。減らし方は「期限を明日にする」か「フラグを外す」かのどちらかです。</li>
+      <li><b>今日やると決めたタスクにフラグを付ける。</b><a href="/guide/next.html">Next</a> や各プロジェクトの一覧で見つけたタスクにフラグを付けると、Todayに集まります。</li>
+      <li><b>上から片付ける。</b>完了にしたタスクはその場で消え、<a href="/guide/logbook.html">Logbook</a> に移ります。</li>
+      <li><b>終わらなかったものは翌日へ送る。</b>期限を明日に引き直すか、フラグを外して <a href="/guide/next.html">Next</a> の順番に戻します。フラグを付けたまま放置すると、Todayが少しずつ長くなっていきます。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>「共有」ボタンについて。</b>チームで使っている場合、共有プロジェクトのタスクを Today に出すかどうかをこのボタンで切り替えられます。既定では表示されており、押すと自分のプロジェクトだけに絞れます。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Todayビューに表示されるもの</h3>
+      <ul>
+        <li>期限日が今日のタスク</li>
+        <li>フラグ（★）が付いたタスク（期限日は問わない）</li>
+        <li>両方に当てはまるタスクは1件だけ表示</li>
+        <li>サブタスクも独立した行として表示</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>期限が今日ではないタスクが混ざっています。</summary>
+        <p>フラグ（★）が付いているタスクです。Todayは「期限が今日」または「フラグ付き」のどちらかに当てはまるタスクを表示します。行の右側に赤い旗のアイコンが出ているかを確認してください。</p>
+      </details>
+      <details>
+        <summary>フラグを外したのに Today から消えません。</summary>
+        <p>そのタスクの期限が今日になっている可能性があります。期限のチップが「今日」と出ていれば、フラグとは別の理由で表示されています。</p>
+      </details>
+      <details>
+        <summary>Todayが毎日長くなっていきます。</summary>
+        <p>フラグを付けたまま外していないタスクがたまっている状態です。フラグは「今日やる」という一時的な印なので、終わらなかった日は外して<a href="/guide/next.html">Next</a> の順番に戻すと、翌日のTodayが短くなります。</p>
+      </details>
+      <details>
+        <summary>サブタスクだけを非表示にできますか？</summary>
+        <p>サブタスクごとに期限を設定しなければ、Todayには出てきません。期限は親タスクだけに入れて、サブタスクは手順の分解として使うと画面が短くなります。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/dashboard.html">
+        <span class="t">Dashboard</span>
+        <span class="d">期限切れ・今日・自分の担当・通知を1画面に集めた要約。</span>
+      </a>
+      <a class="g-card" href="/guide/flagged.html">
+        <span class="t">Flagged</span>
+        <span class="d">重要マーク（フラグ）を付けたタスクの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/overdue.html">
+        <span class="t">Overdue</span>
+        <span class="d">期限を過ぎてしまったタスクだけの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/next.html">
+        <span class="t">Next</span>
+        <span class="d">各プロジェクトの「次の1件」だけを抜き出した一覧。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>今日やることを整理する</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

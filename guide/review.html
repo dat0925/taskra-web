@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviewの使い方 – 週に一度、見落としを拾い直す | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのReviewビューは、期限切れ・期限のない停滞タスク・レビュー時期の来たプロジェクトを1画面にまとめます。期限を入れていないタスクの取りこぼしを防ぐための画面です。">
+<link rel="canonical" href="https://taskra.jp/guide/review.html">
+<meta property="og:title" content="Reviewの使い方 – 週に一度、見落としを拾い直す">
+<meta property="og:description" content="期限切れ・停滞タスク・レビュー時期の案件を一度に点検。週次の棚卸しのための画面です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/review.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/review.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/review.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Reviewビュー",
+      "item": "https://taskra.jp/guide/review.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「停滞タスク」に出てくる条件を教えてください。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "期限日が入っておらず、最後に編集してから7日以上たっている未完了タスクです。期限が入っているタスクは、遅れていれば「期限切れ」のほうに出ます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "レビュー期日の間隔を変えられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "プロジェクトごとに「何日ごとに見直すか」を設定できます。既定は7日です。動きの遅い案件は長めにしておくと、この一覧が静かになります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「✓ 完了」を押すと何が起きますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "表示されているプロジェクトのレビュー日が、まとめて次の期日へ送られます。タスクが完了になるわけではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アーカイブしたタスクはどこへ行きますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logbook の表示から外れますが、データは消えていません。完了タスクが増えすぎて一覧が重くなったときの整理用の機能です。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html" class="is-current"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Reviewビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      Review
+    </span>
+
+    <h1>Reviewの使い方<br>― 週に一度、見落としを拾い直す</h1>
+
+    <p class="g-lead">
+      毎日使うビューは「今どうするか」を見せてくれますが、<strong>「見えていないもの」は教えてくれません</strong>。期限を入れ忘れたタスクは <a href="/guide/overdue.html">Overdue</a> に出ませんし、動かなくなったプロジェクトは静かに沈んでいくだけです。Reviewは、そうした<strong>取りこぼしを拾うための画面</strong>です。週に一度開けば十分です。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>期限切れ・停滞タスク・レビュー時期のプロジェクトを、1画面で点検できる</li>
+        <li>期限を入れていないまま放置されたタスクを見つけられる</li>
+        <li>定期的に見直すプロジェクトを、期日が来たら自動で知らせてもらえる</li>
+        <li>古い完了タスクをまとめてアーカイブして、Logbookを軽くできる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/review.jpg" alt="TaskraのReviewビュー。期限切れ2件、停滞タスク3件、レビュー必要なプロジェクト3件が縦に並んでいる" width="1568" height="697">
+      <span class="pin" style="left:18.9%;top:22.5%">1</span>
+      <span class="pin" style="left:21.4%;top:41.5%">2</span>
+      <span class="pin" style="left:21.7%;top:64.9%">3</span>
+      <span class="pin" style="left:94%;top:13.2%">4</span>
+    </figure>
+    <p class="shot-cap">3つのカードは、それぞれ拾っている条件が違います。順番に見ていくのが週次点検です。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>期限切れ。</b><a href="/guide/overdue.html">Overdue</a> と同じ顔ぶれです。ここでは件数の確認だけして、「すべて見る →」で本体へ移動します。</span></li>
+      <li><span class="n">2</span><span><b>停滞タスク（7日以上）。</b><b>このビューでしか見つけられないのがここです。</b>期限が入っておらず、7日以上さわっていないタスクが並びます。</span></li>
+      <li><span class="n">3</span><span><b>レビュー必要なプロジェクト。</b>次回レビュー日が来た案件です。中身を確認したら右の「完了」を押すと、次の期日まで引っ込みます。</span></li>
+      <li><span class="n">4</span><span><b>✓ 完了ボタン。</b>点検を終えたときに押します。表示中のプロジェクトのレビュー日が、まとめて次の期日へ送られます。</span></li>
+    </ul>
+
+    <h2>仕組み：3つのふるいが並んでいる</h2>
+    <p>Reviewは1つの条件で絞り込んだリストではありません。<strong>まったく違う3つの条件</strong>で拾ったものを、縦に並べただけの画面です。それぞれ「何を見落としているか」の種類が違います。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 322" role="img" aria-labelledby="svgt-13 svgd-13" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-13">Reviewビューが拾う3種類のタスク</title>
+        <desc id="svgd-13">期限切れ・期限のない停滞タスク・レビュー時期の来たプロジェクトという3つの条件で、それぞれ違う見落としを拾うことを示した図。</desc>
+        <defs><marker id="ah-rv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">Review は、3つのちがう「ふるい」を1画面に並べたもの</text>
+        <rect x="0" y="36" width="240" height="216" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="16" y="60" font-size="12.5" font-weight="700" fill="#ef4444">期限切れ</text>
+        <rect x="16" y="88" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="26" y="105" font-size="10" fill="#4b5563">期限日が今日より前</text>
+        <rect x="16" y="120" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="26" y="137" font-size="10" fill="#4b5563">かつ 未完了</text>
+        <text x="16" y="166" font-size="10.5" fill="#9ca3af">拾うもの</text>
+        <text x="16" y="184" font-size="10.5" fill="#374151">約束した日を過ぎたもの</text>
+        <text x="16" y="206" font-size="10.5" fill="#9ca3af">やること</text>
+        <text x="16" y="224" font-size="10.5" font-weight="600" fill="#ef4444">期限を引き直すか、片付ける</text>
+        <rect x="260" y="36" width="240" height="216" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="276" y="60" font-size="12.5" font-weight="700" fill="#f59e0b">停滞タスク</text>
+        <rect x="276" y="88" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="286" y="105" font-size="10" fill="#4b5563">期限日が入っていない</text>
+        <rect x="276" y="120" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="286" y="137" font-size="10" fill="#4b5563">かつ 7日以上さわっていない</text>
+        <text x="276" y="166" font-size="10.5" fill="#9ca3af">拾うもの</text>
+        <text x="276" y="184" font-size="10.5" fill="#374151">忘れられているもの</text>
+        <text x="276" y="206" font-size="10.5" fill="#9ca3af">やること</text>
+        <text x="276" y="224" font-size="10.5" font-weight="600" fill="#f59e0b">期限を入れるか、捨てる</text>
+        <rect x="520" y="36" width="240" height="216" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="536" y="60" font-size="12.5" font-weight="700" fill="#4f46e5">レビュー時期の</text>
+        <text x="536" y="78" font-size="12.5" font-weight="700" fill="#4f46e5">プロジェクト</text>
+        <rect x="536" y="106" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="546" y="123" font-size="10" fill="#4b5563">次回レビュー日が来た</text>
+        <rect x="536" y="138" width="208" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="546" y="155" font-size="10" fill="#4b5563">アクティブなプロジェクト</text>
+        <text x="536" y="184" font-size="10.5" fill="#9ca3af">拾うもの</text>
+        <text x="536" y="202" font-size="10.5" fill="#374151">定期点検の時期が来た案件</text>
+        <text x="536" y="224" font-size="10.5" fill="#9ca3af">やること</text>
+        <text x="536" y="242" font-size="10.5" font-weight="600" fill="#4f46e5">中身を見て「完了」を押す</text>
+        <rect x="0" y="268" width="760" height="46" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="288" font-size="11.5" fill="#4b5563">真ん中の「停滞タスク」だけは、期限が入っていないタスクが対象です。</text>
+        <text x="16" y="306" font-size="11.5" fill="#4b5563">期限を入れていないタスクは Overdue に出ないので、ここが最後の受け皿になります。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">3つとも0件になると「見落としはありません」という状態になります。</p>
+    <p>いちばん価値があるのは真ん中の<strong>停滞タスク</strong>です。期限を入れなければ Overdue にも Today にも Forecast にも出ないので、<strong>「期限を入れない」は事実上の先送りとして機能してしまいます</strong>。Reviewはそこに気づくための唯一の入り口です。</p>
+
+    <h2>プロジェクトのレビュー期日</h2>
+    <p>プロジェクトには「何日ごとに見直すか」という設定があり、既定では7日です。期日が来ると、このビューの「レビュー必要なプロジェクト」に並びます。</p><p>やることは難しくありません。<strong>そのプロジェクトを開いて、先頭のタスクが今も正しいかを見る</strong>だけです。状況が変わっていれば順番を入れ替えます。確認できたら「完了」を押すと、次の期日まで一覧から消えます。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>週に一度、決まった曜日に開く。</b>金曜の夕方や月曜の朝など、時間を固定すると続きます。</li>
+      <li><b>期限切れを片付ける。</b>件数が多ければ<a href="/guide/overdue.html">Overdue</a> へ移って、まとめて期限を引き直します。</li>
+      <li><b>停滞タスクを1件ずつ処理する。</b>「期限を入れる」「<a href="/guide/note.html">Note</a> に移す」「削除する」のどれかを選びます。<b>そのまま残さない</b>のがコツです。</li>
+      <li><b>プロジェクトを点検して「完了」を押す。</b>各プロジェクトの先頭タスクが今も正しいかだけ確認します。</li>
+      <li><b>最後に古い完了タスクをアーカイブする。</b>画面下部で日付を指定すると、それより前に完了したタスクを一覧から外せます。データは残ります。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>アーカイブは削除ではありません。</b><a href="/guide/logbook.html">Logbook</a> の表示から外れるだけで、データは残ります。完了タスクが何百件もたまって Logbook が重くなってきたときに使ってください。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Reviewビューに表示されるもの</h3>
+      <ul>
+        <li>期限切れ：期限日が今日より前の未完了タスク（最大8件）</li>
+        <li>停滞タスク：期限日が未設定で、最終更新から7日以上経った未完了タスク（最大8件）</li>
+        <li>レビュー必要なプロジェクト：次回レビュー日が今日以前になったアクティブなプロジェクト（最大5件）</li>
+        <li>完了タスクのアーカイブ：指定した日より前に完了したタスクを一覧から外す操作</li>
+        <li>非表示にしたプロジェクトは対象外</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>「停滞タスク」に出てくる条件を教えてください。</summary>
+        <p>期限日が入っておらず、最後に編集してから7日以上たっている未完了タスクです。期限が入っているタスクは、遅れていれば「期限切れ」のほうに出ます。</p>
+      </details>
+      <details>
+        <summary>レビュー期日の間隔を変えられますか？</summary>
+        <p>プロジェクトごとに「何日ごとに見直すか」を設定できます。既定は7日です。動きの遅い案件は長めにしておくと、この一覧が静かになります。</p>
+      </details>
+      <details>
+        <summary>「✓ 完了」を押すと何が起きますか？</summary>
+        <p>表示されているプロジェクトのレビュー日が、まとめて次の期日へ送られます。タスクが完了になるわけではありません。</p>
+      </details>
+      <details>
+        <summary>アーカイブしたタスクはどこへ行きますか？</summary>
+        <p><a href="/guide/logbook.html">Logbook</a> の表示から外れますが、データは消えていません。完了タスクが増えすぎて一覧が重くなったときの整理用の機能です。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/overdue.html">
+        <span class="t">Overdue</span>
+        <span class="d">期限を過ぎてしまったタスクだけの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/logbook.html">
+        <span class="t">Logbook</span>
+        <span class="d">完了したタスクの履歴と、取り消し。</span>
+      </a>
+      <a class="g-card" href="/guide/project.html">
+        <span class="t">プロジェクト</span>
+        <span class="d">案件ごとのタスク一覧。並び順が Next を決めます。</span>
+      </a>
+      <a class="g-card" href="/guide/inbox.html">
+        <span class="t">Inbox</span>
+        <span class="d">プロジェクトをまだ決めていないタスクの置き場。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>週次レビューを習慣にする</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

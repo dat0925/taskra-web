@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flaggedの使い方 – プロジェクトをまたいで「気になる」を集める | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのFlaggedビューには、フラグ（★）を付けたタスクがプロジェクトをまたいで集まります。期限との使い分け、Todayにも出る理由、たまってしまったときの外し方を説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/flagged.html">
+<meta property="og:title" content="Flaggedの使い方 – プロジェクトをまたいで「気になる」を集める">
+<meta property="og:description" content="プロジェクトをまたいで「気になる」を集める印。フラグの使い方を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/flagged.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/flagged.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/flagged.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Flaggedビュー",
+      "item": "https://taskra.jp/guide/flagged.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "フラグを付けるとタスクが移動しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "移動しません。元のプロジェクトにあるまま、FlaggedビューとTodayビューにも表示されるようになります。フラグを外せば、その2つのビューから消えるだけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "フラグと優先度「高」は何が違いますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "優先度はタスクの性質を表す属性で、並び替えの基準にも使えます。フラグは「今このタスクを手元に置きたい」という一時的な印です。優先度が高くても今日やらないタスクにはフラグを付けない、という使い分けになります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Flaggedの件数がずっと減りません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "フラグを外す習慣がないと起こります。フラグは「今日やる」の印なので、やらなかった日は外すのが基本です。この画面の「一括」からまとめて外せます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "チームのメンバーにもフラグは見えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "見えません。フラグは自分の画面だけの印です。チームで共有したい優先度は、優先度の設定か、タスクのコメントで伝えてください。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html" class="is-current"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Flaggedビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      Flagged
+    </span>
+
+    <h1>Flaggedの使い方<br>― プロジェクトをまたいで「気になる」を集める</h1>
+
+    <p class="g-lead">
+      期限は<strong>相手との約束</strong>なので、自分の都合で動かせません。でも「今週中には見ておきたい」「気になっているので忘れたくない」といった<strong>自分の側の優先</strong>も記録したくなります。フラグ（★）はそのための印です。期限を1日も動かさずに、タスクを手元に引き寄せられます。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>プロジェクトが違うタスクを、1つの一覧にまとめられる</li>
+        <li>期限を変えずに「今日やる」と決められる（Todayにも出ます）</li>
+        <li>外せば元の場所に戻るだけなので、間違えても影響がない</li>
+        <li>サイドバーのバッジで、抱え込んでいる件数を把握できる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/flagged.jpg" alt="TaskraのFlaggedビュー。異なるプロジェクトのタスクとプロジェクト未設定のタスクが、フラグ付きとして3件並んでいる" width="1568" height="697">
+      <span class="pin" style="left:43.6%;top:28.1%">1</span>
+      <span class="pin" style="left:13.6%;top:55.5%">2</span>
+      <span class="pin" style="left:24.9%;top:54.4%">3</span>
+    </figure>
+    <p class="shot-cap">3件はそれぞれ別の場所にあるタスクです。フラグという印だけで、この画面に集まっています。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>赤い旗がフラグです。</b>タスクの行やタスク詳細から付け外しできます。付けた瞬間にこの画面と <a href="/guide/today.html">Today</a> に現れます。</span></li>
+      <li><span class="n">2</span><span><b>サイドバーのバッジ。</b>フラグを付けたままのタスクの件数です。<b>ここが二桁になっていたら、フラグが「気になるものリスト」になってしまっている合図</b>です。</span></li>
+      <li><span class="n">3</span><span><b>プロジェクト未設定のタスクも混ざります。</b>3行目にはプロジェクト名のチップがありません。<a href="/guide/inbox.html">Inbox</a> にいるタスクにもフラグは付けられます。</span></li>
+    </ul>
+
+    <h2>仕組み：フラグは場所を変えずに印を付ける</h2>
+    <p>フラグを付けても、タスクは<strong>元のプロジェクトから動きません</strong>。プロジェクトの一覧を開けば、これまでどおり同じ位置にあります。変わるのは、Flagged と Today という2つのビューにも顔を出すようになることだけです。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 314" role="img" aria-labelledby="svgt-9 svgd-9" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-9">フラグを付けたタスクの行き先</title>
+        <desc id="svgd-9">プロジェクトが違うタスクでもフラグを付けるとFlaggedビューに集まり、同時にTodayビューにも表示されることを示した図。</desc>
+        <defs><marker id="ah-fg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">フラグはビューをまたぐ「持ち上げる」ための印</text>
+        <rect x="0" y="38" width="240" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="16" cy="60" r="4.5" fill="#3b82f6"/>
+        <text x="27" y="64" font-size="11" fill="#6b7280">Webサイトリニューアル</text>
+        <rect x="16" y="74" width="208" height="28" rx="6" fill="#fef2f2" stroke="#ef4444"/>
+        <text x="26" y="93" font-size="10.5" fill="#b91c1c">🚩 現行サイトの課題を洗い出す</text>
+        <path d="M 120 118 C 120 134, 380 122, 380 136" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#ah-fg)"/>
+        <rect x="260" y="38" width="240" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="276" cy="60" r="4.5" fill="#8b5cf6"/>
+        <text x="287" y="64" font-size="11" fill="#6b7280">新サービスの企画</text>
+        <rect x="276" y="74" width="208" height="28" rx="6" fill="#fef2f2" stroke="#ef4444"/>
+        <text x="286" y="93" font-size="10.5" fill="#b91c1c">🚩 競合サービスを調査する</text>
+        <path d="M 380 118 C 380 134, 380 122, 380 136" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#ah-fg)"/>
+        <rect x="520" y="38" width="240" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="536" cy="60" r="4.5" fill="#6b7280"/>
+        <text x="547" y="64" font-size="11" fill="#6b7280">Inbox（PJ未設定）</text>
+        <rect x="536" y="74" width="208" height="28" rx="6" fill="#fef2f2" stroke="#ef4444"/>
+        <text x="546" y="93" font-size="10.5" fill="#b91c1c">🚩 来期の予算枠を確認する</text>
+        <path d="M 640 118 C 640 134, 380 122, 380 136" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#ah-fg)"/>
+        <rect x="300" y="140" width="160" height="28" rx="14" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="380" y="159" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">★ を付けたタスク</text>
+        <path d="M 330 170 C 300 182, 240 178, 200 186" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#ah-fg)"/>
+        <path d="M 430 170 C 460 182, 520 178, 560 186" fill="none" stroke="#4f46e5" stroke-width="1.8" marker-end="url(#ah-fg)"/>
+        <rect x="30" y="192" width="330" height="112" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="46" y="214" font-size="11.5" font-weight="700" fill="#b91c1c">Flagged ビュー</text>
+        <text x="46" y="236" font-size="10.5" fill="#7f1d1d">プロジェクトの垣根を越えて</text>
+        <text x="46" y="254" font-size="10.5" fill="#7f1d1d">★を付けた3件が集まる</text>
+        <text x="46" y="284" font-size="10.5" fill="#9ca3af">「あとで必ず見る」ための置き場</text>
+        <rect x="400" y="192" width="330" height="112" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="416" y="214" font-size="11.5" font-weight="700" fill="#3730a3">Today ビュー</text>
+        <text x="416" y="236" font-size="10.5" fill="#3730a3">同じ3件が、期限が今日のタスクと</text>
+        <text x="416" y="254" font-size="10.5" fill="#3730a3">一緒に並ぶ</text>
+        <text x="416" y="284" font-size="10.5" fill="#9ca3af">「今日の作業リスト」として使う</text>
+      </svg>
+    </div>
+    <p class="figure-cap">フラグを外すと、この2つのビューから消えるだけで、タスク自体は元の場所に残ります。</p>
+    <p>この「消えない・動かない」という性質があるので、<strong>フラグは気軽に付け外しできます</strong>。間違って付けても、外せば何も残りません。期限を動かすのは相手への連絡が要りますが、フラグは自分の中だけで完結します。</p>
+
+    <h2>期限とフラグの使い分け</h2>
+    <p>2つは競合しません。<strong>期限は「いつまでに」、フラグは「いつやるか」</strong>を表します。</p><p>たとえば「来週金曜が締め切りだが、今日のうちに下書きだけ作りたい」タスクは、期限を来週金曜のまま、フラグだけを付けます。これで <a href="/guide/forecast.html">Forecast</a> のカレンダー上では来週金曜に置かれたまま、Today には今日の作業として並びます。<strong>予定は崩さず、手元にだけ引き寄せる</strong>という使い方です。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>気になったその場で付ける。</b>どのビューからでも、タスクの行から付けられます。「あとで探す」より確実です。</li>
+      <li><b>Today で作業する。</b>フラグを付けたタスクは <a href="/guide/today.html">Today</a> に集まるので、その日の作業はTodayだけを見れば済みます。</li>
+      <li><b>終わったら完了にする。</b>完了にすればフラグごと画面から消えます。</li>
+      <li><b>終わらなかったら外す。</b>これが一番大事です。フラグを付けたまま翌日に持ち越し続けると、Todayが伸びていきます。「今日はやらない」と決めたら外して、<a href="/guide/next.html">Next</a> の順番に戻します。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>フラグが増えすぎたときは。</b>この画面で「一括」を押すと選択モードになり、まとめてフラグを外せます。週の終わりに全部外して、翌週また付け直す運用にすると、フラグが「気になるものの墓場」になるのを防げます。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Flaggedビューに表示されるもの</h3>
+      <ul>
+        <li>フラグ（★）が付いたタスク</li>
+        <li>プロジェクト・期限・担当者は問わない</li>
+        <li>プロジェクト未設定（Inbox）のタスクも対象</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>フラグを付けるとタスクが移動しますか？</summary>
+        <p>移動しません。元のプロジェクトにあるまま、FlaggedビューとTodayビューにも表示されるようになります。フラグを外せば、その2つのビューから消えるだけです。</p>
+      </details>
+      <details>
+        <summary>フラグと優先度「高」は何が違いますか？</summary>
+        <p>優先度はタスクの性質を表す属性で、並び替えの基準にも使えます。フラグは「今このタスクを手元に置きたい」という一時的な印です。優先度が高くても今日やらないタスクにはフラグを付けない、という使い分けになります。</p>
+      </details>
+      <details>
+        <summary>Flaggedの件数がずっと減りません。</summary>
+        <p>フラグを外す習慣がないと起こります。フラグは「今日やる」の印なので、やらなかった日は外すのが基本です。この画面の「一括」からまとめて外せます。</p>
+      </details>
+      <details>
+        <summary>チームのメンバーにもフラグは見えますか？</summary>
+        <p>見えません。フラグは自分の画面だけの印です。チームで共有したい優先度は、優先度の設定か、タスクのコメントで伝えてください。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/today.html">
+        <span class="t">Today</span>
+        <span class="d">期限が今日のタスクと、フラグを付けたタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/next.html">
+        <span class="t">Next</span>
+        <span class="d">各プロジェクトの「次の1件」だけを抜き出した一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/tag.html">
+        <span class="t">タグ</span>
+        <span class="d">プロジェクトをまたぐ切り口でまとめて表示。</span>
+      </a>
+      <a class="g-card" href="/guide/review.html">
+        <span class="t">Review</span>
+        <span class="d">期限切れ・停滞・レビュー時期をまとめて点検。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>気になるタスクを集める</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

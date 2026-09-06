@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Searchの使い方 – タスクとノートをまとめて探す | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのSearchビューは、タスクのタイトル・メモとノートのタイトル・本文を横断して検索します。タグとの組み合わせ、完了済みタスクが出ない理由を説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/search.html">
+<meta property="og:title" content="Searchの使い方 – タスクとノートをまとめて探す">
+<meta property="og:description" content="タスクとノートを横断してキーワード検索。タグとの組み合わせも使えます。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/search.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/search.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/search.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Searchビュー",
+      "item": "https://taskra.jp/guide/search.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "検索したのに、あるはずのタスクが出てきません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完了済みのタスクは既定では検索されません。設定で「完了済みを表示」をONにしてからもう一度検索してください。アーカイブしたタスクも同様に対象外です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タグだけで絞り込みたいのですが。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Searchはキーワードを入れないと結果が出ません。タグだけで見たいときは、サイドバーのタグからそのタグを開いてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "複数のキーワードで検索できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "スペースで区切ると、すべての語を含むものが結果に出ます。絞り込みたいときに使ってください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "コメントや添付ファイルの中身も検索できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "検索されるのはタスクのタイトル・メモと、ノートのタイトル・本文です。コメントや添付ファイルの中身は対象外です。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html" class="is-current"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Searchビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Search
+    </span>
+
+    <h1>Searchの使い方<br>― タスクとノートをまとめて探す</h1>
+
+    <p class="g-lead">
+      「あの件、どこに書いたか」を思い出せないときの画面です。タスクとノートを<strong>区別せずに探せる</strong>のが特徴で、「タスクとして書いたか、メモとして書いたか」を覚えていなくても見つかります。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>タスクとノートを同時に検索できる</li>
+        <li>タイトルだけでなく、メモや本文の中身も対象になる</li>
+        <li>タグと組み合わせて、範囲を絞り込める</li>
+        <li>結果は「タスク」「ノート」に分かれて表示される</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/search.jpg" alt="TaskraのSearchビュー。「資料」で検索して、2件のタスクが見つかっている" width="1568" height="697">
+      <span class="pin" style="left:38.3%;top:3.7%">1</span>
+      <span class="pin" style="left:18%;top:23.7%">2</span>
+      <span class="pin" style="left:17.7%;top:29.0%">3</span>
+    </figure>
+    <p class="shot-cap">「資料」というキーワードが、タスクのタイトルに含まれる2件が見つかっています。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>画面上部の検索窓。</b>どのビューを開いていてもここから検索でき、入力するとSearchビューに切り替わります。</span></li>
+      <li><span class="n">2</span><span><b>タグでの絞り込み。</b>キーワードと<b>組み合わせて</b>使います。「すべて」を選んでいるあいだはタグによる絞り込みなしです。</span></li>
+      <li><span class="n">3</span><span><b>種類ごとの見出し。</b>結果は「タスク」と「ノート」に分かれます。該当がない種類の見出しは表示されません。</span></li>
+    </ul>
+
+    <h2>仕組み：4つの場所を探しにいく</h2>
+    <p>入力したキーワードは、<strong>タスクのタイトル・タスクのメモ・ノートのタイトル・ノートの本文</strong>の4ヶ所を探します。どこかに含まれていればヒットします。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 300" role="img" aria-labelledby="svgt-15 svgd-15" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-15">検索が探しにいく場所</title>
+        <desc id="svgd-15">キーワードがタスクのタイトルとメモ、ノートのタイトルと本文の4つを探し、タグを選ぶとキーワードとのAND条件で絞り込まれることを示した図。</desc>
+        <defs><marker id="ah-sc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">キーワードは4つの場所を探しにいく</text>
+        <rect x="270" y="34" width="220" height="38" rx="19" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="380" y="58" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">🔍 キーワード</text>
+        <rect x="0" y="110" width="360" height="102" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="16" y="134" font-size="12" font-weight="700" fill="#4f46e5">タスク</text>
+        <rect x="16" y="146" width="328" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="28" y="163" font-size="10.5" fill="#4b5563">タイトル を探す</text>
+        <rect x="16" y="178" width="328" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="28" y="195" font-size="10.5" fill="#4b5563">メモ を探す</text>
+        <path d="M 380 76 C 380 92, 180 92, 180 106" fill="none" stroke="#4f46e5" stroke-width="1.8" marker-end="url(#ah-sc)"/>
+        <rect x="400" y="110" width="360" height="102" rx="12" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="416" y="134" font-size="12" font-weight="700" fill="#8b5cf6">ノート</text>
+        <rect x="416" y="146" width="328" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="428" y="163" font-size="10.5" fill="#4b5563">タイトル を探す</text>
+        <rect x="416" y="178" width="328" height="26" rx="6" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="428" y="195" font-size="10.5" fill="#4b5563">本文 を探す</text>
+        <path d="M 380 76 C 380 92, 580 92, 580 106" fill="none" stroke="#8b5cf6" stroke-width="1.8" marker-end="url(#ah-sc)"/>
+        <rect x="0" y="232" width="760" height="58" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="16" y="254" font-size="11.5" font-weight="700" fill="#b45309">タグを選ぶと、キーワードとの「かつ」で絞り込まれる</text>
+        <text x="16" y="276" font-size="11" fill="#92400e">「資料」で検索 ＋ タグ「提出物」を選択 → 両方に当てはまるものだけが残る（どちらか、ではない）</text>
+      </svg>
+    </div>
+    <p class="figure-cap">タグは絞り込みなので、キーワードと足し算ではなく掛け算で効きます。</p>
+    <p>タグとの組み合わせが<strong>「かつ」</strong>である点に注意してください。「資料」で検索してタグ「提出物」を選ぶと、<strong>両方に当てはまるものだけ</strong>が残ります。結果が0件になったときは、条件を重ねすぎていないか確認してください。</p>
+
+    <h2>完了したタスクは既定では出てこない</h2>
+    <p>「終わったはずのタスクを探したい」というときに引っかかるのがここです。<strong>完了済みのタスクは、既定では検索結果に出ません。</strong></p><p>設定で「完了済みを表示」をONにすると、検索結果にも並ぶようになります。過去の記録をたどりたいときは、先にこの設定を切り替えてください。完了したタスクだけを時系列で見たい場合は、<a href="/guide/logbook.html">Logbookビュー</a> のほうが向いています。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>画面上部の検索窓に入力する。</b>どのビューからでも呼び出せます。</li>
+      <li><b>覚えている単語を1つだけ入れる。</b>長い文を入れるより、確実に含まれていそうな単語を1つ入れるほうが見つかります。</li>
+      <li><b>多すぎたらタグで絞る。</b>結果が多いときは、タグのチップを押して範囲を狭めます。</li>
+      <li><b>見つからなければ完了済みを表示する。</b>設定で「完了済みを表示」をONにすると、終わったタスクも検索されるようになります。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>キーワードを入れずにタグだけを選ぶことはできません。</b>Searchはキーワードが起点の画面なので、タグだけで絞りたいときはサイドバーの<a href="/guide/tag.html">タグ</a>から開いてください。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Searchビューで検索される範囲</h3>
+      <ul>
+        <li>タスクのタイトルとメモ</li>
+        <li>ノートのタイトルと本文</li>
+        <li>タグを選ぶと、キーワードとの「かつ」で絞り込み</li>
+        <li>複数のタグを選んだ場合は、そのすべてが付いているものだけ</li>
+        <li>完了済みタスクは既定では対象外（設定で変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>検索したのに、あるはずのタスクが出てきません。</summary>
+        <p>完了済みのタスクは既定では検索されません。設定で「完了済みを表示」をONにしてからもう一度検索してください。アーカイブしたタスクも同様に対象外です。</p>
+      </details>
+      <details>
+        <summary>タグだけで絞り込みたいのですが。</summary>
+        <p>Searchはキーワードを入れないと結果が出ません。タグだけで見たいときは、サイドバーの<a href="/guide/tag.html">タグ</a>からそのタグを開いてください。</p>
+      </details>
+      <details>
+        <summary>複数のキーワードで検索できますか？</summary>
+        <p>スペースで区切ると、すべての語を含むものが結果に出ます。絞り込みたいときに使ってください。</p>
+      </details>
+      <details>
+        <summary>コメントや添付ファイルの中身も検索できますか？</summary>
+        <p>検索されるのはタスクのタイトル・メモと、ノートのタイトル・本文です。コメントや添付ファイルの中身は対象外です。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/note.html">
+        <span class="t">Note</span>
+        <span class="d">タスクに紐づかない自由なメモ。</span>
+      </a>
+      <a class="g-card" href="/guide/tag.html">
+        <span class="t">タグ</span>
+        <span class="d">プロジェクトをまたぐ切り口でまとめて表示。</span>
+      </a>
+      <a class="g-card" href="/guide/logbook.html">
+        <span class="t">Logbook</span>
+        <span class="d">完了したタスクの履歴と、取り消し。</span>
+      </a>
+      <a class="g-card" href="/guide/inbox.html">
+        <span class="t">Inbox</span>
+        <span class="d">プロジェクトをまだ決めていないタスクの置き場。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>探しものを見つける</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

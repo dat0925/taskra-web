@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nextビューの使い方 – 各プロジェクトの「次の1手」だけを並べる | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのNextビューは、抱えているプロジェクトそれぞれの「次にやるべきタスク」を1件ずつ抜き出して並べます。なぜ1件しか出ないのか、開始日が先のタスクがどう扱われるのかを、実際の画面と図解で説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/next.html">
+<meta property="og:title" content="Nextビューの使い方 – 各プロジェクトの「次の1手」だけを並べる">
+<meta property="og:description" content="なぜプロジェクトごとに1件しか出ないのか。開始日が先のタスクはどう扱われるのか。図解します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/next.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/next-main.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/next-main.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nextビュー",
+      "item": "https://taskra.jp/guide/next.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "TaskraのNextビューで次にやることを決める",
+  "description": "抱えているプロジェクトの中から、いま着手すべきタスクを決めるための手順です。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Nextを開く",
+      "text": "サイドバー（スマートフォンでは画面下のタブ）から Next を選びます。各プロジェクトの先頭タスクが1件ずつ並びます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "上から順に着手する",
+      "text": "行の並びはプロジェクトの並び順です。優先したいプロジェクトを上に移動しておくと、Nextの並びもそのとおりになります。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "順番を入れ替える",
+      "text": "表示されているタスクが今やるべきものでない場合は、プロジェクト名をタップしてプロジェクトを開き、先頭に置きたいタスクを一番上へドラッグします。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "完了して次を出す",
+      "text": "タスクを完了にすると、そのプロジェクトの次のタスクが自動的にNextへ繰り上がります。"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "2件目以降のタスクも見たいのですが。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "行に付いているプロジェクト名のチップをタップすると、そのプロジェクトの全タスクが表示されます。Nextはあくまで「次の1手」を選ぶための画面なので、一覧としては使いません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Nextを開くたびに「現在」がONになるのが煩わしいです。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nextの中で「現在」を押せばその場で解除できます。ただしNextを開き直すと、また自動でONに戻ります。開始日が先のタスクを常に表示しておきたい場合は、タスクの開始日を空欄にしておくと「現在」の対象外になり、いつでも表示されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "行の順番はどう決まっていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "サイドバーに並んでいるプロジェクトの順番と同じです。サイドバーでプロジェクトをドラッグして並べ替えると、Nextの行の順番も変わります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Nextの行が20行を超えてしまいました。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "タスクが多いのではなく、プロジェクトを多く抱えている状態です。当面動かさないプロジェクトを非表示にすると、Nextから外れて画面が落ち着きます。Reviewビューを使うと、止まっているプロジェクトを見つけやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "チームで共有しているプロジェクトが出てきません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nextを開くと共有プロジェクトは既定で非表示になります。フィルタ行の「共有」を押すと表示されます。自分が担当になっているタスクだけを見たいときはAssignedビューが便利です。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html" class="is-current"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Nextビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+      Next
+    </span>
+
+    <h1>Nextビューの使い方<br>― 各プロジェクトの「次の1手」だけを並べる</h1>
+
+    <p class="g-lead">
+      プロジェクトをいくつも抱えていると、タスクの一覧を開いた瞬間に手が止まります。件数が多すぎて、どれから始めるかを決めること自体が仕事になってしまうからです。<strong>Nextビューは、この「決める作業」をなくすための画面</strong>です。各プロジェクトから<strong>先頭の1件だけ</strong>を抜き出して並べるので、画面に出るのは「いま着手できる候補」だけになります。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>抱えているプロジェクトすべての「次にやるべきタスク」を、1画面で見渡せる</li>
+        <li>どのプロジェクトが止まっているかに気づける（1行＝1プロジェクト）</li>
+        <li>タスクを完了にすると、そのプロジェクトの次のタスクが自動で繰り上がる</li>
+        <li>プロジェクト名をタップして、そのプロジェクトの全タスクへすぐ移動できる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/next-main.jpg" alt="TaskraのNextビュー。5つのプロジェクトそれぞれから先頭のタスクが1件ずつ、合計5行だけ表示されている" width="1568" height="697">
+      <span class="pin" style="left:7.5%;top:29.1%">1</span>
+      <span class="pin" style="left:22.8%;top:18.2%">2</span>
+      <span class="pin" style="left:35.8%;top:28.3%">3</span>
+      <span class="pin" style="left:44%;top:52.0%">4</span>
+    </figure>
+    <p class="shot-cap">5つのプロジェクトを抱えているので5行。<b>Nextの行数は、抱えているプロジェクトの数と同じ</b>になります。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>サイドバーの Next。</b>スマートフォンでは画面下のタブから開きます。</span></li>
+      <li><span class="n">2</span><span><b>「現在」フィルタ。</b>Nextを開くと自動でONになり、開始日がまだ来ていないタスクを画面から外します。押して解除することもできます。</span></li>
+      <li><span class="n">3</span><span><b>プロジェクト名のチップ。</b>そのタスクがどのプロジェクトのものかを示します。タップするとそのプロジェクトへ移動し、2件目以降のタスクも確認できます。</span></li>
+      <li><span class="n">4</span><span><b>この行だけ、2番目のタスクが出ています。</b>「月次レポート作成」の1番目は開始日が明日なので、「現在」フィルタに飛ばされています。理由は<a href="#genzai">後述</a>します。</span></li>
+    </ul>
+
+    <h2>仕組み：なぜ1件しか出ないのか</h2>
+    <p>Nextは、タスクを新しく作るビューでも、条件で検索するビューでもありません。すでにあるタスクに対して、<strong>「各プロジェクトの先頭を1件ずつ取る」という決まった手順</strong>を実行しているだけです。図にすると次のようになります。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 480" role="img" aria-labelledby="svgt-3 svgd-3" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-3">Nextビューがタスクを抜き出す仕組み</title>
+        <desc id="svgd-3">3つのプロジェクトのタスクを並び順に並べ、それぞれの先頭にある1件だけを取り出して、Nextビューに3行として並べる流れを示した図。</desc>
+        <defs><marker id="ah-nx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">① 各プロジェクトのタスクを、設定した並び順で並べる</text>
+        <text x="255" y="42" font-size="10.5" fill="#9ca3af" text-anchor="middle">1番目</text>
+        <text x="445" y="42" font-size="10.5" fill="#9ca3af" text-anchor="middle">2番目</text>
+        <text x="635" y="42" font-size="10.5" fill="#9ca3af" text-anchor="middle">3番目</text>
+        <rect x="162" y="48" width="186" height="190" rx="10" fill="#4f46e5" fill-opacity="0.07" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <circle cx="9" cy="76" r="4.5" fill="#3b82f6"/>
+        <text x="20" y="82" font-size="11.5" fill="#4b5563">Webサイトリニューアル</text>
+        <rect x="170" y="58" width="170" height="40" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="182" y="83" font-size="11" font-weight="600" fill="#3730a3">現行サイトの課題を洗い出す</text>
+        <rect x="360" y="58" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="372" y="83" font-size="11" fill="#9ca3af">ワイヤーフレームを作成する</text>
+        <rect x="550" y="58" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="562" y="83" font-size="11" fill="#9ca3af">デザイン案をレビューする</text>
+        <circle cx="9" cy="140" r="4.5" fill="#8b5cf6"/>
+        <text x="20" y="146" font-size="11.5" fill="#4b5563">新サービスの企画</text>
+        <rect x="170" y="122" width="170" height="40" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="182" y="147" font-size="11" font-weight="600" fill="#3730a3">競合サービスを調査する</text>
+        <rect x="360" y="122" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="372" y="147" font-size="11" fill="#9ca3af">企画書のドラフトを書く</text>
+        <rect x="550" y="122" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="562" y="147" font-size="11" fill="#9ca3af">社内レビューを受ける</text>
+        <circle cx="9" cy="204" r="4.5" fill="#10b981"/>
+        <text x="20" y="210" font-size="11.5" fill="#4b5563">採用活動 2026秋</text>
+        <rect x="170" y="186" width="170" height="40" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="182" y="211" font-size="11" font-weight="600" fill="#3730a3">求人票を更新する</text>
+        <rect x="360" y="186" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="372" y="211" font-size="11" fill="#9ca3af">一次面接の日程を調整する</text>
+        <rect x="550" y="186" width="170" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="562" y="211" font-size="11" fill="#9ca3af">内定者へ連絡する</text>
+        <line x1="255" y1="246" x2="255" y2="288" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-nx)"/>
+        <text x="278" y="272" font-size="13" font-weight="700" fill="#4f46e5">② 先頭の1件だけを抜き出す</text>
+        <rect x="170" y="300" width="430" height="164" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="186" y="324" font-size="12.5" font-weight="700" fill="#4f46e5">③ Next ビュー</text>
+        <rect x="186" y="334" width="398" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <circle cx="203" cy="351" r="4.5" fill="#3b82f6"/>
+        <text x="216" y="355" font-size="11" fill="#374151">現行サイトの課題を洗い出す</text>
+        <text x="574" y="355" font-size="10" fill="#9ca3af" text-anchor="end">Webサイトリニューアル</text>
+        <rect x="186" y="376" width="398" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <circle cx="203" cy="393" r="4.5" fill="#8b5cf6"/>
+        <text x="216" y="397" font-size="11" fill="#374151">競合サービスを調査する</text>
+        <text x="574" y="397" font-size="10" fill="#9ca3af" text-anchor="end">新サービスの企画</text>
+        <rect x="186" y="418" width="398" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <circle cx="203" cy="435" r="4.5" fill="#10b981"/>
+        <text x="216" y="439" font-size="11" fill="#374151">求人票を更新する</text>
+        <text x="574" y="439" font-size="10" fill="#9ca3af" text-anchor="end">採用活動 2026秋</text>
+        <text x="620" y="356" font-size="10.5" fill="#9ca3af">プロジェクトが</text>
+        <text x="620" y="372" font-size="10.5" fill="#9ca3af">3つだから</text>
+        <text x="620" y="388" font-size="10.5" fill="#9ca3af">3行になる</text>
+      </svg>
+    </div>
+    <p class="figure-cap">2番目以降のタスクは、Nextには出てきません。先頭のタスクを完了にすると、そのプロジェクトの2番目が繰り上がって表示されます。</p>
+    <p>つまり <strong>Nextの行数は、抱えているプロジェクトの数と同じ</strong>になります。行が10行あるなら、10件の案件を並行して進めているということです。「Nextが長すぎて見切れない」と感じたときは、タスクが多すぎるのではなく<strong>プロジェクトを持ちすぎている</strong>という合図として使えます。</p>
+
+    <h2 id="genzai">「現在」フィルタ：開始日が先のタスクは飛ばされる</h2>
+    <p>Nextを開くと、フィルタ行の<strong>「現在」が自動的にONになります</strong>。これは<strong>開始日がまだ来ていないタスクを画面から外す</strong>絞り込みです。来週から始める予定のタスクが先頭にあっても、今日できることが代わりに表示されます。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 250" role="img" aria-labelledby="svgt-4 svgd-4" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-4">「現在」フィルタが開始前のタスクを飛ばす動き</title>
+        <desc id="svgd-4">先頭のタスクの開始日がまだ来ていない場合、それを飛ばして2番目のタスクがNextビューに表示されることを示した図。</desc>
+        <defs><marker id="ah-nx2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">「現在」フィルタがONのとき</text>
+        <path d="M 285 70 C 340 30, 500 30, 551 68" fill="none" stroke="#4f46e5" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ah-nx2)"/>
+        <text x="418" y="34" font-size="12" font-weight="700" fill="#4f46e5" text-anchor="middle">飛ばす</text>
+        <circle cx="9" cy="99" r="4.5" fill="#f59e0b"/>
+        <text x="20" y="104" font-size="11.5" fill="#4b5563">月次レポート作成</text>
+        <rect x="170" y="76" width="230" height="46" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+        <text x="184" y="97" font-size="11" fill="#9ca3af">1番目</text>
+        <text x="184" y="114" font-size="12" fill="#9ca3af">8月の数値を集計する</text>
+        <line x1="352" y1="88" x2="368" y2="110" stroke="#9ca3af" stroke-width="2"/>
+        <line x1="368" y1="88" x2="352" y2="110" stroke="#9ca3af" stroke-width="2"/>
+        <text x="170" y="146" font-size="11" fill="#6b7280">開始日：明日（まだ来ていない）</text>
+        <text x="170" y="164" font-size="11" fill="#6b7280">→ Nextには出さない</text>
+        <rect x="440" y="76" width="230" height="46" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="454" y="97" font-size="11" fill="#6366f1">2番目</text>
+        <text x="454" y="114" font-size="12" font-weight="600" fill="#3730a3">前月比のコメントを書く</text>
+        <text x="440" y="146" font-size="11" fill="#4f46e5">開始日：今日</text>
+        <text x="440" y="164" font-size="11" font-weight="600" fill="#4f46e5">→ これが Next に表示される</text>
+        <rect x="0" y="192" width="760" height="46" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="212" font-size="11.5" fill="#4b5563">「現在」を押して解除すると、開始日が先のタスクも含めた本来の先頭（＝1番目）が表示されます。</text>
+        <text x="16" y="230" font-size="11.5" fill="#4b5563">Nextから別のビューへ移ると、フィルタは元の設定に戻ります。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">先頭のタスクがまだ始められない状態のとき、Nextはその次のタスクを表示します。「今日できることだけを出す」ための動きです。</p>
+        <figure class="shot">
+      <img src="/guide/img/next-all.jpg" alt="Nextビューで「現在」フィルタを解除した状態。開始日がまだ来ていないタスクが薄い文字で表示されている" width="1568" height="697" loading="lazy">
+    </figure>
+    <p class="shot-cap">「現在」を解除すると、4行目が「前月比のコメントを書く」から「8月の数値を集計する」に変わります。開始日がまだ来ていないタスクは、文字が薄く表示されます。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>Next を開く。</b>サイドバー（スマートフォンでは画面下のタブ）から選びます。各プロジェクトの先頭タスクが1件ずつ並びます。</li>
+      <li><b>上から順に着手する。</b>行の並びは<a href="/guide/project.html">プロジェクトの並び順</a>そのままです。優先したいプロジェクトをサイドバーで上へドラッグしておくと、Nextの並びもそのとおりになります。</li>
+      <li><b>出てくるタスクを変えたいときは、プロジェクト側を直す。</b>プロジェクト名のチップをタップしてプロジェクトを開き、先頭に置きたいタスクを一番上へドラッグします。並び替えの基準は「手動の並び順」のほか「優先度順」「期限順」も選べます。</li>
+      <li><b>完了にして次を出す。</b>チェックを付けると、そのプロジェクトの次のタスクが自動的にNextへ繰り上がります。1日の終わりにNextを見て、行が減っていれば前に進んでいます。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>Nextに出てこないプロジェクトがあるときは。</b>そのプロジェクトに表示できる未完了タスクが1件もない状態です。すべて完了しているか、残っているタスクの開始日がまだ来ていないか（「現在」を解除すると確認できます）のどちらかです。</p><p>プロジェクトを<b>非表示</b>（プロジェクトの「⋯」→「🙈 非表示にする」）にしている場合も、Nextには出てきません。動いている案件だけを並べるための仕様です。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Nextビューに表示されるもの</h3>
+      <ul>
+        <li>アクティブなプロジェクトごとに、先頭の未完了タスクを1件ずつ表示</li>
+        <li>プロジェクト名をタップするとそのプロジェクトへ移動</li>
+        <li>「現在」フィルタで、開始済みのタスクのみ表示（Nextを開くと自動でON）</li>
+        <li>共有プロジェクトのタスクは既定では非表示（「共有」を押すと表示）</li>
+        <li>サブタスクは対象外。プロジェクト直下のタスクだけが並びます</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>2件目以降のタスクも見たいのですが。</summary>
+        <p>行に付いているプロジェクト名のチップをタップすると、そのプロジェクトの全タスクが表示されます。Nextはあくまで「次の1手」を選ぶための画面なので、一覧としては使いません。</p>
+      </details>
+      <details>
+        <summary>Nextを開くたびに「現在」がONになるのが煩わしいです。</summary>
+        <p>Nextの中で「現在」を押せばその場で解除できます。ただしNextを開き直すと、また自動でONに戻ります。開始日が先のタスクを常に表示しておきたい場合は、タスクの開始日を空欄にしておくと「現在」の対象外になり、いつでも表示されます。</p>
+      </details>
+      <details>
+        <summary>行の順番はどう決まっていますか？</summary>
+        <p>サイドバーに並んでいるプロジェクトの順番と同じです。サイドバーでプロジェクトをドラッグして並べ替えると、Nextの行の順番も変わります。</p>
+      </details>
+      <details>
+        <summary>Nextの行が20行を超えてしまいました。</summary>
+        <p>タスクが多いのではなく、プロジェクトを多く抱えている状態です。当面動かさないプロジェクトを非表示にすると、Nextから外れて画面が落ち着きます。<a href="/guide/review.html">Reviewビュー</a>を使うと、止まっているプロジェクトを見つけやすくなります。</p>
+      </details>
+      <details>
+        <summary>チームで共有しているプロジェクトが出てきません。</summary>
+        <p>Nextを開くと共有プロジェクトは既定で非表示になります。フィルタ行の「共有」を押すと表示されます。自分が担当になっているタスクだけを見たいときは<a href="/guide/assigned.html">Assignedビュー</a>が便利です。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/project.html">
+        <span class="t">プロジェクト</span>
+        <span class="d">案件ごとのタスク一覧。並び順が Next を決めます。</span>
+      </a>
+      <a class="g-card" href="/guide/today.html">
+        <span class="t">Today</span>
+        <span class="d">期限が今日のタスクと、フラグを付けたタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/review.html">
+        <span class="t">Review</span>
+        <span class="d">期限切れ・停滞・レビュー時期をまとめて点検。</span>
+      </a>
+      <a class="g-card" href="/guide/dashboard.html">
+        <span class="t">Dashboard</span>
+        <span class="d">期限切れ・今日・自分の担当・通知を1画面に集めた要約。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>Nextを使ってみる</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

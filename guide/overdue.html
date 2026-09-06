@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overdueの使い方 – 期限を過ぎたタスクだけを集める | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのOverdueビューには、期限日が今日より前で、まだ完了していないタスクだけが並びます。期限を設定していないタスクが出てこない理由と、たまったときの片付け方を説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/overdue.html">
+<meta property="og:title" content="Overdueの使い方 – 期限を過ぎたタスクだけを集める">
+<meta property="og:description" content="期限を過ぎたタスクだけの一覧。放置を防ぐための画面の使い方を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/overdue.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/overdue.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/overdue.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Overdueビュー",
+      "item": "https://taskra.jp/guide/overdue.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ずっと放置しているタスクがあるのに、Overdueに出てきません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "期限日を設定していないタスクです。Overdueは期限日だけを見ているので、期限が空欄のタスクは何日たっても対象になりません。Reviewビューの「停滞タスク（7日以上）」で拾えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "期限を過ぎたタスクを完了にすると、記録は残りますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "残ります。Logbook に完了日つきで記録され、ガントチャートにも完了マーカーとして表示されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Overdueの件数を一気に0にする方法はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「一括」から全件を選んで期限をまとめて引き直せます。ただし日付を先送りしただけでは、その日にまた同じ画面が現れます。本当に着手できる日を入れるか、やらないものは完了・削除で閉じてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Todayにも同じタスクが出ています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "そのタスクにフラグが付いています。Today は「期限が今日」または「フラグ付き」を表示するため、期限切れでもフラグがあれば両方に並びます。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html" class="is-current"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Overdueビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+      Overdue
+    </span>
+
+    <h1>Overdueの使い方<br>― 期限を過ぎたタスクだけを集める</h1>
+
+    <p class="g-lead">
+      約束した日を過ぎてしまったタスクだけが並びます。気持ちのいい画面ではありませんが、<strong>ここを空にできるかどうかで信用が決まります</strong>。大事なのは全部やり切ることではなく、<strong>1件ずつ「やる」か「日を引き直す」かを決めること</strong>です。判断さえすれば、この画面からは消えます。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>期限を過ぎたタスクだけを、他のタスクに紛れずに確認できる</li>
+        <li>何日過ぎているかを行ごとに把握できる</li>
+        <li>サイドバーのバッジで、放置している件数を常に把握できる</li>
+        <li>まとめて選択して、期限を一括で引き直せる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/overdue.jpg" alt="TaskraのOverdueビュー。期限を過ぎた未完了タスクが2件表示されている" width="1568" height="697">
+      <span class="pin" style="left:29.5%;top:28.3%">1</span>
+      <span class="pin" style="left:13.6%;top:42.2%">2</span>
+    </figure>
+    <p class="shot-cap">期限のチップが赤くなり、何日前だったかが表示されます。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>期限のチップ。</b>「2日前(金曜)」のように、どれくらい過ぎたかが分かる書き方になります。日数が大きいほど、そもそもの見積もりが外れていた可能性が高い行です。</span></li>
+      <li><span class="n">2</span><span><b>サイドバーのバッジ。</b>Overdueの件数です。<b>この数字が増え続けているときは、期限の入れ方そのものを見直す合図</b>になります。</span></li>
+    </ul>
+
+    <h2>仕組み：期限日の位置だけで決まる</h2>
+    <p>Overdueに入る条件はひとつだけ、<strong>期限日が今日より前で、まだ完了していないこと</strong>です。プロジェクトも優先度も関係ありません。同じ期限日という情報が、位置によって別のビューに振り分けられていると考えると分かりやすくなります。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 244" role="img" aria-labelledby="svgt-6 svgd-6" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-6">期限日の位置と表示されるビューの関係</title>
+        <desc id="svgd-6">期限日が今日より前ならOverdue、今日ならToday、未来ならForecastやGanttに表示されることを、時間軸で示した図。</desc>
+        <defs><marker id="ah-ov" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">期限日がどこにあるかで、出てくるビューが変わる</text>
+        <rect x="20" y="46" width="330" height="34" rx="8" fill="#fee2e2" stroke="#ef4444"/>
+        <text x="185" y="68" font-size="12" font-weight="700" fill="#b91c1c" text-anchor="middle">Overdue</text>
+        <rect x="358" y="46" width="64" height="34" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+        <text x="390" y="68" font-size="12" font-weight="700" fill="#4f46e5" text-anchor="middle">Today</text>
+        <rect x="430" y="46" width="310" height="34" rx="8" fill="#ecfdf5" stroke="#10b981"/>
+        <text x="585" y="68" font-size="12" font-weight="700" fill="#047857" text-anchor="middle">Forecast ／ Gantt</text>
+        <line x1="20" y1="112" x2="740" y2="112" stroke="#9ca3af" stroke-width="2"/>
+        <line x1="390" y1="98" x2="390" y2="126" stroke="#4f46e5" stroke-width="2.5"/>
+        <text x="390" y="146" font-size="11.5" font-weight="700" fill="#4f46e5" text-anchor="middle">今日</text>
+        <text x="20" y="146" font-size="11" fill="#6b7280">← 過ぎた期限</text>
+        <text x="740" y="146" font-size="11" fill="#6b7280" text-anchor="end">これから来る期限 →</text>
+        <circle cx="120" cy="112" r="5" fill="#ef4444"/>
+        <text x="120" y="94" font-size="10.5" fill="#ef4444" text-anchor="middle">9/4</text>
+        <circle cx="250" cy="112" r="5" fill="#ef4444"/>
+        <text x="250" y="94" font-size="10.5" fill="#ef4444" text-anchor="middle">9/5</text>
+        <circle cx="390" cy="112" r="5" fill="#4f46e5"/>
+        <text x="390" y="94" font-size="10.5" fill="#4f46e5" text-anchor="middle">9/6</text>
+        <circle cx="500" cy="112" r="5" fill="#10b981"/>
+        <text x="500" y="94" font-size="10.5" fill="#10b981" text-anchor="middle">9/9</text>
+        <circle cx="640" cy="112" r="5" fill="#10b981"/>
+        <text x="640" y="94" font-size="10.5" fill="#10b981" text-anchor="middle">9/12</text>
+        <rect x="0" y="168" width="760" height="66" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="190" font-size="11.5" fill="#4b5563">Overdue に入るのは「期限日が今日より前」かつ「まだ完了していない」タスクだけです。</text>
+        <text x="16" y="209" font-size="11.5" fill="#4b5563">期限を設定していないタスクは、どれだけ放置しても Overdue には出てきません。</text>
+        <text x="16" y="228" font-size="11.5" fill="#4b5563">期限のないタスクの滞留は <tspan font-weight="700">Review</tspan> の「停滞タスク」で拾います。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">完了にした瞬間、期限がいつであっても Overdue から消え、Logbook に移ります。</p>
+    <p>注意したいのは、<strong>期限を設定していないタスクは何ヶ月放置しても Overdue に出ない</strong>ことです。「期限を入れないでおけば怒られない」状態を作らないために、<a href="/guide/review.html">Reviewビュー</a>の「停滞タスク」を併せて見る運用にしておくと安全です。</p>
+
+    <h2>たまってしまったときの片付け方</h2>
+    <p>件数が二桁になると、上から順に片付ける気力は続きません。<strong>やる／やらないではなく、日を決め直す作業として処理します。</strong></p><p>Overdueの上部にある「一括」を押すと選択モードになり、複数のタスクをまとめて選んで期限を引き直せます。「今週中に触れないもの」を全部まとめて来週に送るだけで、画面はかなり短くなります。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>件数を見る。</b>5件以下ならそのまま片付けます。二桁なら次の手順で減らします。</li>
+      <li><b>本当に今日やるものにフラグを付ける。</b><a href="/guide/today.html">Today</a> に集まるので、Overdueを離れて作業できます。</li>
+      <li><b>残りは期限を引き直す。</b>「一括」から複数選んで、まとめて先の日付へ送ります。このとき<b>本当に手を付けられる日</b>を入れるのが大事です。明日に送り続けると、翌日また同じ画面を見ることになります。</li>
+      <li><b>やらないと決めたものは完了か削除にする。</b>判断して閉じたものは、放置しているタスクではありません。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>Overdueへは Dashboard からも来られます。</b>Dashboardの「期限切れ」セクションで件数だけ確認し、3件を超えていたら「もっと見る →」でこの画面へ移動する、という流れが自然です。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Overdueビューに表示されるもの</h3>
+      <ul>
+        <li>期限日が今日より前で、まだ完了していないタスク</li>
+        <li>期限を設定していないタスクは対象外</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+        <li>プロジェクト・優先度・担当者による絞り込みはかかっていない</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>ずっと放置しているタスクがあるのに、Overdueに出てきません。</summary>
+        <p>期限日を設定していないタスクです。Overdueは期限日だけを見ているので、期限が空欄のタスクは何日たっても対象になりません。<a href="/guide/review.html">Reviewビュー</a>の「停滞タスク（7日以上）」で拾えます。</p>
+      </details>
+      <details>
+        <summary>期限を過ぎたタスクを完了にすると、記録は残りますか？</summary>
+        <p>残ります。<a href="/guide/logbook.html">Logbook</a> に完了日つきで記録され、<a href="/guide/gantt.html">ガントチャート</a>にも完了マーカーとして表示されます。</p>
+      </details>
+      <details>
+        <summary>Overdueの件数を一気に0にする方法はありますか？</summary>
+        <p>「一括」から全件を選んで期限をまとめて引き直せます。ただし日付を先送りしただけでは、その日にまた同じ画面が現れます。本当に着手できる日を入れるか、やらないものは完了・削除で閉じてください。</p>
+      </details>
+      <details>
+        <summary>Todayにも同じタスクが出ています。</summary>
+        <p>そのタスクにフラグが付いています。<a href="/guide/today.html">Today</a> は「期限が今日」または「フラグ付き」を表示するため、期限切れでもフラグがあれば両方に並びます。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/today.html">
+        <span class="t">Today</span>
+        <span class="d">期限が今日のタスクと、フラグを付けたタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/review.html">
+        <span class="t">Review</span>
+        <span class="d">期限切れ・停滞・レビュー時期をまとめて点検。</span>
+      </a>
+      <a class="g-card" href="/guide/forecast.html">
+        <span class="t">Forecast</span>
+        <span class="d">今日から2週間分を日別のカレンダーで表示。</span>
+      </a>
+      <a class="g-card" href="/guide/dashboard.html">
+        <span class="t">Dashboard</span>
+        <span class="d">期限切れ・今日・自分の担当・通知を1画面に集めた要約。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>期限切れを片付ける</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forecastの使い方 – 2週間分の予定を日別に見る | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのForecastビューは、今日から14日分のタスクを日別のカレンダーで表示します。1つのタスクが開始日と期限日の2ヶ所に出る仕組みと、仕事が集中している日の見つけ方を説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/forecast.html">
+<meta property="og:title" content="Forecastの使い方 – 2週間分の予定を日別に見る">
+<meta property="og:description" content="今日から14日分を日別カレンダーで。仕事が集中している日を見つける画面です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/forecast.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/forecast.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/forecast.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Forecastビュー",
+      "item": "https://taskra.jp/guide/forecast.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "同じタスクが2つの日に出ています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開始日と期限日が別の日に設定されているためです。▶ が開始日、🗓 が期限日を表します。重複表示ではなく、「この日に始めて、この日までに終える」という2つの予定を示しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "セルの数字と、表示されているタスクの数が合いません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1つのセルに表示できるのは期限4件・開始2件までです。右上の数字はその日の総件数なので、入り切らない分は表示されていません。日付をタップすると全件を確認できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3週間先の予定を見たいのですが。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Forecastは14日分に固定されています。それより先を見るときはガントチャートを使ってください。月表示・年表示に切り替えれば、数ヶ月先まで見渡せます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "期限切れのタスクがカレンダーの中に出てきません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仕様どおりです。過ぎてしまったものを未来のマスに混ぜると予定が読めなくなるため、上部のバーに分けてあります。件数をタップすると開いて中身を確認できます。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html" class="is-current"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Forecastビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      Forecast
+    </span>
+
+    <h1>Forecastの使い方<br>― 2週間分の予定を日別に見る</h1>
+
+    <p class="g-lead">
+      リスト表示では「いつが忙しいか」が分かりません。Forecastは今日から<strong>14日分</strong>を日別のマス目に並べ替えた画面です。<strong>マスの中身が多い日＝仕事が集中している日</strong>なので、手を付ける前に予定をならすことができます。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>今日から2週間分の予定を、日別のカレンダーで見渡せる</li>
+        <li>仕事が集中している日を、マスの中身の量で見つけられる</li>
+        <li>期限日と開始日を別々の印で確認できる</li>
+        <li>期限切れの件数を、未来の予定と切り離して上部で確認できる</li>
+        <li>日付をタップして、その日のタスクを全件表示できる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/forecast.jpg" alt="TaskraのForecastビュー。今日から14日分の日別セルにタスクが並び、上部に期限切れ2件のバーが表示されている" width="1568" height="697">
+      <span class="pin" style="left:21%;top:18.5%">1</span>
+      <span class="pin" style="left:17.9%;top:27.8%">2</span>
+      <span class="pin" style="left:25.8%;top:33.6%">3</span>
+      <span class="pin" style="left:25.8%;top:47.6%">4</span>
+    </figure>
+    <p class="shot-cap">9日と11日は中身が少なく、6日に9件が集中しています。この偏りが一目で分かるのが Forecast の役割です。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>期限切れバー。</b>過ぎてしまった件数だけを、未来の予定と分けて上部に畳んであります。タップすると開いて、その場で整理できます。</span></li>
+      <li><span class="n">2</span><span><b>今日のセル。</b>色が反転して強調されます。右上の数字はその日の件数です。</span></li>
+      <li><span class="n">3</span><span><b>🗓 は期限日。</b>その日が締め切りのタスクです。</span></li>
+      <li><span class="n">4</span><span><b>▶ は開始日。</b>その日に着手する予定のタスクです。<b>同じタスクが両方の日に出ることがあります。</b></span></li>
+    </ul>
+
+    <h2>仕組み：1つのタスクが2ヶ所に出る</h2>
+    <p>Taskraのタスクは、開始日と期限日という<strong>2つの日付</strong>を持てます。Forecastはその両方をカレンダーに落とすので、<strong>1件のタスクが2ヶ所に現れることがあります</strong>。重複ではなく、意味が違う2つの予定です。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 340" role="img" aria-labelledby="svgt-7 svgd-7" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-7">Forecastで1つのタスクが2ヶ所に表示される仕組み</title>
+        <desc id="svgd-7">開始日と期限日を持つタスクが、カレンダー上の開始日の欄と期限日の欄の2ヶ所に、それぞれ別のアイコンで表示されることを示した図。</desc>
+        <defs><marker id="ah-fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">1つのタスクが、カレンダー上の2ヶ所に出る</text>
+        <rect x="0" y="36" width="360" height="70" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="16" y="60" font-size="12" font-weight="700" fill="#3730a3">デザイン案をレビューする</text>
+        <text x="16" y="82" font-size="11" fill="#4f46e5">開始日 9/8　　期限日 9/10</text>
+        <text x="16" y="98" font-size="10.5" fill="#6b7280">1件のタスクに、日付が2つ入っている</text>
+        <rect x="0" y="176" width="100" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="12" y="196" font-size="13" font-weight="700" fill="#374151">6</text>
+        <text x="30" y="196" font-size="10" fill="#9ca3af">日</text>
+        <rect x="110" y="176" width="100" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="122" y="196" font-size="13" font-weight="700" fill="#374151">7</text>
+        <text x="140" y="196" font-size="10" fill="#9ca3af">月</text>
+        <rect x="220" y="176" width="100" height="86" rx="8" fill="#f8fafc" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="232" y="196" font-size="13" font-weight="700" fill="#374151">8</text>
+        <text x="250" y="196" font-size="10" fill="#9ca3af">火</text>
+        <rect x="330" y="176" width="100" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="342" y="196" font-size="13" font-weight="700" fill="#374151">9</text>
+        <text x="360" y="196" font-size="10" fill="#9ca3af">水</text>
+        <rect x="440" y="176" width="100" height="86" rx="8" fill="#f8fafc" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="452" y="196" font-size="13" font-weight="700" fill="#374151">10</text>
+        <text x="470" y="196" font-size="10" fill="#9ca3af">木</text>
+        <rect x="550" y="176" width="100" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="562" y="196" font-size="13" font-weight="700" fill="#374151">11</text>
+        <text x="580" y="196" font-size="10" fill="#9ca3af">金</text>
+        <rect x="660" y="176" width="100" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="672" y="196" font-size="13" font-weight="700" fill="#374151">12</text>
+        <text x="690" y="196" font-size="10" fill="#9ca3af">土</text>
+        <text x="232" y="222" font-size="10.5" fill="#4f46e5">▶ デザイン案を</text>
+        <text x="232" y="236" font-size="10.5" fill="#4f46e5">　 レビューする</text>
+        <text x="452" y="222" font-size="10.5" fill="#4f46e5">🗓 デザイン案を</text>
+        <text x="452" y="236" font-size="10.5" fill="#4f46e5">　 レビューする</text>
+        <path d="M 100 110 C 140 130, 200 150, 258 170" fill="none" stroke="#4f46e5" stroke-width="1.8" marker-end="url(#ah-fc)"/>
+        <path d="M 250 110 C 330 130, 420 150, 478 170" fill="none" stroke="#4f46e5" stroke-width="1.8" marker-end="url(#ah-fc)"/>
+        <text x="150" y="150" font-size="10.5" fill="#6b7280">開始日の欄へ</text>
+        <text x="380" y="150" font-size="10.5" fill="#6b7280">期限日の欄へ</text>
+        <rect x="0" y="284" width="760" height="46" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="304" font-size="11.5" fill="#4b5563">🗓 は期限日、▶ は開始日。同じタスクでも役割が違うので、別の印で表示されます。</text>
+        <text x="16" y="322" font-size="11.5" fill="#4b5563">「この日に始める予定」と「この日までに終える約束」を、1枚のカレンダーで同時に見られます。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">開始日と期限日が同じ日なら、その日に1回だけ表示されます。</p>
+    <p>この見え方に慣れると、<strong>「着手が集中している日」と「締め切りが集中している日」を区別できます</strong>。▶ が多い日は自分の作業がふくらむ日、🗓 が多い日は相手に渡すものが重なる日です。対処のしかたが違うので、印を見分ける価値があります。</p>
+
+    <h2>1マスに全部は表示されない</h2>
+    <p>マスの高さには限りがあるため、<strong>期限のタスクは4件まで、開始のタスクは2件まで</strong>しか表示されません。右上の数字はその日の総件数なので、<strong>表示されている行数と数字が合わないことがあります</strong>。</p><p>全件を見たいときは<strong>日付の部分をタップ</strong>してください。その日のタスクだけを並べた一覧に切り替わり、「Forecastに戻る」でカレンダーへ戻れます。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>週のはじめに開いて、山を見つける。</b>件数が多い日が今週のボトルネックです。</li>
+      <li><b>山の日から、動かせるものを前後に移す。</b>タスクをタップして期限や開始日を変えると、マスの中身がその場で移動します。</li>
+      <li><b>期限切れバーを開いて清算する。</b>未来をならす前に、過ぎてしまったものの日を決め直しておきます。</li>
+      <li><b>細かい確認は日付タップで。</b>マスに入り切らない日は、日付をタップしてその日の全件を確認します。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>「現在」フィルタはここでも効きます。</b>ONのあいだは、開始日がまだ来ていないタスクがカレンダーから消えます。先の予定を確かめたい画面なので、<b>Forecastでは解除しておくほうが役に立ちます</b>。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Forecastビューに表示されるもの</h3>
+      <ul>
+        <li>今日から14日分の日別セル</li>
+        <li>各日のセルに、その日が期限日のタスク（🗓）と、その日が開始日のタスク（▶）</li>
+        <li>期限日と開始日が別の日なら、同じタスクが2ヶ所に表示される</li>
+        <li>1セルの表示は期限4件・開始2件まで。右上の数字は総件数</li>
+        <li>期限切れのタスクは、カレンダーとは別に上部のバーにまとめて表示</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>同じタスクが2つの日に出ています。</summary>
+        <p>開始日と期限日が別の日に設定されているためです。▶ が開始日、🗓 が期限日を表します。重複表示ではなく、「この日に始めて、この日までに終える」という2つの予定を示しています。</p>
+      </details>
+      <details>
+        <summary>セルの数字と、表示されているタスクの数が合いません。</summary>
+        <p>1つのセルに表示できるのは期限4件・開始2件までです。右上の数字はその日の総件数なので、入り切らない分は表示されていません。日付をタップすると全件を確認できます。</p>
+      </details>
+      <details>
+        <summary>3週間先の予定を見たいのですが。</summary>
+        <p>Forecastは14日分に固定されています。それより先を見るときは<a href="/guide/gantt.html">ガントチャート</a>を使ってください。月表示・年表示に切り替えれば、数ヶ月先まで見渡せます。</p>
+      </details>
+      <details>
+        <summary>期限切れのタスクがカレンダーの中に出てきません。</summary>
+        <p>仕様どおりです。過ぎてしまったものを未来のマスに混ぜると予定が読めなくなるため、上部のバーに分けてあります。件数をタップすると開いて中身を確認できます。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/gantt.html">
+        <span class="t">Gantt</span>
+        <span class="d">プロジェクトの期間を横棒で可視化。</span>
+      </a>
+      <a class="g-card" href="/guide/overdue.html">
+        <span class="t">Overdue</span>
+        <span class="d">期限を過ぎてしまったタスクだけの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/today.html">
+        <span class="t">Today</span>
+        <span class="d">期限が今日のタスクと、フラグを付けたタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/project.html">
+        <span class="t">プロジェクト</span>
+        <span class="d">案件ごとのタスク一覧。並び順が Next を決めます。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>2週間の予定を見渡す</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

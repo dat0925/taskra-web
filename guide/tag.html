@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タグの使い方 – プロジェクトをまたぐ切り口をつくる | Taskra 使い方ガイド</title>
+<meta name="description" content="Taskraのタグは、プロジェクトをまたいでタスクをまとめるラベルです。プロジェクトとの使い分け、1タスクに付けられるタグの数、タグでの絞り込み方を実際の画面で説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/tag.html">
+<meta property="og:title" content="タグの使い方 – プロジェクトをまたぐ切り口をつくる">
+<meta property="og:description" content="プロジェクトをまたぐ切り口をつくるラベル。タグの使い方を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/tag.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/tag.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/tag.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "タグ",
+      "item": "https://taskra.jp/guide/tag.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "タグとプロジェクトはどう使い分けますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "プロジェクトは「何の案件か」、タグは「どういう性質の作業か」です。1タスクにプロジェクトは1つだけ、タグは何個でも付けられます。案件名をタグにすると二重管理になるので避けてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "1つのタスクに複数のタグを付けられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "付けられます。複数のタグを選んで絞り込むと、そのすべてが付いているタスクだけが表示されます（どれかに当てはまる、ではありません）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タグを削除すると、タスクも消えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "消えません。タグが外れるだけで、タスクはプロジェクトに残ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タグとフラグはどちらを使えばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "タグは分類、フラグは一時的な印です。「打ち合わせで確認する」のように繰り返し使う切り口ならタグ、「今日やる」のようにその日限りならフラグが向いています。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html" class="is-current"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>タグ</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      タグ
+    </span>
+
+    <h1>タグの使い方<br>― プロジェクトをまたぐ切り口をつくる</h1>
+
+    <p class="g-lead">
+      プロジェクトは<strong>「何の案件か」</strong>で分ける縦の区切りです。それだけだと「明日の打ち合わせで確認することを、案件をまたいで全部見たい」といった見方ができません。タグは<strong>「どういう性質の作業か」</strong>で束ねる、横の切り口です。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>複数のプロジェクトにまたがるタスクを、1つのリストにまとめられる</li>
+        <li>「打ち合わせ」「提出物」など、作業の性質でタスクを束ねられる</li>
+        <li>タグの色で、一覧の中から目的のタスクを見つけやすくできる</li>
+        <li>検索やノートの絞り込みにも、同じタグを使える</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/tag.jpg" alt="Taskraのタグビュー。「打ち合わせ」タグが付いたタスクが、4つの異なるプロジェクトから5件集まっている" width="1568" height="697">
+      <span class="pin" style="left:21.4%;top:3.7%">1</span>
+      <span class="pin" style="left:38.1%;top:27.8%">2</span>
+      <span class="pin" style="left:34.2%;top:44.9%">3</span>
+      <span class="pin" style="left:4%;top:88.4%">4</span>
+    </figure>
+    <p class="shot-cap">5件はすべて別々のプロジェクトのタスクです。「打ち合わせ」という切り口だけで集まっています。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>画面のタイトルがタグ名になります。</b>いま何で絞り込んでいるかが常に分かります。</span></li>
+      <li><span class="n">2</span><span><b>タグのチップ。</b>タスクに付いているタグが色付きで表示されます。1件のタスクに複数のタグを付けられます。</span></li>
+      <li><span class="n">3</span><span><b>プロジェクト名のチップ。</b>行ごとに違うのが分かります。<b>これがタグの本質で、プロジェクトの境界を越えて集まっています。</b></span></li>
+      <li><span class="n">4</span><span><b>サイドバーのタグ一覧。</b>ここからタグを選ぶと、この画面に切り替わります。「タグなし」を選ぶと、タグが1つも付いていないタスクを確認できます。</span></li>
+    </ul>
+
+    <h2>仕組み：プロジェクトが縦、タグが横</h2>
+    <p>1つのタスクは<strong>プロジェクトを1つだけ</strong>持ちますが、<strong>タグは何個でも</strong>持てます。この非対称が、2つの使い分けを決めています。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 340" role="img" aria-labelledby="svgt-12 svgd-12" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-12">タグがプロジェクトを横断する仕組み</title>
+        <desc id="svgd-12">プロジェクトを縦、タグを横に置いた表で、1つのタグを選ぶと複数のプロジェクトにまたがるタスクが1つのリストに集まることを示した図。</desc>
+        <defs><marker id="ah-tg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">プロジェクトは「縦」、タグは「横」の切り口</text>
+        <text x="320" y="52" font-size="11" font-weight="700" fill="#0ea5e9" text-anchor="middle">#打ち合わせ</text>
+        <text x="480" y="52" font-size="11" font-weight="400" fill="#9ca3af" text-anchor="middle">#提出物</text>
+        <text x="640" y="52" font-size="11" font-weight="400" fill="#9ca3af" text-anchor="middle">#要確認</text>
+        <rect x="250" y="60" width="140" height="152" rx="10" fill="#0ea5e9" fill-opacity="0.08" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <circle cx="9" cy="88" r="4.5" fill="#3b82f6"/>
+        <text x="20" y="92" font-size="11" fill="#4b5563">Webサイトリニューアル</text>
+        <rect x="250" y="70" width="140" height="34" rx="7" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="274" cy="87" r="5" fill="#0ea5e9"/>
+        <text x="286" y="91" font-size="10" fill="#4b5563">タスクあり</text>
+        <rect x="410" y="70" width="140" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="476" y="91" font-size="10" fill="#d1d5db">—</text>
+        <rect x="570" y="70" width="140" height="34" rx="7" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="594" cy="87" r="5" fill="#f59e0b"/>
+        <text x="606" y="91" font-size="10" fill="#4b5563">タスクあり</text>
+        <circle cx="9" cy="136" r="4.5" fill="#10b981"/>
+        <text x="20" y="140" font-size="11" fill="#4b5563">採用活動 2026秋</text>
+        <rect x="250" y="118" width="140" height="34" rx="7" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="274" cy="135" r="5" fill="#0ea5e9"/>
+        <text x="286" y="139" font-size="10" fill="#4b5563">タスクあり</text>
+        <rect x="410" y="118" width="140" height="34" rx="7" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="434" cy="135" r="5" fill="#f43f5e"/>
+        <text x="446" y="139" font-size="10" fill="#4b5563">タスクあり</text>
+        <rect x="570" y="118" width="140" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="636" y="139" font-size="10" fill="#d1d5db">—</text>
+        <circle cx="9" cy="184" r="4.5" fill="#ef4444"/>
+        <text x="20" y="188" font-size="11" fill="#4b5563">社内AI勉強会</text>
+        <rect x="250" y="166" width="140" height="34" rx="7" fill="#ffffff" stroke="#e5e7eb"/>
+        <circle cx="274" cy="183" r="5" fill="#0ea5e9"/>
+        <text x="286" y="187" font-size="10" fill="#4b5563">タスクあり</text>
+        <rect x="410" y="166" width="140" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="476" y="187" font-size="10" fill="#d1d5db">—</text>
+        <rect x="570" y="166" width="140" height="34" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="636" y="187" font-size="10" fill="#d1d5db">—</text>
+        <line x1="320" y1="220" x2="320" y2="250" stroke="#0ea5e9" stroke-width="2" marker-end="url(#ah-tg)"/>
+        <rect x="0" y="258" width="760" height="72" rx="10" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1.5"/>
+        <text x="16" y="280" font-size="11.5" font-weight="700" fill="#0369a1">タグ「打ち合わせ」を選ぶと、この縦1列が集まる</text>
+        <text x="16" y="302" font-size="11" fill="#0c4a6e">3つの別々のプロジェクトにある「打ち合わせ」のタスクが、1つのリストに並ぶ。</text>
+        <text x="16" y="320" font-size="11" fill="#0c4a6e">「打ち合わせの日に、全部まとめて確認する」といった使い方ができる。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">タグはタスクを移動させません。プロジェクトに属したまま、別の切り口でも集まるようになるだけです。</p>
+    <p>迷ったときの目安は、<strong>「これは案件名か、作業の性質か」</strong>です。「Webサイトリニューアル」は案件名なのでプロジェクト、「打ち合わせ」は作業の性質なのでタグになります。案件名をタグにすると、プロジェクトと二重管理になって破綻します。</p>
+
+    <h2>タグを増やしすぎないための考え方</h2>
+    <p>タグは自由に作れるぶん、増えすぎると機能しなくなります。20個あるタグの中から毎回選ぶのは、選ばないのと同じくらい手間だからです。</p><p>目安として、<strong>タグを付ける基準を「そのタグで一覧を開く場面があるか」</strong>に置いてください。「打ち合わせ」は打ち合わせの前に開くので役に立ちます。「重要」は開く場面が思い浮かばないので、<a href="/guide/flagged.html">フラグ</a>や優先度のほうが向いています。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>タグを作る。</b>サイドバーのタグ欄から追加するか、クイック追加バーで <code>#打ち合わせ</code> のように書くと、その場で新しいタグができます。</li>
+      <li><b>タスクに付ける。</b>タスクを開いてタグを選びます。複数付けられます。</li>
+      <li><b>サイドバーから開く。</b>タグ名をタップすると、そのタグが付いたタスクだけが並びます。</li>
+      <li><b>タグなしを点検する。</b>「タグなし」を選ぶと、まだ分類していないタスクが出ます。整理のきっかけとして使えます。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>タグは検索やノートでも使えます。</b><a href="/guide/search.html">Search</a> ではキーワードとタグを組み合わせて絞り込めますし、<a href="/guide/note.html">Note</a> にも同じタグを付けられます。「この案件の議事録」をタグでまとめておくと、あとから探しやすくなります。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>タグの画面に表示されるもの</h3>
+      <ul>
+        <li>選択したタグが付いたタスク</li>
+        <li>プロジェクトをまたいで集約される</li>
+        <li>「タグなし」を選ぶと、タグが1つも付いていないタスクを表示</li>
+        <li>複数のタグを選ぶと、そのすべてが付いたタスクだけに絞り込まれる</li>
+        <li>完了済みは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>タグとプロジェクトはどう使い分けますか？</summary>
+        <p>プロジェクトは「何の案件か」、タグは「どういう性質の作業か」です。1タスクにプロジェクトは1つだけ、タグは何個でも付けられます。案件名をタグにすると二重管理になるので避けてください。</p>
+      </details>
+      <details>
+        <summary>1つのタスクに複数のタグを付けられますか？</summary>
+        <p>付けられます。複数のタグを選んで絞り込むと、そのすべてが付いているタスクだけが表示されます（どれかに当てはまる、ではありません）。</p>
+      </details>
+      <details>
+        <summary>タグを削除すると、タスクも消えますか？</summary>
+        <p>消えません。タグが外れるだけで、タスクはプロジェクトに残ります。</p>
+      </details>
+      <details>
+        <summary>タグとフラグはどちらを使えばよいですか？</summary>
+        <p>タグは分類、フラグは一時的な印です。「打ち合わせで確認する」のように繰り返し使う切り口ならタグ、「今日やる」のようにその日限りならフラグが向いています。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/project.html">
+        <span class="t">プロジェクト</span>
+        <span class="d">案件ごとのタスク一覧。並び順が Next を決めます。</span>
+      </a>
+      <a class="g-card" href="/guide/flagged.html">
+        <span class="t">Flagged</span>
+        <span class="d">重要マーク（フラグ）を付けたタスクの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/search.html">
+        <span class="t">Search</span>
+        <span class="d">タスクとノートをキーワードで横断検索。</span>
+      </a>
+      <a class="g-card" href="/guide/note.html">
+        <span class="t">Note</span>
+        <span class="d">タスクに紐づかない自由なメモ。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>タグで整理してみる</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

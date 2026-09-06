@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboardの使い方 – 今日の全体像を数秒でつかむ | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのDashboardは、期限切れ・今日・メンション通知・自分の担当・Inbox・フラグ付きを1画面に集めた要約です。何を見て、どこから次に進むのかを実際の画面で説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/dashboard.html">
+<meta property="og:title" content="Dashboardの使い方 – 今日の全体像を数秒でつかむ">
+<meta property="og:description" content="期限切れ・今日・自分の担当を1画面に。Taskra の Dashboard の見かたを画面つきで解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/dashboard.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/dashboard.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/dashboard.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Dashboardビュー",
+      "item": "https://taskra.jp/guide/dashboard.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "セクションが表示されたり消えたりします。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "件数が0のセクションは表示されない仕組みです。期限切れが片付けば「期限切れ」は消えますし、チームを使っていなければ「自分の担当」は最初から出ません。画面が短いほど片付いている状態です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「今日」に、フラグを付けたタスクが出てきません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dashboardの「今日」は期限が今日のタスクだけを拾います。フラグを付けたタスクは同じ画面の「フラグ付き」セクション、または Todayビュー で確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4件目以降を見たいのですが。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "セクション右上の「もっと見る →」を押すと、そのセクションに対応するビューへ移動して全件を確認できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "メンション通知が「読み込み中…」のまま変わりません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通知はタスク本体とは別に読み込まれるため、回線が遅いときに数秒かかることがあります。しばらく待っても変わらない場合は、画面を再読み込みしてください。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html" class="is-current"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Dashboardビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+      Dashboard
+    </span>
+
+    <h1>Dashboardの使い方<br>― 今日の全体像を数秒でつかむ</h1>
+
+    <p class="g-lead">
+      朝いちばんに開く画面です。<strong>Dashboardは新しい情報を持っていません。</strong>ほかのビューが持っている内容から<strong>先頭の3件だけ</strong>を借りてきて、1画面に並べ直したものです。だからここを見れば「今日、放っておくとまずいものが何件あるか」が数秒で分かり、気になったセクションから対応するビューへ降りていけます。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>期限切れが何件あるかを、開いた瞬間に把握できる</li>
+        <li>今日が期限のタスクを確認できる</li>
+        <li>チームメンバーから自分宛に飛んできたメンションに気づける</li>
+        <li>各セクションの「もっと見る →」から、そのビューの全件へ移動できる</li>
+        <li>チェックを付けて、その場でタスクを完了にできる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/dashboard.jpg" alt="TaskraのDashboard。期限切れ2件、今日4件、メンション通知のセクションが縦に並んでいる" width="1568" height="697">
+      <span class="pin" style="left:20.5%;top:26.4%">1</span>
+      <span class="pin" style="left:93%;top:26.4%">2</span>
+      <span class="pin" style="left:19.7%;top:53.1%">3</span>
+    </figure>
+    <p class="shot-cap">セクションは<b>中身があるものだけ</b>が表示されます。期限切れが0件の日は、そのセクションごと消えます。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>セクションの見出しと件数。</b>「期限切れ 2」は、期限を過ぎた未完了タスクが2件あるという意味です。</span></li>
+      <li><span class="n">2</span><span><b>もっと見る →。</b>そのセクションに対応するビューへ移動します。ここでは Overdue ビューです。</span></li>
+      <li><span class="n">3</span><span><b>「今日」セクション。</b>期限日が今日のタスクだけが入ります。<b>フラグを付けただけのタスクは、ここには出ません</b>（<a href="/guide/today.html">Todayビュー</a>には出ます）。</span></li>
+    </ul>
+
+    <h2>仕組み：Dashboardは各ビューの「窓」</h2>
+    <p>Dashboardのセクションは、それぞれ対応するビューの先頭3件を映しているだけです。4件目以降を見たいときは、そのビューへ移動します。<strong>Dashboardで全部を片付けようとしない</strong>のが、この画面とうまく付き合うコツです。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 340" role="img" aria-labelledby="svgt-1 svgd-1" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-1">Dashboardと各ビューの対応</title>
+        <desc id="svgd-1">Dashboardの6つのセクションが、それぞれOverdue・Today・Assigned・Inbox・Flaggedの各ビューの先頭3件であることを示した図。</desc>
+        <defs><marker id="ah-db" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">Dashboard は、6つのビューの「先頭3件」を1画面に集めた要約</text>
+        <rect x="0" y="32" width="320" height="272" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="16" y="54" font-size="12.5" font-weight="700" fill="#4f46e5">Dashboard</text>
+        <rect x="16" y="66" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="87" font-size="12">🔴</text>
+        <text x="50" y="86" font-size="11.5" fill="#374151">期限切れ</text>
+        <text x="292" y="86" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <line x1="330" y1="82" x2="452" y2="82" stroke="#c7d2fe" stroke-width="1.6" marker-end="url(#ah-db)"/>
+        <rect x="462" y="66" width="180" height="32" rx="7" fill="#ffffff" stroke="#ef4444"/>
+        <text x="478" y="86" font-size="11.5" font-weight="600" fill="#ef4444">Overdue ビューの全件</text>
+        <rect x="16" y="104" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="125" font-size="12">📅</text>
+        <text x="50" y="124" font-size="11.5" fill="#374151">今日</text>
+        <text x="292" y="124" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <line x1="330" y1="120" x2="452" y2="120" stroke="#c7d2fe" stroke-width="1.6" marker-end="url(#ah-db)"/>
+        <rect x="462" y="104" width="180" height="32" rx="7" fill="#ffffff" stroke="#4f46e5"/>
+        <text x="478" y="124" font-size="11.5" font-weight="600" fill="#4f46e5">Today ビューの全件</text>
+        <rect x="16" y="142" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="163" font-size="12">💬</text>
+        <text x="50" y="162" font-size="11.5" fill="#374151">メンション通知</text>
+        <text x="292" y="162" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <text x="340" y="162" font-size="10.5" fill="#9ca3af">対応するビューは無く、ここだけで完結</text>
+        <rect x="16" y="180" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="201" font-size="12">👤</text>
+        <text x="50" y="200" font-size="11.5" fill="#374151">自分の担当</text>
+        <text x="292" y="200" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <line x1="330" y1="196" x2="452" y2="196" stroke="#c7d2fe" stroke-width="1.6" marker-end="url(#ah-db)"/>
+        <rect x="462" y="180" width="180" height="32" rx="7" fill="#ffffff" stroke="#3b82f6"/>
+        <text x="478" y="200" font-size="11.5" font-weight="600" fill="#3b82f6">Assigned ビューの全件</text>
+        <rect x="16" y="218" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="239" font-size="12">📥</text>
+        <text x="50" y="238" font-size="11.5" fill="#374151">Inbox</text>
+        <text x="292" y="238" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <line x1="330" y1="234" x2="452" y2="234" stroke="#c7d2fe" stroke-width="1.6" marker-end="url(#ah-db)"/>
+        <rect x="462" y="218" width="180" height="32" rx="7" fill="#ffffff" stroke="#6b7280"/>
+        <text x="478" y="238" font-size="11.5" font-weight="600" fill="#6b7280">Inbox ビューの全件</text>
+        <rect x="16" y="256" width="288" height="32" rx="7" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="30" y="277" font-size="12">🚩</text>
+        <text x="50" y="276" font-size="11.5" fill="#374151">フラグ付き</text>
+        <text x="292" y="276" font-size="10" fill="#9ca3af" text-anchor="end">先頭3件</text>
+        <line x1="330" y1="272" x2="452" y2="272" stroke="#c7d2fe" stroke-width="1.6" marker-end="url(#ah-db)"/>
+        <rect x="462" y="256" width="180" height="32" rx="7" fill="#ffffff" stroke="#ef4444"/>
+        <text x="478" y="276" font-size="11.5" font-weight="600" fill="#ef4444">Flagged ビューの全件</text>
+        <text x="0" y="326" font-size="11" fill="#6b7280">各セクションの右にある「もっと見る →」を押すと、そのビューの全件に移動します。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">メンション通知だけは対応するビューがなく、Dashboard上で完結します。</p>
+    <p>セクションは<strong>件数が0のときは表示されません</strong>。「今日」だけは常に表示され、何もなければ「今日のタスクはありません」と出ます。画面が短い日ほど、片付いているということです。</p>
+
+    <h2>「今日」セクションと Today ビューは中身が違う</h2>
+    <p>名前が同じなので混同しやすいのですが、拾う条件が違います。Dashboardの「今日」は<strong>期限が今日のタスクだけ</strong>。Todayビューは<strong>期限が今日のタスク＋フラグを付けたタスク</strong>です。</p><p>フラグを付けたタスクをDashboardで見たいときは、同じ画面の下にある「フラグ付き」セクションを見てください。</p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>まず期限切れの件数を見る。</b>ここが赤く出ていたら、ほかを見る前に片付けるか、期限を引き直します。</li>
+      <li><b>「今日」を確認する。</b>今日中に終える必要があるものが並びます。多すぎると感じたら、この時点で期限を動かします。</li>
+      <li><b>メンション通知を確認する。</b>チームで使っている場合、自分宛のコメントがここに出ます。押すとそのタスクへ移動します。</li>
+      <li><b>着手は Next へ。</b>全体像をつかんだら、<a href="/guide/next.html">Nextビュー</a>に移って実際に手を動かします。Dashboardは把握のための画面です。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>チェックボックスはこの画面からでも押せます。</b>「もう終わっている」と分かっているタスクは、ビューへ移動せずその場で完了にできます。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Dashboardに表示されるもの</h3>
+      <ul>
+        <li>期限切れ：期限日が今日より前の未完了タスク（0件のときはセクションごと非表示）</li>
+        <li>今日：期限日が今日の未完了タスク</li>
+        <li>メンション通知：タスクのコメントで自分がメンションされたもの</li>
+        <li>自分の担当：担当者が自分になっている未完了タスク</li>
+        <li>Inbox：プロジェクト未設定のタスク（サブタスクを除く）</li>
+        <li>フラグ付き：フラグを付けた未完了タスク</li>
+        <li>各セクションとも表示は先頭3件まで。残りは「他 ◯ 件」と件数だけ出ます</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>セクションが表示されたり消えたりします。</summary>
+        <p>件数が0のセクションは表示されない仕組みです。期限切れが片付けば「期限切れ」は消えますし、チームを使っていなければ「自分の担当」は最初から出ません。画面が短いほど片付いている状態です。</p>
+      </details>
+      <details>
+        <summary>「今日」に、フラグを付けたタスクが出てきません。</summary>
+        <p>Dashboardの「今日」は期限が今日のタスクだけを拾います。フラグを付けたタスクは同じ画面の「フラグ付き」セクション、または <a href="/guide/today.html">Todayビュー</a> で確認してください。</p>
+      </details>
+      <details>
+        <summary>4件目以降を見たいのですが。</summary>
+        <p>セクション右上の「もっと見る →」を押すと、そのセクションに対応するビューへ移動して全件を確認できます。</p>
+      </details>
+      <details>
+        <summary>メンション通知が「読み込み中…」のまま変わりません。</summary>
+        <p>通知はタスク本体とは別に読み込まれるため、回線が遅いときに数秒かかることがあります。しばらく待っても変わらない場合は、画面を再読み込みしてください。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/next.html">
+        <span class="t">Next</span>
+        <span class="d">各プロジェクトの「次の1件」だけを抜き出した一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/today.html">
+        <span class="t">Today</span>
+        <span class="d">期限が今日のタスクと、フラグを付けたタスク。</span>
+      </a>
+      <a class="g-card" href="/guide/overdue.html">
+        <span class="t">Overdue</span>
+        <span class="d">期限を過ぎてしまったタスクだけの一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/assigned.html">
+        <span class="t">Assigned</span>
+        <span class="d">チームの中で自分が担当になっているタスク。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>Dashboardを開いてみる</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

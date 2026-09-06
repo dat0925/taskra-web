@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inboxの使い方 – 思いついたことを、まず受け止める | Taskra 使い方ガイド</title>
+<meta name="description" content="TaskraのInboxは、プロジェクトをまだ決めていないタスクの置き場です。整理より先に書き留めるための画面で、件数バッジが0になった状態が整理の完了を示します。実際の画面で説明します。">
+<link rel="canonical" href="https://taskra.jp/guide/inbox.html">
+<meta property="og:title" content="Inboxの使い方 – 思いついたことを、まず受け止める">
+<meta property="og:description" content="整理より先に書き留めるための画面。Taskra の Inbox の使い方を画面つきで解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taskra.jp/guide/inbox.html">
+<meta property="og:image" content="https://taskra.jp/guide/img/inbox.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://taskra.jp/guide/img/inbox.jpg">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/guide/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Taskra",
+      "item": "https://taskra.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "使い方ガイド",
+      "item": "https://taskra.jp/guide/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inboxビュー",
+      "item": "https://taskra.jp/guide/inbox.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "追加したはずのタスクがInboxにありません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "クイック追加で @プロジェクト名 を書いた場合や、プロジェクトを開いた状態で追加した場合は、最初からそのプロジェクトに入ります。Searchビュー でタイトルを検索すると見つかります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inboxのタスクにプロジェクトを設定したら消えました。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仕様どおりの動きです。Inboxは「プロジェクトが決まっていないタスク」の置き場なので、決まった時点でそのプロジェクトの一覧へ移ります。削除されたわけではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inboxを空にしないといけませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。ただし件数が増え続けている場合は、書き留めたまま扱いを決めていないものがたまっている状態です。週に一度まとめて行き先を決めるだけで、見落としはかなり減ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タスクとノート、どちらに書けばよいか迷います。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「いつか自分が手を動かすこと」ならタスク、「あとで読み返したい情報」ならノートです。迷ったらまずInboxに入れて、整理のときに Note へ移してかまいません。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/icon.png" class="logo-img" alt="Taskra">
+      Taskra
+    </a>
+    <nav>
+      <a href="/#features">機能</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/guide/" class="is-current">使い方ガイド</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://app.taskra.jp" target="_blank" rel="noopener">アプリを開く</a>
+    </div>
+  </div>
+</header>
+
+<div class="guide-wrap">
+
+  <aside class="guide-nav">
+    <h2>使い方ガイド</h2>
+    <ul>
+      <li><a href="/guide/"><span class="nav-en">目次</span><span class="nav-ja">ガイドのトップ</span></a></li>
+    </ul>
+    <h2>まず押さえる</h2>
+    <ul>
+      <li><a href="/guide/dashboard.html"><span class="nav-en">Dashboard</span><span class="nav-ja">今日の全体像</span></a></li>
+      <li><a href="/guide/inbox.html" class="is-current"><span class="nav-en">Inbox</span><span class="nav-ja">未整理の受信箱</span></a></li>
+      <li><a href="/guide/next.html"><span class="nav-en">Next</span><span class="nav-ja">各PJの次の1手</span></a></li>
+    </ul>
+    <h2>期限とスケジュール</h2>
+    <ul>
+      <li><a href="/guide/today.html"><span class="nav-en">Today</span><span class="nav-ja">今日やること</span></a></li>
+      <li><a href="/guide/overdue.html"><span class="nav-en">Overdue</span><span class="nav-ja">期限切れ</span></a></li>
+      <li><a href="/guide/forecast.html"><span class="nav-en">Forecast</span><span class="nav-ja">2週間の見通し</span></a></li>
+      <li><a href="/guide/gantt.html"><span class="nav-en">Gantt</span><span class="nav-ja">ガントチャート</span></a></li>
+    </ul>
+    <h2>絞り込んで見る</h2>
+    <ul>
+      <li><a href="/guide/flagged.html"><span class="nav-en">Flagged</span><span class="nav-ja">重要マーク</span></a></li>
+      <li><a href="/guide/assigned.html"><span class="nav-en">Assigned</span><span class="nav-ja">自分の担当</span></a></li>
+      <li><a href="/guide/project.html"><span class="nav-en">プロジェクト</span><span class="nav-ja">案件ごとの一覧</span></a></li>
+      <li><a href="/guide/tag.html"><span class="nav-en">タグ</span><span class="nav-ja">横断ラベル</span></a></li>
+    </ul>
+    <h2>振り返る・探す</h2>
+    <ul>
+      <li><a href="/guide/review.html"><span class="nav-en">Review</span><span class="nav-ja">週次の棚卸し</span></a></li>
+      <li><a href="/guide/logbook.html"><span class="nav-en">Logbook</span><span class="nav-ja">完了の履歴</span></a></li>
+      <li><a href="/guide/search.html"><span class="nav-en">Search</span><span class="nav-ja">横断検索</span></a></li>
+      <li><a href="/guide/note.html"><span class="nav-en">Note</span><span class="nav-ja">自由なメモ</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="guide-main">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">Taskra</a>
+      <span aria-hidden="true">/</span>
+      <a href="/guide/">使い方ガイド</a>
+      <span aria-hidden="true">/</span>
+      <span>Inboxビュー</span>
+    </nav>
+
+    <span class="g-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+      Inbox
+    </span>
+
+    <h1>Inboxの使い方<br>― 思いついたことを、まず受け止める</h1>
+
+    <p class="g-lead">
+      タスク管理が続かなくなる原因の多くは、<strong>書き留める前に分類させられること</strong>です。「どのプロジェクトだろう」「いつまでにやるんだっけ」と考えているうちに、書くこと自体が面倒になります。Inboxは<strong>何も決めずに放り込める場所</strong>です。分類は後で、まとめてやります。
+    </p>
+
+    <h2>この画面でできること</h2>
+    <div class="conds">
+      <ul>
+        <li>プロジェクトも期限も決めずに、タスクを1行で追加できる</li>
+        <li>未整理のタスクが何件たまっているかを、バッジの数字で把握できる</li>
+        <li>あとからまとめてプロジェクトを割り当てられる</li>
+        <li>Inboxにいる状態でも、期限やフラグ、タグは付けられる</li>
+      </ul>
+    </div>
+
+    <h2>画面の見かた</h2>
+
+    <figure class="shot">
+      <img src="/guide/img/inbox.jpg" alt="TaskraのInboxビュー。プロジェクトが未設定のタスクが4件並んでいる" width="1568" height="697">
+      <span class="pin" style="left:22.3%;top:11.0%">1</span>
+      <span class="pin" style="left:13.6%;top:22.2%">2</span>
+      <span class="pin" style="left:23.1%;top:53.8%">3</span>
+    </figure>
+    <p class="shot-cap">4件とも、まだどのプロジェクトにも属していないタスクです。プロジェクト名のチップが付いていないのが目印です。</p>
+
+    <ul class="pin-list">
+      <li><span class="n">1</span><span><b>クイック追加バー。</b>ここに1行書いて Enter を押すだけで追加できます。<code>#タグ</code>・<code>!高</code>（優先度）・<code>@プロジェクト</code>・<code>明日</code> のように書くと、その場で属性も付けられます。</span></li>
+      <li><span class="n">2</span><span><b>件数バッジ。</b>未整理のタスク数です。<b>この数字を0に戻すのが整理の目安</b>になります。</span></li>
+      <li><span class="n">3</span><span><b>Inboxにいても期限やフラグは付けられます。</b>プロジェクトが決まっていないだけで、ふつうのタスクと同じように扱えます。</span></li>
+    </ul>
+
+    <h2>仕組み：Inboxは通り道であって、置き場ではない</h2>
+    <p>Inboxに入るのは<strong>プロジェクトが割り当てられていないタスク</strong>だけです。逆に言えば、プロジェクトを決めた瞬間にInboxから消えます。消えたのではなく、そのプロジェクトの一覧へ移動しただけです。</p>
+    <div class="figure">
+      <svg viewBox="0 0 760 220" role="img" aria-labelledby="svgt-2 svgd-2" xmlns="http://www.w3.org/2000/svg">
+        <title id="svgt-2">Inboxを通るタスクの流れ</title>
+        <desc id="svgd-2">タスクを追加するとまずInboxに入り、プロジェクトを決めるとInboxから消えてそのプロジェクトの一覧に移ることを示した図。</desc>
+        <defs><marker id="ah-ib" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4f46e5"/></marker></defs>
+        <text x="0" y="15" font-size="13" font-weight="700" fill="#4f46e5">タスクが通る道すじ</text>
+        <rect x="0" y="46" width="160" height="66" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+        <text x="80" y="76" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">思いついたら</text>
+        <text x="80" y="94" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">すぐ追加</text>
+        <line x1="168" y1="79" x2="192" y2="79" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-ib)"/>
+        <rect x="200" y="46" width="160" height="66" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+        <text x="280" y="76" font-size="11.5" font-weight="600" fill="#3730a3" text-anchor="middle">Inbox に入る</text>
+        <text x="280" y="94" font-size="11.5" font-weight="600" fill="#3730a3" text-anchor="middle">（行き先は未定）</text>
+        <line x1="368" y1="79" x2="392" y2="79" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-ib)"/>
+        <rect x="400" y="46" width="160" height="66" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+        <text x="480" y="76" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">プロジェクトを</text>
+        <text x="480" y="94" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">決める</text>
+        <line x1="568" y1="79" x2="592" y2="79" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah-ib)"/>
+        <rect x="600" y="46" width="160" height="66" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+        <text x="680" y="76" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">プロジェクトの</text>
+        <text x="680" y="94" font-size="11.5" font-weight="600" fill="#374151" text-anchor="middle">一覧へ移る</text>
+        <rect x="200" y="126" width="160" height="26" rx="6" fill="#4f46e5" fill-opacity="0.07"/>
+        <text x="280" y="144" font-size="10.5" fill="#4f46e5" text-anchor="middle">ここに残っている＝未整理</text>
+        <rect x="0" y="168" width="760" height="42" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="186" font-size="11.5" fill="#4b5563">プロジェクトを決めた瞬間に Inbox から消え、そのプロジェクトの一覧に移ります。</text>
+        <text x="16" y="203" font-size="11.5" fill="#4b5563">Inbox の件数バッジが 0 になった状態が「整理し終わった」の合図です。</text>
+      </svg>
+    </div>
+    <p class="figure-cap">Inboxに残り続けているタスクは、行き先を決められていないタスクです。</p>
+    <p>ここから導けるのは、<strong>Inboxを空にすること自体が整理作業だ</strong>ということです。毎日空にする必要はありませんが、週に一度<a href="/guide/review.html">Reviewビュー</a>と合わせて見ると、「書き留めたまま忘れていたこと」を拾い直せます。</p>
+
+    <h2>「現在」フィルタが効かない、唯一のビュー</h2>
+    <p>ほかのビューでは、開始日がまだ来ていないタスクを「現在」フィルタで隠せます。<strong>Inboxだけはこのフィルタの対象外</strong>です。</p><p>受信箱は「取りこぼしを見つける場所」なので、条件で隠すとバッジの件数と画面の件数が食い違い、「4件あるはずなのに2件しか見えない」という状態になってしまうためです。<strong>Inboxに表示される件数は、常にバッジの数字と一致します。</strong></p>
+
+    <h2>使い方</h2>
+    <ol class="steps">
+      <li><b>とにかく書く。</b>クイック追加バーに1行入れて Enter。会議中でも移動中でも、判断を挟まずに放り込みます。</li>
+      <li><b>まとめて行き先を決める。</b>手が空いたときにInboxを開き、1件ずつタップしてプロジェクトを選びます。決まったタスクはその場でInboxから消えます。</li>
+      <li><b>タスクではないものはノートへ移す。</b>「あとで読む」「メモしておきたい」だけのものは、<a href="/guide/note.html">Note</a> に書き写すとInboxが軽くなります。</li>
+      <li><b>バッジが0になったら完了。</b>次に思いついたことが、また空のInboxに入ります。</li>
+    </ol>
+
+    <div class="note">
+      <p><b>プロジェクトを決めずに期限だけ入れてもかまいません。</b>その場合、Inboxに残ったまま <a href="/guide/today.html">Today</a> や <a href="/guide/forecast.html">Forecast</a> にも出てきます。「行き先は未定だが日付は決まっている」タスクを取りこぼさないためです。</p>
+    </div>
+
+    <h2>表示条件</h2>
+    <div class="conds">
+      <h3>Inboxに表示されるもの</h3>
+      <ul>
+        <li>プロジェクトがまだ割り当てられていないタスク</li>
+        <li>タスクを追加した直後は、指定しない限りここに入る</li>
+        <li>サブタスクは表示されない（親タスクの下にぶら下がるため）</li>
+        <li>「現在」フィルタの対象外。開始日が未来のタスクも常に表示される</li>
+        <li>完了したタスクは非表示（設定で表示に変更可）</li>
+      </ul>
+    </div>
+
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>追加したはずのタスクがInboxにありません。</summary>
+        <p>クイック追加で <code>@プロジェクト名</code> を書いた場合や、プロジェクトを開いた状態で追加した場合は、最初からそのプロジェクトに入ります。<a href="/guide/search.html">Searchビュー</a> でタイトルを検索すると見つかります。</p>
+      </details>
+      <details>
+        <summary>Inboxのタスクにプロジェクトを設定したら消えました。</summary>
+        <p>仕様どおりの動きです。Inboxは「プロジェクトが決まっていないタスク」の置き場なので、決まった時点でそのプロジェクトの一覧へ移ります。削除されたわけではありません。</p>
+      </details>
+      <details>
+        <summary>Inboxを空にしないといけませんか？</summary>
+        <p>いいえ。ただし件数が増え続けている場合は、書き留めたまま扱いを決めていないものがたまっている状態です。週に一度まとめて行き先を決めるだけで、見落としはかなり減ります。</p>
+      </details>
+      <details>
+        <summary>タスクとノート、どちらに書けばよいか迷います。</summary>
+        <p>「いつか自分が手を動かすこと」ならタスク、「あとで読み返したい情報」ならノートです。迷ったらまずInboxに入れて、整理のときに <a href="/guide/note.html">Note</a> へ移してかまいません。</p>
+      </details>
+    </div>
+
+    <h2>関連するビュー</h2>
+    <div class="related">
+      <a class="g-card" href="/guide/next.html">
+        <span class="t">Next</span>
+        <span class="d">各プロジェクトの「次の1件」だけを抜き出した一覧。</span>
+      </a>
+      <a class="g-card" href="/guide/note.html">
+        <span class="t">Note</span>
+        <span class="d">タスクに紐づかない自由なメモ。</span>
+      </a>
+      <a class="g-card" href="/guide/review.html">
+        <span class="t">Review</span>
+        <span class="d">期限切れ・停滞・レビュー時期をまとめて点検。</span>
+      </a>
+      <a class="g-card" href="/guide/project.html">
+        <span class="t">プロジェクト</span>
+        <span class="d">案件ごとのタスク一覧。並び順が Next を決めます。</span>
+      </a>
+    </div>
+
+    <div class="g-cta">
+      <h2>Inboxに書き留めてみる</h2>
+      <p>フリープランはクレジットカード不要。Googleアカウントですぐに始められます。</p>
+      <a class="btn btn-lg" href="https://app.taskra.jp" target="_blank" rel="noopener">無料で始める</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2025 Taskra. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/guide/">使い方ガイド</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/tokushoho.html">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
